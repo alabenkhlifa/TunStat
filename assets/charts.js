@@ -462,14 +462,33 @@
   function optionsFor(spec) {
     const p = palette();
     const radial = spec.type === "doughnut" || spec.type === "pie";
+    const compact = matchMedia("(max-width: 639px)").matches;
+    const tickOptions = {
+      color: p.muted,
+      autoSkip: true,
+      maxTicksLimit: compact ? 5 : 9,
+      maxRotation: compact ? 0 : 45,
+      minRotation: 0,
+    };
     return {
       responsive: true,
       maintainAspectRatio: false,
+      resizeDelay: 80,
       animation: reducedMotion ? false : { duration: 500 },
       indexAxis: spec.indexAxis || "x",
+      layout: { padding: compact ? 0 : 4 },
       interaction: { mode: radial ? "nearest" : "index", intersect: false },
       plugins: {
-        legend: { position: "bottom", labels: { color: p.text, usePointStyle: true, boxWidth: 8, padding: 16 } },
+        legend: {
+          position: "bottom",
+          labels: {
+            color: p.text,
+            usePointStyle: true,
+            boxWidth: 8,
+            padding: compact ? 10 : 16,
+            font: { size: compact ? 10 : 12 },
+          },
+        },
         tooltip: {
           enabled: true,
           backgroundColor: document.documentElement.classList.contains("dark") ? "#111a17" : "#1c1917",
@@ -489,14 +508,14 @@
             x: {
               stacked: Boolean(spec.stacked),
               grid: { color: spec.indexAxis === "y" ? p.grid : "transparent" },
-              ticks: { color: p.muted },
+              ticks: tickOptions,
               title: { display: Boolean(spec.xTitle), text: spec.xTitle, color: p.muted },
             },
             y: {
               stacked: Boolean(spec.stacked),
               beginAtZero: true,
               grid: { color: p.grid },
-              ticks: { color: p.muted },
+              ticks: tickOptions,
               title: { display: Boolean(spec.yTitle), text: spec.yTitle, color: p.muted },
             },
           },
@@ -517,7 +536,7 @@
       const group = chartGroups[host.dataset.chartGroup];
       if (!group) return;
       host.innerHTML = `
-        <div class="p-3 sm:p-4">
+        <div class="min-w-0 max-w-full p-3 sm:p-4">
           <div class="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
             <div><h3 class="text-xl font-black text-ink dark:text-white">${group.title}</h3><p class="mt-2 max-w-3xl text-xs leading-5 text-stone-500 dark:text-stone-400">${group.note}</p></div>
             <a class="shrink-0 text-xs font-bold text-tunis-red hover:underline" href="./${group.source}">CSV data ↓</a>
@@ -526,7 +545,7 @@
             <p class="text-xs font-black tracking-wider text-emerald-800 uppercase dark:text-emerald-300">Healthy means</p>
             <ul class="mt-2 space-y-1 text-xs leading-5 text-emerald-950 dark:text-emerald-100">${group.health.map((item) => `<li>• ${item}</li>`).join("")}</ul>
           </div>
-          <div class="mt-4 grid gap-4 ${group.charts.length > 1 ? "lg:grid-cols-2" : ""}" data-chart-cards></div>
+          <div class="mt-4 grid min-w-0 max-w-full gap-4 ${group.charts.length > 1 ? "lg:grid-cols-2" : ""}" data-chart-cards></div>
         </div>`;
       const cards = host.querySelector("[data-chart-cards]");
       group.charts.forEach((spec, index) => {
