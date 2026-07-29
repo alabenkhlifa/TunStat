@@ -101,14 +101,15 @@
     instances.splice(0).forEach((chart) => chart.destroy());
     const compact = matchMedia("(max-width: 639px)").matches;
     const theme = palette();
+    const translate = window.tunstatTranslate || ((value) => value);
 
     document.querySelectorAll("[data-comparison-chart]").forEach((canvas) => {
       const spec = active.charts[canvas.dataset.comparisonChart];
       if (!spec) return;
       const title = canvas.closest("[data-chart-card]")?.querySelector("[data-chart-title]");
       const subtitle = canvas.closest("[data-chart-card]")?.querySelector("[data-chart-subtitle]");
-      if (title) title.textContent = spec.title;
-      if (subtitle) subtitle.textContent = spec.subtitle;
+      if (title) title.textContent = translate(spec.title);
+      if (subtitle) subtitle.textContent = translate(spec.subtitle);
       const card = canvas.closest("[data-chart-card]");
       if (card && !card.querySelector("[data-comparison-table]")) {
         const details = document.createElement("details");
@@ -127,10 +128,10 @@
         new Chart(canvas, {
           type: "bar",
           data: {
-            labels: spec.labels,
+            labels: spec.labels.map(translate),
             datasets: [
-              { label: "Tunisia", data: spec.tunisia, backgroundColor: colors.tunisia, borderRadius: 6 },
-              { label: active.peer, data: spec.peer, backgroundColor: active.color, borderRadius: 6 },
+              { label: translate("Tunisia"), data: spec.tunisia, backgroundColor: colors.tunisia, borderRadius: 6 },
+              { label: translate(active.peer), data: spec.peer, backgroundColor: active.color, borderRadius: 6 },
             ],
           },
           options: {
@@ -174,4 +175,5 @@
 
   render();
   document.documentElement.addEventListener("tunstat:theme", render);
+  document.documentElement.addEventListener("tunstat:language", render);
 })();

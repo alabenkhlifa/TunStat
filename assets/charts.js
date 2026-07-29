@@ -532,33 +532,43 @@
 
   function renderCharts() {
     charts.splice(0).forEach((chart) => chart.destroy());
+    const translate = window.tunstatTranslate || ((value) => value);
     document.querySelectorAll("[data-chart-group]").forEach((host) => {
       const group = chartGroups[host.dataset.chartGroup];
       if (!group) return;
       host.innerHTML = `
         <div class="min-w-0 max-w-full p-3 sm:p-4">
           <div class="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
-            <div><h3 class="text-xl font-black text-ink dark:text-white">${group.title}</h3><p class="mt-2 max-w-3xl text-xs leading-5 text-stone-500 dark:text-stone-400">${group.note}</p></div>
-            <a class="shrink-0 text-xs font-bold text-tunis-red hover:underline" href="./${group.source}">CSV data ↓</a>
+            <div><h3 class="text-xl font-black text-ink dark:text-white">${translate(group.title)}</h3><p class="mt-2 max-w-3xl text-xs leading-5 text-stone-500 dark:text-stone-400">${translate(group.note)}</p></div>
+            <a class="shrink-0 text-xs font-bold text-tunis-red hover:underline" href="./${group.source}">${translate("CSV data ↓")}</a>
           </div>
           <div class="mt-4 rounded-xl border border-emerald-200 bg-emerald-50 p-4 dark:border-emerald-800 dark:bg-emerald-950/60">
-            <p class="text-xs font-black tracking-wider text-emerald-800 uppercase dark:text-emerald-200">Healthy means</p>
-            <ul class="mt-2 space-y-1 text-xs leading-5 text-emerald-950 dark:text-emerald-50">${group.health.map((item) => `<li>• ${item}</li>`).join("")}</ul>
+            <p class="text-xs font-black tracking-wider text-emerald-800 uppercase dark:text-emerald-200">${translate("Healthy means")}</p>
+            <ul class="mt-2 space-y-1 text-xs leading-5 text-emerald-950 dark:text-emerald-50">${group.health.map((item) => `<li>• ${translate(item)}</li>`).join("")}</ul>
           </div>
           <div class="mt-4 grid min-w-0 max-w-full gap-4 ${group.charts.length > 1 ? "lg:grid-cols-2" : ""}" data-chart-cards></div>
         </div>`;
       const cards = host.querySelector("[data-chart-cards]");
       group.charts.forEach((spec, index) => {
+        const localizedSpec = {
+          ...spec,
+          title: translate(spec.title),
+          labels: spec.labels.map(translate),
+          datasets: spec.datasets.map((dataset) => ({ ...dataset, label: translate(dataset.label) })),
+          xTitle: spec.xTitle ? translate(spec.xTitle) : spec.xTitle,
+          yTitle: spec.yTitle ? translate(spec.yTitle) : spec.yTitle,
+          benchmark: spec.benchmark ? { ...spec.benchmark, label: translate(spec.benchmark.label) } : spec.benchmark,
+        };
         const card = document.createElement("section");
         card.className = "chart-panel";
         const canvasId = `chart-${host.dataset.chartGroup}-${index}`;
-        card.innerHTML = `<h4 class="text-sm font-black text-stone-800 dark:text-stone-100">${spec.title}</h4><div class="chart-canvas-wrap"><canvas id="${canvasId}" role="img" aria-label="${group.title}: ${spec.title}"></canvas></div>${dataTable(spec)}`;
+        card.innerHTML = `<h4 class="text-sm font-black text-stone-800 dark:text-stone-100">${localizedSpec.title}</h4><div class="chart-canvas-wrap"><canvas id="${canvasId}" role="img" aria-label="${translate(group.title)}: ${localizedSpec.title}"></canvas></div>${dataTable(localizedSpec)}`;
         cards.append(card);
         charts.push(
           new Chart(card.querySelector("canvas"), {
-            type: spec.type,
-            data: { labels: spec.labels, datasets: spec.datasets },
-            options: optionsFor(spec),
+            type: localizedSpec.type,
+            data: { labels: localizedSpec.labels, datasets: localizedSpec.datasets },
+            options: optionsFor(localizedSpec),
           }),
         );
       });
@@ -703,4 +713,5 @@
   renderCharts();
   renderHealthRegistry();
   document.documentElement.addEventListener("tunstat:theme", renderCharts);
+  document.documentElement.addEventListener("tunstat:language", renderCharts);
 })();

@@ -37,7 +37,9 @@ Every value is labeled by status:
 
 The website is mobile-first and includes:
 
+- Tunisia’s flag as the site identity and favicon;
 - persistent light and dark themes;
+- a persistent English/French language preference across the dashboard and comparison pages;
 - responsive navigation and accessible controls;
 - a current economic snapshot;
 - twelve interactive Chart.js chart groups with tooltips, exact-value tables and responsive layouts;
@@ -129,6 +131,7 @@ npm run dev
 ├── index.html                  # Responsive dashboard
 ├── assets/
 │   ├── app.js                  # Theme and mobile navigation
+│   ├── i18n.js                 # English/French translation and language preference
 │   ├── charts.js               # Interactive charts and metric registry
 │   ├── comparisons.js          # Country-comparison charts and tables
 │   ├── chart.umd.min.js        # Chart.js runtime copied during build

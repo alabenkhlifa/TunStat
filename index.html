@@ -66,7 +66,7 @@
     <header class="sticky top-0 z-50 border-b border-stone-200/80 bg-stone-50/90 backdrop-blur-xl dark:border-white/10 dark:bg-[#0b1210]/90">
       <div class="shell flex h-18 items-center justify-between gap-4">
         <a href="#top" class="flex items-center gap-3" aria-label="TunStat home">
-          <span class="grid size-10 place-items-center rounded-full bg-tunis-red text-lg font-black text-white shadow-lg shadow-red-900/20">T</span>
+          <img src="./assets/tunisia-flag.svg" alt="Flag of Tunisia" width="48" height="32" class="h-8 w-12 rounded-sm object-cover shadow-sm ring-1 ring-black/10 dark:ring-white/20" />
           <span>
             <span class="block text-base font-black tracking-tight text-ink dark:text-white">TunStat</span>
             <span class="block text-[10px] font-bold tracking-[0.13em] text-stone-500 uppercase dark:text-stone-400">Tunisia, measured</span>
@@ -86,14 +86,7 @@
         </nav>
 
         <div class="flex items-center gap-2">
-          <img
-            src="./assets/tunisia-flag.svg"
-            alt="Flag of Tunisia"
-            title="Tunisia"
-            width="42"
-            height="28"
-            class="h-7 w-10 rounded-sm object-cover shadow-sm ring-1 ring-black/10 dark:ring-white/20"
-          />
+          <button type="button" data-language-toggle class="grid size-11 place-items-center rounded-full border border-stone-200 bg-white text-xs font-black tracking-wider dark:border-white/10 dark:bg-white/5" aria-label="Passer au français">FR</button>
           <button
             type="button"
             data-theme-toggle
@@ -638,6 +631,7 @@
       </div>
     </footer>
 
+    <script src="./assets/i18n.js" defer></script>
     <script src="./assets/chart.umd.min.js" defer></script>
     <script src="./assets/charts.js" defer></script>
     <script src="./assets/app.js" defer></script>
