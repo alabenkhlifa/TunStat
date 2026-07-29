@@ -73,13 +73,14 @@
           </span>
         </a>
 
-        <nav class="hidden items-center gap-7 md:flex" aria-label="Primary navigation">
+        <nav class="hidden items-center gap-5 md:flex" aria-label="Primary navigation">
           <a class="nav-link" href="#snapshot">Snapshot</a>
           <a class="nav-link" href="#system-risk">System risk</a>
           <a class="nav-link" href="#power">Power</a>
           <a class="nav-link" href="#finance">Finance</a>
           <a class="nav-link" href="#projects">Projects</a>
           <a class="nav-link" href="#plan">Recovery plan</a>
+          <a class="nav-link" href="#health">Healthy ranges</a>
           <a class="nav-link" href="#research">Research</a>
         </nav>
 
@@ -121,6 +122,7 @@
           <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#finance">Finance</a>
           <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#projects">Projects</a>
           <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#plan">Recovery plan</a>
+          <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#health">Healthy ranges</a>
           <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#research">Research</a>
         </div>
       </nav>
@@ -198,16 +200,7 @@
             Growth returned, inflation eased and declared investment improved. But unemployment, energy dependence, debt service and a widening trade deficit still limit the recovery.
           </p>
 
-          <div class="mt-10 chart-frame">
-            <img
-              src="./charts/macro-path.svg"
-              alt="Charts showing Tunisia's GDP growth, inflation, fiscal balance and public debt from 2023 to 2028"
-              width="1000"
-              height="560"
-              class="h-auto w-full"
-              loading="lazy"
-            />
-          </div>
+          <div class="mt-10 chart-frame interactive-chart" data-chart-group="macro"></div>
 
           <div class="mt-8 grid gap-4 lg:grid-cols-3">
             <article class="panel p-6 sm:p-8">
@@ -271,58 +264,13 @@
             </article>
           </div>
 
-          <div class="mt-6 chart-frame">
-            <img
-              src="./charts/metric-coverage-2026.svg"
-              alt="Coverage audit of 39 critical metrics across ten economic and public-service domains"
-              width="1000"
-              height="700"
-              class="h-auto w-full"
-              loading="lazy"
-            />
-          </div>
+          <div class="mt-6 chart-frame interactive-chart" data-chart-group="coverage"></div>
 
           <div class="mt-6 grid gap-6 xl:grid-cols-2">
-            <div class="chart-frame">
-              <img
-                src="./charts/external-liquidity-2026.svg"
-                alt="Tunisia foreign-exchange reserves, import cover, workers income and tourism receipts"
-                width="1000"
-                height="560"
-                class="h-auto w-full"
-                loading="lazy"
-              />
-            </div>
-            <div class="chart-frame">
-              <img
-                src="./charts/banking-health-2025.svg"
-                alt="Tunisia banking-sector solvency, liquidity, classified loans and public-sector exposure in 2025"
-                width="1000"
-                height="590"
-                class="h-auto w-full"
-                loading="lazy"
-              />
-            </div>
-            <div class="chart-frame">
-              <img
-                src="./charts/jobs-and-welfare-2026.svg"
-                alt="Tunisia employment, unemployment and poverty indicators in 2025 and 2026"
-                width="1000"
-                height="560"
-                class="h-auto w-full"
-                loading="lazy"
-              />
-            </div>
-            <div class="chart-frame">
-              <img
-                src="./charts/water-security-2026.svg"
-                alt="Tunisia dam filling, water losses and approved water investment in 2026"
-                width="1000"
-                height="560"
-                class="h-auto w-full"
-                loading="lazy"
-              />
-            </div>
+            <div class="chart-frame interactive-chart" data-chart-group="external"></div>
+            <div class="chart-frame interactive-chart" data-chart-group="banking"></div>
+            <div class="chart-frame interactive-chart" data-chart-group="jobs"></div>
+            <div class="chart-frame interactive-chart" data-chart-group="water"></div>
           </div>
 
           <div class="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -348,16 +296,7 @@
             </div>
 
             <div class="space-y-5">
-              <div class="chart-frame">
-                <img
-                  src="./charts/energy-security-2026.svg"
-                  alt="Energy independence, energy trade deficit and electricity production mix through May 2026"
-                  width="1000"
-                  height="560"
-                  class="h-auto w-full"
-                  loading="lazy"
-                />
-              </div>
+              <div class="chart-frame interactive-chart" data-chart-group="energy"></div>
               <div class="grid gap-4 sm:grid-cols-2">
                 <article class="panel p-6">
                   <p class="text-xs font-bold tracking-widest text-stone-500 uppercase dark:text-stone-400">Energy independence</p>
@@ -407,39 +346,12 @@
           </p>
 
           <div class="mt-10 grid gap-5 lg:grid-cols-2">
-            <div class="chart-frame">
-              <img
-                src="./charts/budget-expenses-2025.svg"
-                alt="Horizontal bar chart showing Tunisia's 2025 budget expense composition"
-                width="1000"
-                height="500"
-                class="h-auto w-full"
-                loading="lazy"
-              />
-            </div>
-            <div class="chart-frame">
-              <img
-                src="./charts/debt-and-service-2025.svg"
-                alt="Chart showing Tunisia's 2025 public debt stock and debt service"
-                width="1000"
-                height="520"
-                class="h-auto w-full"
-                loading="lazy"
-              />
-            </div>
+            <div class="chart-frame interactive-chart" data-chart-group="budget"></div>
+            <div class="chart-frame interactive-chart" data-chart-group="debt"></div>
           </div>
 
           <div class="mt-5 grid gap-5 lg:grid-cols-[0.8fr_1.2fr]">
-            <div class="chart-frame">
-              <img
-                src="./charts/subsidies-2025.svg"
-                alt="Donut chart showing fuel, basic-goods and transport subsidies in 2025"
-                width="900"
-                height="500"
-                class="h-auto w-full"
-                loading="lazy"
-              />
-            </div>
+            <div class="chart-frame interactive-chart" data-chart-group="subsidies"></div>
             <article class="panel p-6 sm:p-8">
               <p class="section-kicker">The fiscal choice</p>
               <h3 class="text-2xl font-black tracking-tight text-ink sm:text-3xl dark:text-white">Reallocate carefully. Do not cut the recovery.</h3>
@@ -479,27 +391,9 @@
             <a href="./data/major_projects.csv" class="button-secondary shrink-0">Download project data ↓</a>
           </div>
 
-          <div class="mt-10 chart-frame">
-            <img
-              src="./charts/investment-2025.svg"
-              alt="Charts comparing declared investment and recorded international investment in Tunisia in 2025"
-              width="1000"
-              height="560"
-              class="h-auto w-full"
-              loading="lazy"
-            />
-          </div>
+          <div class="mt-10 chart-frame interactive-chart" data-chart-group="investment-overview"></div>
 
-          <div class="mt-6 chart-frame">
-            <img
-              src="./charts/investment-execution-2026.svg"
-              alt="Tunisia gross fixed capital formation, sector allocation and realized foreign direct investment"
-              width="1000"
-              height="570"
-              class="h-auto w-full"
-              loading="lazy"
-            />
-          </div>
+          <div class="mt-6 chart-frame interactive-chart" data-chart-group="investment-execution"></div>
 
           <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             <article class="panel p-6">
@@ -589,6 +483,54 @@
         </div>
       </section>
 
+      <section id="health" class="border-b border-stone-200 bg-[#eef4f2] py-18 sm:py-24 dark:border-white/10 dark:bg-[#0e1916]">
+        <div class="shell">
+          <div class="flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
+            <div>
+              <p class="section-kicker">Healthy ranges</p>
+              <h2 class="section-title text-balance">Every metric now has an explicit reference point.</h2>
+              <p class="section-copy">
+                “Healthy” may mean a prudential minimum, an official Tunisian program target, an international reference or a TunStat policy range. It is never presented as a universal rule when none exists.
+              </p>
+            </div>
+            <a href="./data/metric_health_reference.csv" class="button-secondary shrink-0">Download all references ↓</a>
+          </div>
+
+          <div class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4" aria-label="Benchmark types">
+            <article class="health-key"><span class="health-key-dot bg-emerald-500"></span><div><strong>Legal or prudential</strong><p>Binding rule or supervisory minimum where applicable.</p></div></article>
+            <article class="health-key"><span class="health-key-dot bg-blue-500"></span><div><strong>Official program</strong><p>Published Tunisian or financed-program target.</p></div></article>
+            <article class="health-key"><span class="health-key-dot bg-amber-500"></span><div><strong>International reference</strong><p>Comparator or rule of thumb, not automatically binding.</p></div></article>
+            <article class="health-key"><span class="health-key-dot bg-stone-500"></span><div><strong>TunStat policy reference</strong><p>Country-specific operating range or directional test.</p></div></article>
+          </div>
+
+          <div class="mt-8 panel p-4 sm:p-6">
+            <div class="grid gap-3 md:grid-cols-[1fr_18rem]">
+              <label>
+                <span class="mb-2 block text-xs font-bold tracking-wider text-stone-500 uppercase dark:text-stone-400">Search metrics</span>
+                <input data-health-search class="health-control" type="search" placeholder="Search debt, reserves, water losses…" autocomplete="off" />
+              </label>
+              <label>
+                <span class="mb-2 block text-xs font-bold tracking-wider text-stone-500 uppercase dark:text-stone-400">Domain</span>
+                <select data-health-domain class="health-control"><option value="">All domains</option></select>
+              </label>
+            </div>
+            <div data-health-summary class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5" aria-label="Current assessment summary"></div>
+            <p data-health-count class="mt-5 text-sm font-bold text-stone-600 dark:text-stone-300" aria-live="polite">Loading metric references…</p>
+            <p class="mt-2 text-xs leading-5 text-stone-500 dark:text-stone-400">This registry is broader than the 39-metric critical-data audit, so its gap total is not directly comparable with the audit’s 20 missing observations.</p>
+          </div>
+
+          <div data-health-registry class="mt-5 space-y-3"></div>
+          <noscript>
+            <p class="mt-5 panel p-6">JavaScript is needed for the searchable registry. The complete definitions remain available in the <a class="font-bold text-tunis-red" href="./data/metric_health_reference.csv">CSV download</a>.</p>
+          </noscript>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="https://github.com/alabenkhlifa/TunStat/blob/main/12-health-benchmarks.md" class="button-primary">Read the benchmark methodology</a>
+            <a href="https://github.com/alabenkhlifa/TunStat/blob/main/10-sources-and-methodology.md" class="button-secondary">Review source definitions <span class="ml-2" aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
       <section id="research" class="py-18 sm:py-24">
         <div class="shell">
           <p class="section-kicker">Research library</p>
@@ -608,6 +550,7 @@
             <a class="doc-link" href="https://github.com/alabenkhlifa/TunStat/blob/main/09-risks-and-scenarios.md"><span>Risks and scenarios</span><span aria-hidden="true">↗</span></a>
             <a class="doc-link" href="https://github.com/alabenkhlifa/TunStat/blob/main/10-sources-and-methodology.md"><span>Sources and methodology</span><span aria-hidden="true">↗</span></a>
             <a class="doc-link" href="https://github.com/alabenkhlifa/TunStat/blob/main/11-critical-metrics-and-system-risk.md"><span>Critical metrics and system risk</span><span aria-hidden="true">↗</span></a>
+            <a class="doc-link" href="https://github.com/alabenkhlifa/TunStat/blob/main/12-health-benchmarks.md"><span>Healthy ranges and benchmarks</span><span aria-hidden="true">↗</span></a>
             <a class="doc-link" href="https://github.com/alabenkhlifa/TunStat/tree/main/data"><span>Download all CSV data</span><span aria-hidden="true">↓</span></a>
           </div>
 
@@ -639,6 +582,8 @@
       </div>
     </footer>
 
+    <script src="./assets/chart.umd.min.js" defer></script>
+    <script src="./assets/charts.js" defer></script>
     <script src="./assets/app.js" defer></script>
   </body>
 </html>

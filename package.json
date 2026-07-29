@@ -4,11 +4,14 @@
   "private": true,
   "description": "Evidence-based monthly dashboard on Tunisia's economy, reserves, banks, households, energy, water, public finances, investment and major projects.",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./assets/styles.css --minify",
+    "build": "tailwindcss -i ./src/input.css -o ./assets/styles.css --minify && cp ./node_modules/chart.js/dist/chart.umd.min.js ./assets/chart.umd.min.js",
     "dev": "tailwindcss -i ./src/input.css -o ./assets/styles.css --watch"
   },
   "devDependencies": {
     "@tailwindcss/cli": "4.3.3",
     "tailwindcss": "4.3.3"
+  },
+  "dependencies": {
+    "chart.js": "^4.5.1"
   }
 }

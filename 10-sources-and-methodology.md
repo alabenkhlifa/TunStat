@@ -11,6 +11,18 @@ Research was completed through **29 July 2026**. The dossier prioritizes:
 
 Figures are not treated as current simply because a page remains online. Each chapter identifies the period represented. Forecasts, program targets, declared investment, approved financing and realized outcomes are separated.
 
+## Health-reference policy
+
+Every tracked or explicitly missing metric has a health definition in [the metric health reference](data/metric_health_reference.csv). Each definition identifies whether it is:
+
+- a legal or prudential minimum;
+- an official Tunisian or financed-program target;
+- an international reference that is not automatically binding on Tunisia;
+- a TunStat country-specific policy or monitoring range; or
+- a directional or contextual test where no defensible fixed threshold exists.
+
+The `healthy`, `watch`, `stress`, `gap` and `context` assessments are analytical summaries, not automatic policy triggers. See [Healthy ranges and benchmark methodology](12-health-benchmarks.md) for the benchmark hierarchy, core sources and limitations.
+
 ## Core statistical sources
 
 ### National Institute of Statistics
@@ -243,7 +255,8 @@ Calculated values are labeled in the CSV files and chart notes.
 - [Labor-market depth](data/labour_depth_2026q1.csv)
 - [SOE fiscal risk](data/soe_fiscal_risk.csv)
 - [Critical metric coverage](data/metric_coverage.csv)
+- [Metric health definitions and current assessments](data/metric_health_reference.csv)
 
 ## Reproducibility note
 
-The SVG charts are static and contain their values as text. The CSV files are the source tables. If a newer official release becomes available, update the CSV first, then the chart and narrative, and preserve the actual/forecast/status labels.
+The website uses Chart.js 4.5.1 for responsive, interactive charts. Each chart also exposes an exact-value HTML table. The SVG charts remain available for the research documents and non-JavaScript use. CSV files are the source tables. If a newer official release becomes available, update the CSV and health assessment first, then the interactive chart, SVG fallback and narrative, while preserving the actual/forecast/status labels.

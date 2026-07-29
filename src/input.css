@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @source "../index.html";
 @source "../assets/app.js";
+@source "../assets/charts.js";
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
@@ -75,6 +76,54 @@
 
   .chart-frame {
     @apply overflow-hidden rounded-2xl border border-stone-200 bg-white p-2 sm:p-4 dark:border-white/10;
+  }
+
+  .chart-panel {
+    @apply rounded-xl border border-stone-200 bg-stone-50 p-4 dark:border-white/10 dark:bg-white/[0.03];
+  }
+
+  .chart-canvas-wrap {
+    @apply relative mt-4 h-72 w-full sm:h-80;
+  }
+
+  .chart-data-table {
+    @apply mt-4 overflow-x-auto rounded-xl border border-stone-200 dark:border-white/10;
+  }
+
+  .chart-data-table table {
+    @apply w-full min-w-lg text-left text-xs;
+  }
+
+  .chart-data-table th {
+    @apply bg-stone-100 px-3 py-2 font-black text-stone-700 dark:bg-white/5 dark:text-stone-200;
+  }
+
+  .chart-data-table td {
+    @apply border-t border-stone-200 px-3 py-2 text-stone-600 dark:border-white/10 dark:text-stone-300;
+  }
+
+  .health-key {
+    @apply flex gap-3 rounded-2xl border border-stone-200 bg-white p-4 text-sm dark:border-white/10 dark:bg-white/[0.04];
+  }
+
+  .health-key p {
+    @apply mt-1 text-xs leading-5 text-stone-500 dark:text-stone-400;
+  }
+
+  .health-key-dot {
+    @apply mt-1 size-2.5 shrink-0 rounded-full;
+  }
+
+  .health-control {
+    @apply min-h-12 w-full rounded-xl border border-stone-300 bg-white px-4 text-sm text-stone-900 shadow-sm dark:border-white/15 dark:bg-[#111a17] dark:text-white;
+  }
+
+  .health-row {
+    @apply rounded-2xl border border-stone-200 bg-white p-5 shadow-sm dark:border-white/10 dark:bg-white/[0.04];
+  }
+
+  .health-status {
+    @apply inline-flex rounded-full px-2.5 py-1 text-[10px] font-black tracking-wider uppercase;
   }
 }
 

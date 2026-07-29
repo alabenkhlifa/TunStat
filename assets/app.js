@@ -18,6 +18,7 @@ function applyTheme(theme) {
   themeToggle?.setAttribute("aria-label", `Switch to ${dark ? "light" : "dark"} mode`);
   themeToggle?.setAttribute("aria-pressed", String(dark));
   if (themeMeta) themeMeta.content = dark ? "#0b1210" : "#fafaf9";
+  root.dispatchEvent(new CustomEvent("tunstat:theme", { detail: { theme } }));
 }
 
 applyTheme(preferredTheme());
