@@ -1,0 +1,10 @@
+dimension,category,tnd_billion,share_percent,source
+Residence,Domestic debt,86.1780,60.8,"Ministry of Finance, provisional 2025 budget execution"
+Residence,External debt,55.4873,39.2,"Ministry of Finance, provisional 2025 budget execution"
+External creditor,Multilateral creditors,,68.9,"Ministry of Finance, provisional 2025 budget execution"
+External creditor,Bilateral creditors,,22.8,"Ministry of Finance, provisional 2025 budget execution"
+External creditor,Financial markets,,8.3,"Ministry of Finance, provisional 2025 budget execution"
+External currency,Euro,,63.7,"Ministry of Finance, provisional 2025 budget execution"
+External currency,US dollar,,23.4,"Ministry of Finance, provisional 2025 budget execution"
+External currency,Japanese yen,,6.0,"Ministry of Finance, provisional 2025 budget execution"
+External currency,Other,,6.9,"Ministry of Finance, provisional 2025 budget execution"

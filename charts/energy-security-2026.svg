@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" role="img" aria-labelledby="title desc">
+  <title id="title">Tunisia energy security through May 2026</title>
+  <desc id="desc">The energy independence ratio fell from 39 to 34 percent, the energy trade deficit rose from TND 4.37 to 5.77 billion, and electricity production was 91 percent gas.</desc>
+  <rect width="1000" height="560" fill="#fff"/>
+  <style>.t{font:700 25px system-ui;fill:#17212b}.h{font:700 17px system-ui;fill:#17212b}.s{font:13px system-ui;fill:#52606d}.l{font:15px system-ui;fill:#17212b}.v{font:700 16px system-ui;fill:#17212b}.w{font:700 13px system-ui;fill:#fff}</style>
+  <text x="40" y="44" class="t">Energy security weakened before the summer peak</text>
+  <text x="40" y="69" class="s">January–May comparison</text>
+  <g transform="translate(50 115)">
+    <text x="0" y="0" class="h">Energy independence</text>
+    <rect x="0" y="30" width="312" height="40" rx="5" fill="#087e8b"/><text x="320" y="56" class="v">39% · 2025</text>
+    <rect x="0" y="90" width="272" height="40" rx="5" fill="#f18f01"/><text x="280" y="116" class="v">34% · 2026</text>
+    <text x="0" y="165" class="s">Including the transit-gas royalty.</text>
+  </g>
+  <g transform="translate(520 115)">
+    <text x="0" y="0" class="h">Energy trade deficit</text>
+    <rect x="0" y="30" width="227" height="40" rx="5" fill="#3a86ff"/><text x="235" y="56" class="v">TND 4.37bn · 2025</text>
+    <rect x="0" y="90" width="300" height="40" rx="5" fill="#f18f01"/><text x="308" y="116" class="v">TND 5.77bn · 2026</text>
+    <text x="0" y="165" class="s">Increase: 32% year on year.</text>
+  </g>
+  <g transform="translate(50 340)">
+    <text x="0" y="0" class="h">Electricity production mix, Jan–May 2026</text>
+    <rect x="0" y="30" width="819" height="50" rx="5" fill="#f18f01"/><rect x="819" y="30" width="74" height="50" fill="#3a86ff"/><rect x="893" y="30" width="7" height="50" rx="2" fill="#52b788"/>
+    <text x="410" y="61" text-anchor="middle" class="w">Natural gas 91%</text>
+    <text x="0" y="112" class="s">Renewables: solar 8.18%, wind 0.80%, hydro 0.04%. Imports supplied 9% of local-market needs.</text>
+  </g>
+  <text x="40" y="520" class="s">Source: Ministry of Industry, Mines and Energy, energy situation through May 2026.</text>
+</svg>

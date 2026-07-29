@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc">
+  <title id="title">Tunisia public debt stock and 2025 debt service</title>
+  <desc id="desc">Public debt was TND 141.67 billion, 60.8 percent domestic and 39.2 percent external. Debt service was TND 24.44 billion, including TND 17.98 billion principal and TND 6.46 billion interest.</desc>
+  <rect width="1000" height="520" fill="#fff"/>
+  <style>.t{font:700 25px system-ui;fill:#17212b}.h{font:700 17px system-ui;fill:#17212b}.s{font:13px system-ui;fill:#52606d}.l{font:15px system-ui;fill:#17212b}.w{font:700 15px system-ui;fill:#fff}.v{font:700 16px system-ui;fill:#17212b}</style>
+  <text x="40" y="44" class="t">Debt stock and debt-service pressure</text>
+  <text x="40" y="69" class="s">End-2025 provisional fiscal data</text>
+  <g transform="translate(40 115)">
+    <text x="0" y="0" class="h">Public debt: TND 141.67bn · 82.1% of GDP</text>
+    <rect x="0" y="28" width="559" height="62" rx="6" fill="#087e8b"/><rect x="559" y="28" width="361" height="62" rx="6" fill="#3a86ff"/>
+    <text x="280" y="66" text-anchor="middle" class="w">Domestic 60.8% · TND 86.18bn</text><text x="739" y="66" text-anchor="middle" class="w">External 39.2% · TND 55.49bn</text>
+  </g>
+  <g transform="translate(40 255)">
+    <text x="0" y="0" class="h">2025 debt service: TND 24.44bn</text>
+    <text x="0" y="55" class="l">Principal</text><rect x="130" y="30" width="570" height="34" rx="4" fill="#f18f01"/><text x="713" y="53" class="v">TND 17.98bn · 73.6%</text>
+    <text x="0" y="115" class="l">Interest</text><rect x="130" y="90" width="205" height="34" rx="4" fill="#9b5de5"/><text x="348" y="113" class="v">TND 6.46bn · 26.4%</text>
+    <text x="0" y="185" class="s">Domestic service TND 14.35bn; external service TND 10.09bn.</text>
+  </g>
+  <text x="40" y="480" class="s">Source: Tunisia Ministry of Finance, provisional budget execution at end-December 2025.</text>
+</svg>

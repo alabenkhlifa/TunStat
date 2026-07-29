@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" role="img" aria-labelledby="title desc">
+  <title id="title">Tunisia 2025 investment indicators</title>
+  <desc id="desc">Declared investment totaled TND 8.36 billion. Recorded international investment totaled TND 3.57 billion. These are different statistical concepts and should not be added.</desc>
+  <rect width="1000" height="560" fill="#fff"/>
+  <style>.t{font:700 25px system-ui;fill:#17212b}.h{font:700 17px system-ui;fill:#17212b}.s{font:13px system-ui;fill:#52606d}.l{font:15px system-ui;fill:#17212b}.v{font:700 14px system-ui;fill:#17212b}.w{font:700 13px system-ui;fill:#fff}</style>
+  <text x="40" y="44" class="t">Two investment views, not one total</text>
+  <text x="40" y="69" class="s">Declared projects indicate intent; international investment records capital actually reported</text>
+  <g transform="translate(40 115)">
+    <text x="0" y="0" class="h">Declared investment: TND 8.36bn · 101,681 expected jobs</text>
+    <rect x="0" y="35" width="322" height="54" rx="5" fill="#087e8b"/><rect x="322" y="35" width="193" height="54" fill="#3a86ff"/><rect x="515" y="35" width="186" height="54" fill="#52b788"/><rect x="701" y="35" width="219" height="54" rx="5" fill="#7b8794"/>
+    <text x="161" y="67" text-anchor="middle" class="w">Industry 35.0%</text><text x="419" y="67" text-anchor="middle" class="w">Services 21.0%</text><text x="608" y="67" text-anchor="middle" class="w">Renewables 20.2%</text><text x="811" y="67" text-anchor="middle" class="w">Other 23.8%</text>
+    <text x="0" y="120" class="s">Source: Tunisia Investment Authority. “Other” is the residual from the reported total.</text>
+  </g>
+  <g transform="translate(40 290)">
+    <text x="0" y="0" class="h">Recorded international investment: TND 3.57bn</text>
+    <text x="0" y="53" class="l">Manufacturing</text><rect x="145" y="30" width="500" height="32" rx="4" fill="#087e8b"/><text x="655" y="52" class="v">62.6%</text>
+    <text x="0" y="103" class="l">Services</text><rect x="145" y="80" width="150" height="32" rx="4" fill="#3a86ff"/><text x="305" y="102" class="v">18.8%</text>
+    <text x="0" y="153" class="l">Energy</text><rect x="145" y="130" width="130" height="32" rx="4" fill="#f18f01"/><text x="285" y="152" class="v">16.3%</text>
+    <text x="0" y="203" class="l">Agriculture</text><rect x="145" y="180" width="19" height="32" rx="3" fill="#52b788"/><text x="174" y="202" class="v">2.4%</text>
+  </g>
+  <text x="40" y="525" class="s">Source: FIPA 2025 results reported by TAP. Sector shares refer to FDI. Rounding may not sum exactly to 100%.</text>
+</svg>

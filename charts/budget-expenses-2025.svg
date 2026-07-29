@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500" role="img" aria-labelledby="title desc">
+  <title id="title">Tunisia 2025 budget expense composition</title>
+  <desc id="desc">Horizontal bars show wages 39.8 percent, transfers 34.5, interest 11, investment 9.8, goods and services 4.8, and financial operations 0.1.</desc>
+  <rect width="1000" height="500" fill="#fff"/>
+  <style>.t{font:700 25px system-ui;fill:#17212b}.s{font:13px system-ui;fill:#52606d}.l{font:15px system-ui;fill:#17212b}.v{font:700 14px system-ui;fill:#17212b}.g{stroke:#d9e2ec}</style>
+  <text x="40" y="44" class="t">Where 2025 budget expenses went</text>
+  <text x="40" y="69" class="s">TND 58.47bn, excluding lending operations; provisional execution</text>
+  <g transform="translate(245 100)">
+    <line x1="0" y1="0" x2="680" y2="0" class="g"/><line x1="0" y1="320" x2="680" y2="320" class="g"/>
+    <text x="-15" y="28" text-anchor="end" class="l">Wages</text><rect x="0" y="8" width="560" height="28" rx="4" fill="#087e8b"/><text x="569" y="28" class="v">39.8% · TND 23.28bn</text>
+    <text x="-15" y="82" text-anchor="end" class="l">Transfers</text><rect x="0" y="62" width="486" height="28" rx="4" fill="#3a86ff"/><text x="495" y="82" class="v">34.5% · TND 20.15bn</text>
+    <text x="-15" y="136" text-anchor="end" class="l">Interest</text><rect x="0" y="116" width="155" height="28" rx="4" fill="#f18f01"/><text x="164" y="136" class="v">11.0% · TND 6.46bn</text>
+    <text x="-15" y="190" text-anchor="end" class="l">Investment</text><rect x="0" y="170" width="138" height="28" rx="4" fill="#52b788"/><text x="147" y="190" class="v">9.8% · TND 5.73bn</text>
+    <text x="-15" y="244" text-anchor="end" class="l">Goods &amp; services</text><rect x="0" y="224" width="68" height="28" rx="4" fill="#9b5de5"/><text x="77" y="244" class="v">4.8% · TND 2.81bn</text>
+    <text x="-15" y="298" text-anchor="end" class="l">Financial operations</text><rect x="0" y="278" width="3" height="28" rx="2" fill="#7b8794"/><text x="12" y="298" class="v">0.1% · TND 0.04bn</text>
+  </g>
+  <text x="40" y="462" class="s">Source: Tunisia Ministry of Finance, provisional budget execution at end-December 2025.</text>
+</svg>

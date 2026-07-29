@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en" class="scroll-pt-24">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TunStat — Tunisia economy, energy and public finance dashboard</title>
+    <meta
+      name="description"
+      content="An evidence-based monthly dashboard tracking Tunisia's economy, electricity system, public finances, debt, investment and major projects."
+    />
+    <meta name="theme-color" content="#fafaf9" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="TunStat" />
+    <meta
+      name="keywords"
+      content="Tunisia, economy, statistics, electricity, public finance, debt, investment, infrastructure, open data"
+    />
+    <link rel="canonical" href="https://alabenkhlifa.github.io/TunStat/" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇹🇳</text></svg>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="TunStat — Tunisia, measured clearly" />
+    <meta
+      property="og:description"
+      content="Monthly evidence on Tunisia's economy, electricity, public finances, investment and major projects."
+    />
+    <meta property="og:url" content="https://alabenkhlifa.github.io/TunStat/" />
+    <meta property="og:image" content="https://alabenkhlifa.github.io/TunStat/assets/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TunStat — Tunisia, measured clearly" />
+    <meta
+      name="twitter:description"
+      content="Monthly evidence on Tunisia's economy, electricity, public finances, investment and major projects."
+    />
+    <meta name="twitter:image" content="https://alabenkhlifa.github.io/TunStat/assets/og.png" />
+    <script>
+      (() => {
+        const saved = localStorage.getItem("tunstat-theme");
+        const dark = saved ? saved === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.classList.toggle("dark", dark);
+      })();
+    </script>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": "TunStat",
+        "description": "A monthly evidence dashboard and research dataset covering Tunisia's economy, energy, public finances, debt, investment and major projects.",
+        "url": "https://alabenkhlifa.github.io/TunStat/",
+        "keywords": ["Tunisia", "macroeconomics", "energy", "public finance", "investment", "open data"],
+        "temporalCoverage": "2023/2026",
+        "spatialCoverage": "Tunisia",
+        "license": "https://github.com/alabenkhlifa/TunStat"
+      }
+    </script>
+  </head>
+  <body>
+    <a
+      href="#main"
+      class="sr-only z-[100] rounded-lg bg-white px-4 py-3 font-bold text-stone-900 focus:not-sr-only focus:fixed focus:top-4 focus:left-4"
+    >
+      Skip to content
+    </a>
+
+    <header class="sticky top-0 z-50 border-b border-stone-200/80 bg-stone-50/90 backdrop-blur-xl dark:border-white/10 dark:bg-[#0b1210]/90">
+      <div class="shell flex h-18 items-center justify-between gap-4">
+        <a href="#top" class="flex items-center gap-3" aria-label="TunStat home">
+          <span class="grid size-10 place-items-center rounded-full bg-tunis-red text-lg font-black text-white shadow-lg shadow-red-900/20">T</span>
+          <span>
+            <span class="block text-base font-black tracking-tight text-ink dark:text-white">TunStat</span>
+            <span class="block text-[10px] font-bold tracking-[0.13em] text-stone-500 uppercase dark:text-stone-400">Tunisia, measured</span>
+          </span>
+        </a>
+
+        <nav class="hidden items-center gap-7 md:flex" aria-label="Primary navigation">
+          <a class="nav-link" href="#snapshot">Snapshot</a>
+          <a class="nav-link" href="#power">Power</a>
+          <a class="nav-link" href="#finance">Finance</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#plan">Recovery plan</a>
+          <a class="nav-link" href="#research">Research</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <button
+            type="button"
+            data-theme-toggle
+            class="grid size-11 place-items-center rounded-full border border-stone-200 bg-white text-lg transition hover:bg-stone-100 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
+            aria-label="Switch theme"
+          >
+            <span class="dark:hidden" aria-hidden="true">☾</span>
+            <span class="hidden dark:inline" aria-hidden="true">☀</span>
+          </button>
+          <button
+            type="button"
+            data-menu-toggle
+            class="grid size-11 place-items-center rounded-full border border-stone-200 bg-white text-xl md:hidden dark:border-white/10 dark:bg-white/5"
+            aria-label="Open navigation"
+            aria-expanded="false"
+          >
+            <span aria-hidden="true">≡</span>
+          </button>
+        </div>
+      </div>
+
+      <nav data-mobile-menu class="shell hidden border-t border-stone-200 py-4 md:hidden dark:border-white/10" aria-label="Mobile navigation">
+        <div class="grid grid-cols-2 gap-2">
+          <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#snapshot">Snapshot</a>
+          <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#power">Power</a>
+          <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#finance">Finance</a>
+          <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#projects">Projects</a>
+          <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#plan">Recovery plan</a>
+          <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#research">Research</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="top" class="relative isolate overflow-hidden pt-14 pb-18 sm:pt-20 sm:pb-24 lg:pt-28">
+        <div class="grid-fade absolute inset-0 -z-20"></div>
+        <div class="absolute -top-32 -right-36 -z-10 size-[34rem] rounded-full bg-red-200/45 blur-3xl dark:bg-red-950/30"></div>
+        <div class="absolute -bottom-36 -left-28 -z-10 size-[30rem] rounded-full bg-emerald-200/35 blur-3xl dark:bg-emerald-950/20"></div>
+
+        <div class="shell">
+          <div class="max-w-5xl">
+            <div class="flex flex-wrap gap-2">
+              <span class="status-pill"><span class="text-emerald-500" aria-hidden="true">●</span> Evidence cut-off: 29 July 2026</span>
+              <span class="status-pill"><span aria-hidden="true">↻</span> Updated monthly</span>
+              <span class="status-pill"><span aria-hidden="true">◇</span> Open data</span>
+            </div>
+
+            <h1 class="mt-7 text-balance text-5xl leading-[0.96] font-black tracking-[-0.055em] text-ink sm:text-7xl lg:text-[6.8rem] dark:text-white">
+              Tunisia,<br />
+              <span class="text-tunis-red">measured clearly.</span>
+            </h1>
+            <p class="mt-7 max-w-3xl text-lg leading-8 text-stone-600 sm:text-xl dark:text-stone-300">
+              A source-backed view of Tunisia’s economy, electricity system, public finances, debt, investment and major projects—followed by a practical recovery plan.
+            </p>
+            <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+              <a href="#snapshot" class="button-primary">Explore the latest data</a>
+              <a href="https://github.com/alabenkhlifa/TunStat/blob/main/00-executive-summary.md" class="button-secondary">Read the full analysis <span class="ml-2" aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+
+          <div class="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="stat-card">
+              <div class="flex items-center justify-between gap-3">
+                <p class="text-xs font-bold tracking-wider text-stone-500 uppercase dark:text-stone-400">Real GDP</p>
+                <span class="rounded-full bg-emerald-100 px-2.5 py-1 text-[10px] font-bold text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">Q1 2026</span>
+              </div>
+              <p class="mt-5 text-4xl font-black tracking-tight text-ink dark:text-white">+2.6%</p>
+              <p class="mt-2 text-sm text-stone-500 dark:text-stone-400">Year on year; −0.3% quarter on quarter</p>
+            </article>
+            <article class="stat-card">
+              <div class="flex items-center justify-between gap-3">
+                <p class="text-xs font-bold tracking-wider text-stone-500 uppercase dark:text-stone-400">Inflation</p>
+                <span class="rounded-full bg-amber-100 px-2.5 py-1 text-[10px] font-bold text-amber-800 dark:bg-amber-950 dark:text-amber-300">June 2026</span>
+              </div>
+              <p class="mt-5 text-4xl font-black tracking-tight text-ink dark:text-white">5.3%</p>
+              <p class="mt-2 text-sm text-stone-500 dark:text-stone-400">Food inflation remained higher at 7.1%</p>
+            </article>
+            <article class="stat-card">
+              <div class="flex items-center justify-between gap-3">
+                <p class="text-xs font-bold tracking-wider text-stone-500 uppercase dark:text-stone-400">Unemployment</p>
+                <span class="rounded-full bg-red-100 px-2.5 py-1 text-[10px] font-bold text-red-800 dark:bg-red-950 dark:text-red-300">Q1 2026</span>
+              </div>
+              <p class="mt-5 text-4xl font-black tracking-tight text-ink dark:text-white">15.0%</p>
+              <p class="mt-2 text-sm text-stone-500 dark:text-stone-400">Youth unemployment reached 37.5%</p>
+            </article>
+            <article class="stat-card">
+              <div class="flex items-center justify-between gap-3">
+                <p class="text-xs font-bold tracking-wider text-stone-500 uppercase dark:text-stone-400">Trade deficit</p>
+                <span class="rounded-full bg-blue-100 px-2.5 py-1 text-[10px] font-bold text-blue-800 dark:bg-blue-950 dark:text-blue-300">H1 2026</span>
+              </div>
+              <p class="mt-5 text-4xl font-black tracking-tight text-ink dark:text-white">TND 12.57bn</p>
+              <p class="mt-2 text-sm text-stone-500 dark:text-stone-400">Energy accounted for about 54%</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="snapshot" class="border-y border-stone-200 bg-white py-18 sm:py-24 dark:border-white/10 dark:bg-white/[0.02]">
+        <div class="shell">
+          <p class="section-kicker">Economic snapshot</p>
+          <h2 class="section-title text-balance">A recovery that remains too slow for the labor market.</h2>
+          <p class="section-copy">
+            Growth returned, inflation eased and declared investment improved. But unemployment, energy dependence, debt service and a widening trade deficit still limit the recovery.
+          </p>
+
+          <div class="mt-10 chart-frame">
+            <img
+              src="./charts/macro-path.svg"
+              alt="Charts showing Tunisia's GDP growth, inflation, fiscal balance and public debt from 2023 to 2028"
+              width="1000"
+              height="560"
+              class="h-auto w-full"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="mt-8 grid gap-4 lg:grid-cols-3">
+            <article class="panel p-6 sm:p-8">
+              <p class="text-sm font-black text-tunis-red dark:text-red-400">Growth</p>
+              <h3 class="mt-3 text-2xl font-black text-ink dark:text-white">Recovery, not convergence</h3>
+              <p class="mt-4 leading-7 text-stone-600 dark:text-stone-300">
+                The World Bank forecasts 2.5% growth in 2026 and 2.3% in 2027–2028—insufficient on its own to absorb graduates, rebuild fiscal space and modernize infrastructure.
+              </p>
+            </article>
+            <article class="panel p-6 sm:p-8">
+              <p class="text-sm font-black text-tunis-red dark:text-red-400">Households</p>
+              <h3 class="mt-3 text-2xl font-black text-ink dark:text-white">Food pressure persists</h3>
+              <p class="mt-4 leading-7 text-stone-600 dark:text-stone-300">
+                Headline inflation fell, but food prices rose faster. Reform must combine supply, competition and direct household support—not abrupt price changes.
+              </p>
+            </article>
+            <article class="panel p-6 sm:p-8">
+              <p class="text-sm font-black text-tunis-red dark:text-red-400">Employment</p>
+              <h3 class="mt-3 text-2xl font-black text-ink dark:text-white">The deepest constraint</h3>
+              <p class="mt-4 leading-7 text-stone-600 dark:text-stone-300">
+                Graduate unemployment was 24.2%; for female graduates it reached 32%. Investment and training need to connect directly to real employer demand.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="power" class="py-18 sm:py-24">
+        <div class="shell">
+          <div class="grid items-start gap-12 lg:grid-cols-[0.82fr_1.18fr]">
+            <div class="lg:sticky lg:top-28">
+              <p class="section-kicker">Power and energy</p>
+              <h2 class="section-title text-balance">July’s outages exposed a system with too little margin.</h2>
+              <p class="section-copy">
+                STEG used localized rotating cuts during exceptional heat and high evening demand. The immediate event was peak stress; the structural problem is gas dependence, network constraints, limited flexibility and difficult utility finances.
+              </p>
+              <div class="mt-7 rounded-2xl border-l-4 border-amber-500 bg-amber-50 p-5 text-sm leading-6 text-amber-950 dark:bg-amber-950/25 dark:text-amber-100">
+                <strong>Evidence limit:</strong> no complete public real-time dataset for available generation, reserve margin, forced outages or feeder-level interruption duration was found. Publishing it is part of the proposed fix.
+              </div>
+              <a href="https://github.com/alabenkhlifa/TunStat/blob/main/02-power-system-and-outages.md" class="button-secondary mt-7">Read the power-system analysis <span class="ml-2" aria-hidden="true">↗</span></a>
+            </div>
+
+            <div class="space-y-5">
+              <div class="chart-frame">
+                <img
+                  src="./charts/energy-security-2026.svg"
+                  alt="Energy independence, energy trade deficit and electricity production mix through May 2026"
+                  width="1000"
+                  height="560"
+                  class="h-auto w-full"
+                  loading="lazy"
+                />
+              </div>
+              <div class="grid gap-4 sm:grid-cols-2">
+                <article class="panel p-6">
+                  <p class="text-xs font-bold tracking-widest text-stone-500 uppercase dark:text-stone-400">Energy independence</p>
+                  <p class="mt-3 text-4xl font-black text-tunis-red">34%</p>
+                  <p class="mt-3 text-sm leading-6 text-stone-600 dark:text-stone-300">Down from 39% a year earlier through May.</p>
+                </article>
+                <article class="panel p-6">
+                  <p class="text-xs font-bold tracking-widest text-stone-500 uppercase dark:text-stone-400">Generation mix</p>
+                  <p class="mt-3 text-4xl font-black text-tunis-red">91% gas</p>
+                  <p class="mt-3 text-sm leading-6 text-stone-600 dark:text-stone-300">A concentrated fuel and foreign-exchange exposure.</p>
+                </article>
+              </div>
+              <article class="panel overflow-hidden">
+                <div class="border-b border-stone-200 p-6 dark:border-white/10">
+                  <p class="text-xs font-bold tracking-widest text-tunis-red uppercase">Reliability sequence</p>
+                </div>
+                <ol class="divide-y divide-stone-200 dark:divide-white/10">
+                  <li class="flex gap-4 p-6">
+                    <span class="grid size-9 shrink-0 place-items-center rounded-full bg-tunis-red font-black text-white">1</span>
+                    <div><h3 class="font-black">Measure the system</h3><p class="mt-1 text-sm leading-6 text-stone-600 dark:text-stone-300">Publish capacity, peak demand, reserve, imports and outage events daily.</p></div>
+                  </li>
+                  <li class="flex gap-4 p-6">
+                    <span class="grid size-9 shrink-0 place-items-center rounded-full bg-tunis-red font-black text-white">2</span>
+                    <div><h3 class="font-black">Protect critical loads</h3><p class="mt-1 text-sm leading-6 text-stone-600 dark:text-stone-300">Test hospitals, water, telecom and civil-protection backup before summer 2027.</p></div>
+                  </li>
+                  <li class="flex gap-4 p-6">
+                    <span class="grid size-9 shrink-0 place-items-center rounded-full bg-tunis-red font-black text-white">3</span>
+                    <div><h3 class="font-black">Buy flexibility</h3><p class="mt-1 text-sm leading-6 text-stone-600 dark:text-stone-300">Combine repairs, demand response, storage, imports and efficient cooling.</p></div>
+                  </li>
+                  <li class="flex gap-4 p-6">
+                    <span class="grid size-9 shrink-0 place-items-center rounded-full bg-tunis-red font-black text-white">4</span>
+                    <div><h3 class="font-black">Reform with protection</h3><p class="mt-1 text-sm leading-6 text-stone-600 dark:text-stone-300">Lifeline tariffs and tested transfers must precede broad price adjustment.</p></div>
+                  </li>
+                </ol>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="finance" class="border-y border-stone-200 bg-[#f3efe5] py-18 sm:py-24 dark:border-white/10 dark:bg-[#111a17]">
+        <div class="shell">
+          <p class="section-kicker">Public finance</p>
+          <h2 class="section-title text-balance">Most spending is already committed before investment begins.</h2>
+          <p class="section-copy">
+            In provisional 2025 execution, wages and transfers absorbed 74.3% of budget expenses. Interest was larger than direct investment, while debt service reached TND 24.44bn.
+          </p>
+
+          <div class="mt-10 grid gap-5 lg:grid-cols-2">
+            <div class="chart-frame">
+              <img
+                src="./charts/budget-expenses-2025.svg"
+                alt="Horizontal bar chart showing Tunisia's 2025 budget expense composition"
+                width="1000"
+                height="500"
+                class="h-auto w-full"
+                loading="lazy"
+              />
+            </div>
+            <div class="chart-frame">
+              <img
+                src="./charts/debt-and-service-2025.svg"
+                alt="Chart showing Tunisia's 2025 public debt stock and debt service"
+                width="1000"
+                height="520"
+                class="h-auto w-full"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="mt-5 grid gap-5 lg:grid-cols-[0.8fr_1.2fr]">
+            <div class="chart-frame">
+              <img
+                src="./charts/subsidies-2025.svg"
+                alt="Donut chart showing fuel, basic-goods and transport subsidies in 2025"
+                width="900"
+                height="500"
+                class="h-auto w-full"
+                loading="lazy"
+              />
+            </div>
+            <article class="panel p-6 sm:p-8">
+              <p class="section-kicker">The fiscal choice</p>
+              <h3 class="text-2xl font-black tracking-tight text-ink sm:text-3xl dark:text-white">Reallocate carefully. Do not cut the recovery.</h3>
+              <div class="mt-7 grid gap-5 sm:grid-cols-2">
+                <div>
+                  <p class="font-black text-emerald-700 dark:text-emerald-400">Protect</p>
+                  <ul class="mt-3 space-y-2 text-sm leading-6 text-stone-600 dark:text-stone-300">
+                    <li>Targeted household transfers</li>
+                    <li>Critical maintenance</li>
+                    <li>High-readiness infrastructure</li>
+                    <li>Medicines and essential inputs</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="font-black text-red-700 dark:text-red-400">Reduce</p>
+                  <ul class="mt-3 space-y-2 text-sm leading-6 text-stone-600 dark:text-stone-300">
+                    <li>Generalized subsidies over time</li>
+                    <li>New unpriced guarantees</li>
+                    <li>Low-readiness prestige projects</li>
+                    <li>Arrears and repeated monetary finance</li>
+                  </ul>
+                </div>
+              </div>
+              <a href="https://github.com/alabenkhlifa/TunStat/blob/main/03-public-finance-debt-and-loans.md" class="button-secondary mt-8">Explore spending, debt and loans <span class="ml-2" aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="py-18 sm:py-24">
+        <div class="shell">
+          <div class="flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
+            <div>
+              <p class="section-kicker">Investment and delivery</p>
+              <h2 class="section-title text-balance">The project pipeline is real. The execution gap is the risk.</h2>
+            </div>
+            <a href="./data/major_projects.csv" class="button-secondary shrink-0">Download project data ↓</a>
+          </div>
+
+          <div class="mt-10 chart-frame">
+            <img
+              src="./charts/investment-2025.svg"
+              alt="Charts comparing declared investment and recorded international investment in Tunisia in 2025"
+              width="1000"
+              height="560"
+              class="h-auto w-full"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            <article class="panel p-6">
+              <div class="flex items-start justify-between gap-3"><span class="text-2xl" aria-hidden="true">⚡</span><span class="rounded-full bg-emerald-100 px-3 py-1 text-[10px] font-bold text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">APPROVED / IMPLEMENTING</span></div>
+              <h3 class="mt-6 text-xl font-black">TEREG</h3>
+              <p class="mt-3 text-sm leading-6 text-stone-600 dark:text-stone-300">US$430m public package; official target to mobilize US$2.8bn private investment and add 2.8 GW by 2028.</p>
+            </article>
+            <article class="panel p-6">
+              <div class="flex items-start justify-between gap-3"><span class="text-2xl" aria-hidden="true">↔</span><span class="rounded-full bg-blue-100 px-3 py-1 text-[10px] font-bold text-blue-800 dark:bg-blue-950 dark:text-blue-300">IMPLEMENTING</span></div>
+              <h3 class="mt-6 text-xl font-black">ELMED</h3>
+              <p class="mt-3 text-sm leading-6 text-stone-600 dark:text-stone-300">600 MW Tunisia–Italy interconnector designed to support security, balancing and renewable integration.</p>
+            </article>
+            <article class="panel p-6">
+              <div class="flex items-start justify-between gap-3"><span class="text-2xl" aria-hidden="true">≋</span><span class="rounded-full bg-blue-100 px-3 py-1 text-[10px] font-bold text-blue-800 dark:bg-blue-950 dark:text-blue-300">UNDER CONSTRUCTION</span></div>
+              <h3 class="mt-6 text-xl font-black">Bizerte bridge</h3>
+              <p class="mt-3 text-sm leading-6 text-stone-600 dark:text-stone-300">2.07 km bridge with EIB and AfDB financing; benefits depend on completing connecting roads and access.</p>
+            </article>
+            <article class="panel p-6">
+              <div class="flex items-start justify-between gap-3"><span class="text-2xl" aria-hidden="true">◉</span><span class="rounded-full bg-emerald-100 px-3 py-1 text-[10px] font-bold text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">APPROVED</span></div>
+              <h3 class="mt-6 text-xl font-black">Water resilience</h3>
+              <p class="mt-3 text-sm leading-6 text-stone-600 dark:text-stone-300">US$332.5m first phase, including irrigation, networks, smart meters and expanded Zarat desalination.</p>
+            </article>
+            <article class="panel p-6">
+              <div class="flex items-start justify-between gap-3"><span class="text-2xl" aria-hidden="true">▰</span><span class="rounded-full bg-amber-100 px-3 py-1 text-[10px] font-bold text-amber-800 dark:bg-amber-950 dark:text-amber-300">FINANCED / PROCUREMENT</span></div>
+              <h3 class="mt-6 text-xl font-black">Rail and roads</h3>
+              <p class="mt-3 text-sm leading-6 text-stone-600 dark:text-stone-300">Phosphate rail rehabilitation, PMIR III roads and the Sfax–Kasserine corridor require delivery tracking.</p>
+            </article>
+            <article class="panel p-6">
+              <div class="flex items-start justify-between gap-3"><span class="text-2xl" aria-hidden="true">◇</span><span class="rounded-full bg-stone-200 px-3 py-1 text-[10px] font-bold text-stone-700 dark:bg-white/10 dark:text-stone-300">STRATEGIC PIPELINE</span></div>
+              <h3 class="mt-6 text-xl font-black">Rail, airport and port</h3>
+              <p class="mt-3 text-sm leading-6 text-stone-600 dark:text-stone-300">High-speed rail, Tunis–Carthage expansion and Enfidha port still need robust demand and affordability appraisal.</p>
+            </article>
+          </div>
+          <a href="https://github.com/alabenkhlifa/TunStat/blob/main/04-investment-and-major-projects.md" class="button-primary mt-8">Open the complete project portfolio</a>
+        </div>
+      </section>
+
+      <section id="plan" class="relative overflow-hidden border-y border-red-950 bg-[#79000a] py-18 text-white sm:py-24">
+        <div class="absolute -top-40 -right-40 size-[30rem] rounded-full bg-red-500/30 blur-3xl"></div>
+        <div class="shell relative">
+          <p class="mb-3 text-xs font-bold tracking-[0.2em] text-red-200 uppercase">Recovery program</p>
+          <h2 class="max-w-5xl text-balance text-3xl font-black tracking-[-0.035em] sm:text-5xl lg:text-6xl">Stabilize first. Reform the system next. Build resilience for the long term.</h2>
+          <p class="mt-6 max-w-3xl text-lg leading-8 text-red-100">
+            The sequence protects households and essential services while moving resources toward reliable infrastructure, productive investment and stronger institutions.
+          </p>
+
+          <div class="mt-12 grid gap-5 lg:grid-cols-3">
+            <article class="rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur sm:p-8">
+              <p class="text-xs font-bold tracking-[0.18em] text-red-200 uppercase">0–18 months</p>
+              <h3 class="mt-4 text-2xl font-black">Stabilize and expose the facts</h3>
+              <ul class="mt-6 space-y-4 text-sm leading-6 text-red-50">
+                <li>Daily power reliability data and protected loads</li>
+                <li>Cash, arrears, debt and guarantee control</li>
+                <li>Tested transfers before subsidy changes</li>
+                <li>Public permit and connection queues</li>
+                <li>Ready-project delivery and SME working capital</li>
+              </ul>
+            </article>
+            <article class="rounded-3xl border border-white/20 bg-white p-6 text-stone-900 shadow-2xl sm:p-8">
+              <p class="text-xs font-bold tracking-[0.18em] text-tunis-red uppercase">18 months–5 years</p>
+              <h3 class="mt-4 text-2xl font-black">Lower the cost of producing</h3>
+              <ul class="mt-6 space-y-4 text-sm leading-6 text-stone-700">
+                <li>Independent electricity regulation</li>
+                <li>Grid, renewables, storage and efficiency</li>
+                <li>Targeted subsidies and fiscal-risk control</li>
+                <li>Public-enterprise performance contracts</li>
+                <li>FX, competition, finance and labor delivery reform</li>
+              </ul>
+            </article>
+            <article class="rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur sm:p-8">
+              <p class="text-xs font-bold tracking-[0.18em] text-red-200 uppercase">5–15 years</p>
+              <h3 class="mt-4 text-2xl font-black">Build resilience and convergence</h3>
+              <ul class="mt-6 space-y-4 text-sm leading-6 text-red-50">
+                <li>Reliable low-carbon electricity and water</li>
+                <li>More complex exports and regional logistics</li>
+                <li>Foundational learning and applied skills</li>
+                <li>Capable regulators, courts and local government</li>
+                <li>Debt below 70% of GDP as a 2035 ambition</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="https://github.com/alabenkhlifa/TunStat/blob/main/06-recovery-program.md" class="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-black text-red-900 transition hover:bg-red-50">Read the complete recovery program</a>
+            <a href="https://github.com/alabenkhlifa/TunStat/blob/main/07-legal-and-institutional-reforms.md" class="inline-flex min-h-12 items-center justify-center rounded-full border border-white/25 bg-white/10 px-6 py-3 text-sm font-black text-white transition hover:bg-white/20">Review the legal agenda</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="research" class="py-18 sm:py-24">
+        <div class="shell">
+          <p class="section-kicker">Research library</p>
+          <h2 class="section-title">Go from the dashboard to the evidence.</h2>
+          <p class="section-copy">Every claim is linked to its source. The underlying tables are downloadable, and proposed targets are separated from official forecasts and program commitments.</p>
+
+          <div class="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <a class="doc-link" href="https://github.com/alabenkhlifa/TunStat/blob/main/00-executive-summary.md"><span>Executive summary</span><span aria-hidden="true">↗</span></a>
+            <a class="doc-link" href="https://github.com/alabenkhlifa/TunStat/blob/main/01-current-economic-snapshot.md"><span>Economic snapshot</span><span aria-hidden="true">↗</span></a>
+            <a class="doc-link" href="https://github.com/alabenkhlifa/TunStat/blob/main/02-power-system-and-outages.md"><span>Power system and outages</span><span aria-hidden="true">↗</span></a>
+            <a class="doc-link" href="https://github.com/alabenkhlifa/TunStat/blob/main/03-public-finance-debt-and-loans.md"><span>Finance, debt and loans</span><span aria-hidden="true">↗</span></a>
+            <a class="doc-link" href="https://github.com/alabenkhlifa/TunStat/blob/main/04-investment-and-major-projects.md"><span>Investment and projects</span><span aria-hidden="true">↗</span></a>
+            <a class="doc-link" href="https://github.com/alabenkhlifa/TunStat/blob/main/05-diagnosis.md"><span>Economic diagnosis</span><span aria-hidden="true">↗</span></a>
+            <a class="doc-link" href="https://github.com/alabenkhlifa/TunStat/blob/main/06-recovery-program.md"><span>Recovery program</span><span aria-hidden="true">↗</span></a>
+            <a class="doc-link" href="https://github.com/alabenkhlifa/TunStat/blob/main/07-legal-and-institutional-reforms.md"><span>Legal reforms</span><span aria-hidden="true">↗</span></a>
+            <a class="doc-link" href="https://github.com/alabenkhlifa/TunStat/blob/main/08-implementation-scorecard.md"><span>Implementation scorecard</span><span aria-hidden="true">↗</span></a>
+            <a class="doc-link" href="https://github.com/alabenkhlifa/TunStat/blob/main/09-risks-and-scenarios.md"><span>Risks and scenarios</span><span aria-hidden="true">↗</span></a>
+            <a class="doc-link" href="https://github.com/alabenkhlifa/TunStat/blob/main/10-sources-and-methodology.md"><span>Sources and methodology</span><span aria-hidden="true">↗</span></a>
+            <a class="doc-link" href="https://github.com/alabenkhlifa/TunStat/tree/main/data"><span>Download all CSV data</span><span aria-hidden="true">↓</span></a>
+          </div>
+
+          <div class="mt-10 panel grid gap-8 p-6 sm:p-8 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div>
+              <p class="section-kicker">Monthly release cycle</p>
+              <h3 class="text-2xl font-black text-ink sm:text-3xl dark:text-white">New releases will be incorporated every month.</h3>
+              <p class="mt-4 max-w-3xl leading-7 text-stone-600 dark:text-stone-300">
+                Each update will refresh the latest available macro, labor, trade, energy, fiscal, investment and project data while preserving the distinction between actual, forecast, declared, approved and proposed values.
+              </p>
+            </div>
+            <a href="https://github.com/alabenkhlifa/TunStat" class="button-primary shrink-0">Follow on GitHub ↗</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-stone-200 bg-white py-10 dark:border-white/10 dark:bg-white/[0.02]">
+      <div class="shell flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p class="font-black text-ink dark:text-white">TunStat</p>
+          <p class="mt-1 text-sm text-stone-500 dark:text-stone-400">Evidence on Tunisia, updated monthly.</p>
+        </div>
+        <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold text-stone-600 dark:text-stone-300">
+          <a class="hover:text-tunis-red" href="https://github.com/alabenkhlifa/TunStat/blob/main/10-sources-and-methodology.md">Methodology</a>
+          <a class="hover:text-tunis-red" href="https://github.com/alabenkhlifa/TunStat">GitHub</a>
+          <span>© <span data-year>2026</span></span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/app.js" defer></script>
+  </body>
+</html>

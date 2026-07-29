@@ -1,0 +1,14 @@
+{
+  "name": "tunstat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Evidence-based monthly dashboard on Tunisia's economy, energy, public finances, investment and major projects.",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./assets/styles.css --minify",
+    "dev": "tailwindcss -i ./src/input.css -o ./assets/styles.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.3",
+    "tailwindcss": "4.3.3"
+  }
+}

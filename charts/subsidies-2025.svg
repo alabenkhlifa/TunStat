@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500" role="img" aria-labelledby="title desc">
+  <title id="title">Tunisia 2025 subsidy composition</title>
+  <desc id="desc">Donut chart of TND 11.593 billion in subsidies: fuel 61.3 percent, basic goods 32.8 percent and transport 5.9 percent.</desc>
+  <rect width="900" height="500" fill="#fff"/>
+  <style>.t{font:700 25px system-ui;fill:#17212b}.s{font:13px system-ui;fill:#52606d}.l{font:15px system-ui;fill:#17212b}.v{font:700 28px system-ui;fill:#17212b}</style>
+  <text x="40" y="45" class="t">Subsidies are dominated by fuel</text>
+  <text x="40" y="70" class="s">2025 provisional execution</text>
+  <g transform="rotate(-90 260 265)">
+    <circle cx="260" cy="265" r="125" fill="none" stroke="#eef2f6" stroke-width="65"/>
+    <circle cx="260" cy="265" r="125" fill="none" stroke="#f18f01" stroke-width="65" stroke-dasharray="481.45 303.95" stroke-dashoffset="0"/>
+    <circle cx="260" cy="265" r="125" fill="none" stroke="#3a86ff" stroke-width="65" stroke-dasharray="257.61 527.79" stroke-dashoffset="-481.45"/>
+    <circle cx="260" cy="265" r="125" fill="none" stroke="#52b788" stroke-width="65" stroke-dasharray="46.34 739.06" stroke-dashoffset="-739.06"/>
+  </g>
+  <text x="260" y="255" text-anchor="middle" class="v">TND 11.59bn</text><text x="260" y="283" text-anchor="middle" class="s">total subsidies</text>
+  <g transform="translate(520 155)">
+    <rect width="18" height="18" rx="3" fill="#f18f01"/><text x="30" y="15" class="l">Fuel — 61.3% · TND 7.11bn</text>
+    <rect y="65" width="18" height="18" rx="3" fill="#3a86ff"/><text x="30" y="80" class="l">Basic goods — 32.8% · TND 3.80bn</text>
+    <rect y="130" width="18" height="18" rx="3" fill="#52b788"/><text x="30" y="145" class="l">Transport — 5.9% · TND 0.68bn</text>
+  </g>
+  <text x="40" y="465" class="s">Source: Tunisia Ministry of Finance, provisional budget execution at end-December 2025.</text>
+</svg>

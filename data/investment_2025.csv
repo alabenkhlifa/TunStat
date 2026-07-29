@@ -1,0 +1,11 @@
+measure,sector,value_tnd_billion,share_percent,jobs_or_blank,status,source
+Declared investment,All sectors,8.3564,100.0,101681,declared,"Tunisia Investment Authority, 2025 annual bulletin"
+Declared investment,Industry,2.9247,35.0,,declared,"Tunisia Investment Authority, 2025 annual bulletin"
+Declared investment,Services,1.7554,21.0,59000,declared,"Tunisia Investment Authority, 2025 annual bulletin"
+Declared investment,Renewable energy,1.6851,20.2,,declared,"Tunisia Investment Authority, 2025 annual bulletin"
+Declared investment,Other sectors,1.9912,23.8,,calculated_residual,"Calculated from Tunisia Investment Authority totals"
+International investment,All sectors,3.5721,100.0,,realized_or_recorded,"FIPA results reported by TAP, 2025"
+FDI sector share,Manufacturing,,62.6,,realized_or_recorded,"FIPA results reported by TAP, 2025"
+FDI sector share,Services,,18.8,,realized_or_recorded,"FIPA results reported by TAP, 2025"
+FDI sector share,Energy,,16.3,,realized_or_recorded,"FIPA results reported by TAP, 2025"
+FDI sector share,Agriculture,,2.4,,realized_or_recorded,"FIPA results reported by TAP, 2025"

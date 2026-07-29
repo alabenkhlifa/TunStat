@@ -1,0 +1,8 @@
+indicator,2025_ytd,2026_ytd,unit,source
+Primary energy resources,1.429,1.306,Mtoe,"Ministry of Industry, Mines and Energy, May 2026 energy report"
+Primary energy demand,3.706,3.843,Mtoe,"Ministry of Industry, Mines and Energy, May 2026 energy report"
+Energy balance deficit,2.277,2.536,Mtoe,"Ministry of Industry, Mines and Energy, May 2026 energy report"
+Energy independence,39,34,percent,"Ministry of Industry, Mines and Energy, May 2026 energy report"
+Electricity available to local market,7.929,8.260,TWh,"Ministry of Industry, Mines and Energy, May 2026 energy report"
+Electricity imports,0.847,0.722,TWh,"Ministry of Industry, Mines and Energy, May 2026 energy report"
+Energy trade deficit,4.368,5.767,TND_billion,"Ministry of Industry, Mines and Energy, May 2026 energy report"

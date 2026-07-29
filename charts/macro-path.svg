@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" role="img" aria-labelledby="title desc">
+  <title id="title">Tunisia macroeconomic path, 2023 to 2028</title>
+  <desc id="desc">Small-multiple line charts for real GDP growth, inflation, fiscal balance and public debt. Values after 2025 are World Bank forecasts.</desc>
+  <rect width="1000" height="560" fill="#ffffff"/>
+  <style>
+    .t{font:700 25px system-ui,sans-serif;fill:#17212b}.st{font:600 15px system-ui,sans-serif;fill:#17212b}
+    .a{font:12px system-ui,sans-serif;fill:#52606d}.v{font:600 12px system-ui,sans-serif;fill:#17212b}
+    .g{stroke:#d9e2ec;stroke-width:1}.axis{stroke:#7b8794;stroke-width:1.2}.actual{stroke:#087e8b;stroke-width:4;fill:none}
+    .forecast{stroke:#f18f01;stroke-width:4;stroke-dasharray:8 6;fill:none}.dot1{fill:#087e8b}.dot2{fill:#f18f01}
+  </style>
+  <text x="40" y="42" class="t">Tunisia macroeconomic path</text>
+  <text x="40" y="66" class="a">Actual through 2025; World Bank forecast for 2026–2028</text>
+
+  <g transform="translate(40 95)">
+    <text x="0" y="0" class="st">Real GDP growth (%)</text>
+    <line x1="0" y1="155" x2="420" y2="155" class="axis"/><line x1="0" y1="95" x2="420" y2="95" class="g"/><line x1="0" y1="35" x2="420" y2="35" class="g"/>
+    <text x="-8" y="159" text-anchor="end" class="a">0</text><text x="-8" y="99" text-anchor="end" class="a">2</text><text x="-8" y="39" text-anchor="end" class="a">4</text>
+    <polyline points="20,149 96,107 172,80" class="actual"/><polyline points="172,80 248,80 324,86 400,86" class="forecast"/>
+    <g class="dot1"><circle cx="20" cy="149" r="5"/><circle cx="96" cy="107" r="5"/><circle cx="172" cy="80" r="5"/></g>
+    <g class="dot2"><circle cx="248" cy="80" r="5"/><circle cx="324" cy="86" r="5"/><circle cx="400" cy="86" r="5"/></g>
+    <text x="20" y="137" text-anchor="middle" class="v">0.2</text><text x="96" y="95" text-anchor="middle" class="v">1.6</text><text x="172" y="68" text-anchor="middle" class="v">2.5</text><text x="248" y="68" text-anchor="middle" class="v">2.5</text><text x="324" y="74" text-anchor="middle" class="v">2.3</text><text x="400" y="74" text-anchor="middle" class="v">2.3</text>
+  </g>
+  <g transform="translate(540 95)">
+    <text x="0" y="0" class="st">Average inflation (%)</text>
+    <line x1="0" y1="155" x2="420" y2="155" class="axis"/><line x1="0" y1="95" x2="420" y2="95" class="g"/><line x1="0" y1="35" x2="420" y2="35" class="g"/>
+    <text x="-8" y="159" text-anchor="end" class="a">0</text><text x="-8" y="99" text-anchor="end" class="a">5</text><text x="-8" y="39" text-anchor="end" class="a">10</text>
+    <polyline points="20,43 96,71 172,87" class="actual"/><polyline points="172,87 248,89 324,101 400,101" class="forecast"/>
+    <g class="dot1"><circle cx="20" cy="43" r="5"/><circle cx="96" cy="71" r="5"/><circle cx="172" cy="87" r="5"/></g>
+    <g class="dot2"><circle cx="248" cy="89" r="5"/><circle cx="324" cy="101" r="5"/><circle cx="400" cy="101" r="5"/></g>
+    <text x="20" y="31" text-anchor="middle" class="v">9.3</text><text x="96" y="59" text-anchor="middle" class="v">7.0</text><text x="172" y="75" text-anchor="middle" class="v">5.7</text><text x="248" y="77" text-anchor="middle" class="v">5.5</text><text x="324" y="89" text-anchor="middle" class="v">4.5</text><text x="400" y="89" text-anchor="middle" class="v">4.5</text>
+  </g>
+  <g transform="translate(40 315)">
+    <text x="0" y="0" class="st">Fiscal balance (% of GDP)</text>
+    <line x1="0" y1="35" x2="420" y2="35" class="axis"/><line x1="0" y1="95" x2="420" y2="95" class="g"/><line x1="0" y1="155" x2="420" y2="155" class="g"/>
+    <text x="-8" y="39" text-anchor="end" class="a">0</text><text x="-8" y="99" text-anchor="end" class="a">−4</text><text x="-8" y="159" text-anchor="end" class="a">−8</text>
+    <polyline points="20,142 96,127 172,113" class="actual"/><polyline points="172,113 248,127 324,103 400,95" class="forecast"/>
+    <g class="dot1"><circle cx="20" cy="142" r="5"/><circle cx="96" cy="127" r="5"/><circle cx="172" cy="113" r="5"/></g>
+    <g class="dot2"><circle cx="248" cy="127" r="5"/><circle cx="324" cy="103" r="5"/><circle cx="400" cy="95" r="5"/></g>
+    <text x="20" y="130" text-anchor="middle" class="v">−7.1</text><text x="96" y="115" text-anchor="middle" class="v">−6.1</text><text x="172" y="101" text-anchor="middle" class="v">−5.2</text><text x="248" y="115" text-anchor="middle" class="v">−6.1</text><text x="324" y="91" text-anchor="middle" class="v">−4.5</text><text x="400" y="83" text-anchor="middle" class="v">−4.0</text>
+  </g>
+  <g transform="translate(540 315)">
+    <text x="0" y="0" class="st">Public debt (% of GDP)</text>
+    <line x1="0" y1="155" x2="420" y2="155" class="axis"/><line x1="0" y1="95" x2="420" y2="95" class="g"/><line x1="0" y1="35" x2="420" y2="35" class="g"/>
+    <text x="-8" y="159" text-anchor="end" class="a">75</text><text x="-8" y="99" text-anchor="end" class="a">80</text><text x="-8" y="39" text-anchor="end" class="a">85</text>
+    <polyline points="20,40 96,36 172,69" class="actual"/><polyline points="172,69 248,55 324,63 400,81" class="forecast"/>
+    <g class="dot1"><circle cx="20" cy="40" r="5"/><circle cx="96" cy="36" r="5"/><circle cx="172" cy="69" r="5"/></g>
+    <g class="dot2"><circle cx="248" cy="55" r="5"/><circle cx="324" cy="63" r="5"/><circle cx="400" cy="81" r="5"/></g>
+    <text x="20" y="28" text-anchor="middle" class="v">84.6</text><text x="96" y="24" text-anchor="middle" class="v">84.9</text><text x="172" y="57" text-anchor="middle" class="v">82.2</text><text x="248" y="43" text-anchor="middle" class="v">83.3</text><text x="324" y="51" text-anchor="middle" class="v">82.7</text><text x="400" y="69" text-anchor="middle" class="v">81.2</text>
+  </g>
+  <g transform="translate(40 522)">
+    <line x1="0" y1="0" x2="28" y2="0" class="actual"/><text x="38" y="5" class="a">actual</text>
+    <line x1="110" y1="0" x2="138" y2="0" class="forecast"/><text x="148" y="5" class="a">forecast</text>
+    <text x="270" y="5" class="a">Years: 2023, 2024, 2025, 2026, 2027, 2028</text>
+    <text x="650" y="5" class="a">Source: World Bank, April 2026</text>
+  </g>
+</svg>
