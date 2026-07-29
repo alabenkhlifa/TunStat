@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
+  <title id="title">TunStat critical metric coverage audit</title>
+  <desc id="desc">Of 39 critical metrics reviewed, 13 were current, 6 were partial and 20 were missing from a current public source. Electricity, fiscal cash, household welfare, water and state-owned enterprises contain the largest gaps.</desc>
+  <rect width="1000" height="700" fill="#fff"/>
+  <style>.t{font:700 25px system-ui;fill:#17212b}.h{font:700 17px system-ui;fill:#17212b}.s{font:13px system-ui;fill:#52606d}.l{font:15px system-ui;fill:#17212b}.v{font:800 22px system-ui;fill:#17212b}.w{font:700 13px system-ui;fill:#fff}.g{stroke:#e2e6ea;stroke-width:1}</style>
+  <text x="40" y="44" class="t">Critical economic and service data are still missing</text>
+  <text x="40" y="69" class="s">Coverage of 39 critical metrics at the 29 July 2026 evidence cut-off</text>
+  <g transform="translate(45 110)">
+    <rect width="910" height="54" rx="10" fill="#e7ebee"/>
+    <rect width="303" height="54" rx="10" fill="#087e8b"/>
+    <rect x="303" width="140" height="54" fill="#f18f01"/>
+    <rect x="443" width="467" height="54" rx="10" fill="#e70013"/>
+    <text x="151" y="34" text-anchor="middle" class="w">13 current · 33%</text>
+    <text x="373" y="34" text-anchor="middle" class="w">6 partial</text>
+    <text x="676" y="34" text-anchor="middle" class="w">20 missing · 51%</text>
+  </g>
+  <g transform="translate(45 205)">
+    <text x="0" y="0" class="h">Domain</text><text x="350" y="0" class="h">Current</text><text x="505" y="0" class="h">Partial</text><text x="650" y="0" class="h">Missing</text><text x="785" y="0" class="h">Priority gap</text>
+    <line x1="0" y1="18" x2="910" y2="18" class="g"/>
+    <g transform="translate(0 45)"><text class="l">External liquidity</text><circle cx="375" cy="-5" r="12" fill="#087e8b"/><circle cx="530" cy="-5" r="12" fill="#f18f01"/><circle cx="675" cy="-5" r="12" fill="#e7ebee"/><text x="785" class="s">financing calendar</text></g>
+    <g transform="translate(0 85)"><text class="l">Banking</text><circle cx="375" cy="-5" r="12" fill="#087e8b"/><circle cx="530" cy="-5" r="12" fill="#f18f01"/><circle cx="675" cy="-5" r="12" fill="#e70013"/><text x="785" class="s">productive credit</text></g>
+    <g transform="translate(0 125)"><text class="l">Fiscal cash</text><circle cx="375" cy="-5" r="12" fill="#087e8b"/><circle cx="530" cy="-5" r="12" fill="#e7ebee"/><circle cx="675" cy="-5" r="12" fill="#e70013"/><text x="785" class="s">arrears / guarantees</text></g>
+    <g transform="translate(0 165)"><text class="l">Households</text><circle cx="375" cy="-5" r="12" fill="#087e8b"/><circle cx="530" cy="-5" r="12" fill="#f18f01"/><circle cx="675" cy="-5" r="12" fill="#e70013"/><text x="785" class="s">wages / energy burden</text></g>
+    <g transform="translate(0 205)"><text class="l">Electricity</text><circle cx="375" cy="-5" r="12" fill="#087e8b"/><circle cx="530" cy="-5" r="12" fill="#e7ebee"/><circle cx="675" cy="-5" r="12" fill="#e70013"/><text x="785" class="s">reserve / outage quality</text></g>
+    <g transform="translate(0 245)"><text class="l">Water</text><circle cx="375" cy="-5" r="12" fill="#087e8b"/><circle cx="530" cy="-5" r="12" fill="#f18f01"/><circle cx="675" cy="-5" r="12" fill="#e70013"/><text x="785" class="s">groundwater / service</text></g>
+    <g transform="translate(0 285)"><text class="l">Investment</text><circle cx="375" cy="-5" r="12" fill="#087e8b"/><circle cx="530" cy="-5" r="12" fill="#e7ebee"/><circle cx="675" cy="-5" r="12" fill="#e70013"/><text x="785" class="s">cohort conversion</text></g>
+    <g transform="translate(0 325)"><text class="l">Productive sectors</text><circle cx="375" cy="-5" r="12" fill="#087e8b"/><circle cx="530" cy="-5" r="12" fill="#f18f01"/><circle cx="675" cy="-5" r="12" fill="#e70013"/><text x="785" class="s">orders / production</text></g>
+    <g transform="translate(0 365)"><text class="l">Labor</text><circle cx="375" cy="-5" r="12" fill="#087e8b"/><circle cx="530" cy="-5" r="12" fill="#f18f01"/><circle cx="675" cy="-5" r="12" fill="#e70013"/><text x="785" class="s">job quality / earnings</text></g>
+    <g transform="translate(0 405)"><text class="l">State-owned enterprises</text><circle cx="375" cy="-5" r="12" fill="#087e8b"/><circle cx="530" cy="-5" r="12" fill="#e7ebee"/><circle cx="675" cy="-5" r="12" fill="#e70013"/><text x="785" class="s">debt / cross-arrears</text></g>
+  </g>
+  <text x="40" y="660" class="s">A colored dot means the domain contains at least one metric in that coverage state; it is not a score. See data/metric_coverage.csv.</text>
+  <text x="40" y="682" class="s">Current means a recent public observation. Partial includes stale, incomplete or non-comparable coverage.</text>
+</svg>

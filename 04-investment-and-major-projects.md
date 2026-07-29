@@ -21,6 +21,16 @@ They must not be added to create one “total investment” number. The policy p
 
 Sources: [TIA 2025 declared investment](https://tia.gov.tn/en/news-details/tunisie-croissance-de-393-des-investissements-declares-en-2025), [TIA annual bulletin](https://tia.gov.tn/storage/app/media/00_All_TunisiaInvestmentAuthority_2026/Stats/BULLETIN%20ANNUEL%202025.pdf), [FIPA results reported by TAP](https://www.tap.info.tn/en/Portal-Top-News-EN/19985964-tunisia-over-tnd).
 
+## Capital formation and realized FDI
+
+![Capital formation and realized FDI](charts/investment-execution-2026.svg)
+
+Gross fixed capital formation reached TND 26.76bn in 2025, up 5.4% in real terms, and the investment rate increased to 15.5% of GDP. The BCT forecasts TND 29.98bn and a 16.0% investment rate in 2026. Services represented 51.1% of 2025 GFCF, industry 27.6%, collective equipment 16.4% and agriculture 4.9%.
+
+Realized FDI rose from TND 2.70bn in 2024 to TND 3.51bn in 2025. First-quarter 2026 FDI reached TND 824.4m, up 17.2% year on year. The missing measure is a cohort conversion rate that follows the same declared projects through operation; dividing total FDI by total declarations would mix different concepts and projects.
+
+Sources: [BCT Annual Report 2025](https://www.bct.gov.tn/bct/siteprod/documents/RA_2025_fr.pdf), [FIPA Q1 2026 results reported by TAP](https://www.tap.info.tn/fr/Portail-%C3%A0-la-Une-FR-top/20168744-hausse-des).
+
 ## Major-project portfolio
 
 ### Classification

@@ -1,0 +1,13 @@
+period,indicator,value,unit,status,notes,source
+2026-H1,Merchandise exports,34.65,TND billion,actual,Up 9.0 percent year-on-year,INS
+2026-H1,Tourism receipts,3.3524,TND billion,actual,Up about 4.4 percent year-on-year,TAP reporting BCT indicators
+2025,Workers income receipts,11.4446,TND billion,actual,Up 15.2 percent,BCT Annual Report 2025
+2025,Phosphate and derivatives exports growth,15,percent,actual,Annual change,INS reported by TAP
+2026,Phosphate commercial production target,5.3,million tonnes,official target,Government target reported by TAP,TAP
+2035,Phosphate commercial production target,9.4,million tonnes,strategy target,CPG strategy under development,TAP
+2026-05,Industrial production index,NA,index,release available,INS calendar shows publication but a stable value was not retrieved for this release,INS data portal
+2026,Agricultural output volume,NA,index,not consolidated,Seasonal crop data exist but no single current dashboard was found,INS and Agriculture Ministry should publish
+2026,Export orders,NA,index,not published,High-frequency forward indicator needed for manufacturing,INS and CEPEX should publish monthly
+2026,Tourism arrivals and nights national total,NA,people and nights,not current in reviewed source,Receipts are current but national physical-volume series lags,ONTT should publish monthly
+2026,Phosphate actual monthly production,NA,tonnes,not published consistently,Targets do not substitute for realized production,CPG should publish monthly
+2026,Agricultural water productivity,NA,TND per m3,not published,Required to connect water allocation and value added,Agriculture Ministry should publish annually

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" role="img" aria-labelledby="title desc">
+  <title id="title">Tunisia employment and household welfare indicators</title>
+  <desc id="desc">Employment rose by 16,500 in the first quarter of 2026, but unemployment remained 15 percent, female unemployment 20.7 percent and youth unemployment 37.5 percent. Poverty at the 8.30 dollar line is estimated at 16 percent in 2025.</desc>
+  <rect width="1000" height="560" fill="#fff"/>
+  <style>.t{font:700 25px system-ui;fill:#17212b}.h{font:700 17px system-ui;fill:#17212b}.s{font:13px system-ui;fill:#52606d}.l{font:15px system-ui;fill:#17212b}.v{font:800 20px system-ui;fill:#17212b}.w{font:700 13px system-ui;fill:#fff}.g{stroke:#e2e6ea;stroke-width:1}</style>
+  <text x="40" y="44" class="t">Employment rose, but access and purchasing power remain uneven</text>
+  <text x="40" y="69" class="s">Labor-force depth and household indicators</text>
+  <g transform="translate(45 115)">
+    <text x="0" y="0" class="h">People · Q1 2026</text>
+    <rect x="0" y="32" width="420" height="58" rx="10" fill="#e9f8f3"/>
+    <text x="18" y="59" class="s">EMPLOYED</text><text x="400" y="70" text-anchor="end" class="v">3.626m</text>
+    <rect x="0" y="104" width="420" height="58" rx="10" fill="#fff1e2"/>
+    <text x="18" y="131" class="s">UNEMPLOYED</text><text x="400" y="142" text-anchor="end" class="v">641,700</text>
+    <text x="0" y="198" class="l">Quarterly employment change</text><text x="420" y="198" text-anchor="end" class="v" fill="#087e8b">+16,500</text>
+    <line x1="0" y1="218" x2="420" y2="218" class="g"/>
+    <text x="0" y="248" class="l">Labor-force participation</text><text x="420" y="248" text-anchor="end" class="v">45.9%</text>
+    <line x1="0" y1="268" x2="420" y2="268" class="g"/>
+    <text x="0" y="298" class="l">Women’s share of employment</text><text x="420" y="298" text-anchor="end" class="v">30.2%</text>
+  </g>
+  <g transform="translate(545 115)">
+    <text x="0" y="0" class="h">Unemployment rates</text>
+    <text x="0" y="54" class="l">National</text><rect x="150" y="31" width="150" height="30" rx="5" fill="#7fc8c4"/><text x="310" y="53" class="v">15.0%</text>
+    <text x="0" y="105" class="l">Women</text><rect x="150" y="82" width="207" height="30" rx="5" fill="#e70013"/><text x="365" y="104" class="v">20.7%</text>
+    <text x="0" y="156" class="l">Graduates</text><rect x="150" y="133" width="222" height="30" rx="5" fill="#f18f01"/><text x="380" y="155" class="v">24.2%</text>
+    <text x="0" y="207" class="l">Youth 15–24</text><rect x="150" y="184" width="300" height="30" rx="5" fill="#3a86ff"/><text x="438" y="206" text-anchor="end" class="w">37.5%</text>
+    <rect x="0" y="248" width="410" height="104" rx="18" fill="#f5f7f8"/>
+    <text x="20" y="280" class="s">POVERTY · USD 8.30/DAY LINE</text><text x="20" y="320" class="v">16.0% in 2025</text><text x="205" y="320" class="s">→ 15.7% forecast 2026</text>
+    <text x="20" y="342" class="s">World Bank estimate/nowcast; 2021 PPP.</text>
+  </g>
+  <text x="40" y="512" class="s">Still missing: current informality, underemployment, long-term unemployment, real median earnings and household energy burden.</text>
+  <text x="40" y="536" class="s">Sources: INS employment release, Q1 2026; World Bank Macro Poverty Outlook, April 2026.</text>
+</svg>

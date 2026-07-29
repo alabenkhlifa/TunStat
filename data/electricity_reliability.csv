@@ -1,0 +1,19 @@
+period,indicator,value,unit,status,notes,source
+2026-01_to_2026-05,Energy independence,34,percent,actual,Includes transit-gas royalty,Energy Ministry
+2026-01_to_2026-05,Natural-gas share of domestic electricity generation,91,percent,actual,Period production mix,Energy Ministry
+2024,Renewable-energy program baseline,5.6,percent,program baseline,Definition differs from January-May production share,World Bank TEREG appraisal
+2028,Renewable-energy program target,27,percent,official program target,TEREG target,World Bank TEREG appraisal
+2024,STEG cost recovery,60,percent,program baseline,Program baseline,World Bank TEREG appraisal
+2028,STEG cost recovery,80,percent,official program target,TEREG target,World Bank TEREG appraisal
+2028,Additional solar and wind commissioned,2.8,GW,official program target,TEREG target,World Bank TEREG appraisal
+2025_to_2028,Expected subsidy reduction,2045,TND million,official program target,Cumulative program result,World Bank TEREG appraisal
+2026,Peak electricity demand,NA,MW,not published,No complete public daily series found by cut-off,STEG should publish daily
+2026,Available generation at peak,NA,MW,not published,Installed capacity is not available capacity,STEG should publish daily
+2026,Operating reserve margin,NA,percent,not published,Needed to interpret system stress,STEG should publish daily
+2026,SAIDI,NA,minutes per customer,not published,National and regional customer-minutes interrupted,STEG should publish monthly
+2026,SAIFI,NA,interruptions per customer,not published,National and regional interruption frequency,STEG should publish monthly
+2026,Energy not supplied,NA,MWh,not published,Required to quantify outage severity,STEG should publish monthly
+2026,Forced generation outage rate,NA,percent,not published,Required to distinguish generation and network causes,STEG should publish monthly
+2026,Transmission and distribution losses,NA,percent,not published,Audited current baseline not found,STEG should publish annually
+2026,Bill collection rate,NA,percent,not published,Separate households firms public entities and arrears,STEG should publish quarterly
+2026,STEG receivables and cross-arrears,NA,TND million,not published,Consolidated counterparty table not found,STEG and Ministry of Finance should publish quarterly

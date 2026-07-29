@@ -12,6 +12,8 @@ The evidence supports three careful conclusions:
 
 That third point matters. Without a public operational dataset, it is impossible to separate, for each event, insufficient generation, network congestion, equipment faults, import constraints and local distribution failures. Claims that one specific plant or fuel interruption caused all outages should therefore be treated cautiously unless STEG publishes the event data.
 
+The full measurement checklist—including peak demand, available capacity, reserve margin, SAIDI, SAIFI, unserved energy, losses, collections and receivables—is preserved in [electricity reliability data](data/electricity_reliability.csv). Unpublished fields are marked `NA`, not zero.
+
 Sources: [TAP, 18 July](https://www.tap.info.tn/fr/Portail-Titres-de-l-actualit%C3%A9/20404822-canicule-coupures), [TAP, 19 July](https://www.tap.info.tn/fr/Portail-%C3%A0-la-Une-FR-top/20407107-la-steg-annonce), [TAP, 24 July denial](https://www.tap.info.tn/fr/Portail-Titres-de-l-actualit%C3%A9/20424483-la-steg-d%C3%A9ment-la), [STEG press releases](https://www.steg.com.tn/fr/page/communiqu%C3%A9s-de-presse).
 
 ## Why the system is vulnerable

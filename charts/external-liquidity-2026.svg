@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" role="img" aria-labelledby="title desc">
+  <title id="title">Tunisia foreign-exchange reserves and external inflows</title>
+  <desc id="desc">Import cover declined from 121 days in December 2024 to 106 days in December 2025 and 97 days on 3 July 2026. Workers income reached 11.44 billion dinars in 2025 and tourism receipts reached 3.35 billion dinars in the first half of 2026.</desc>
+  <rect width="1000" height="560" fill="#fff"/>
+  <style>.t{font:700 25px system-ui;fill:#17212b}.h{font:700 17px system-ui;fill:#17212b}.s{font:13px system-ui;fill:#52606d}.a{font:700 14px system-ui;fill:#17212b}.b{font:800 30px system-ui;fill:#17212b}.w{font:700 13px system-ui;fill:#fff}.g{stroke:#d7dde3;stroke-width:1}</style>
+  <text x="40" y="44" class="t">External inflows are strong, but the reserve buffer narrowed</text>
+  <text x="40" y="69" class="s">Net foreign-exchange reserves and import cover</text>
+  <g transform="translate(55 112)">
+    <text x="0" y="0" class="h">Import cover</text>
+    <line x1="60" y1="220" x2="560" y2="220" class="g"/>
+    <line x1="60" y1="165" x2="560" y2="165" class="g"/>
+    <line x1="60" y1="110" x2="560" y2="110" class="g"/>
+    <line x1="60" y1="55" x2="560" y2="55" class="g"/>
+    <text x="22" y="225" class="s">90</text><text x="16" y="170" class="s">100</text><text x="16" y="115" class="s">110</text><text x="16" y="60" class="s">120</text>
+    <polyline points="100,49 310,132 520,181" fill="none" stroke="#e70013" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="100" cy="49" r="9" fill="#e70013"/><circle cx="310" cy="132" r="9" fill="#e70013"/><circle cx="520" cy="181" r="9" fill="#e70013"/>
+    <text x="100" y="31" text-anchor="middle" class="a">121 days</text><text x="310" y="114" text-anchor="middle" class="a">106 days</text><text x="520" y="163" text-anchor="middle" class="a">97 days</text>
+    <text x="100" y="252" text-anchor="middle" class="s">Dec 2024</text><text x="310" y="252" text-anchor="middle" class="s">Dec 2025</text><text x="520" y="252" text-anchor="middle" class="s">3 Jul 2026</text>
+    <text x="100" y="282" text-anchor="middle" class="a">TND 27.33bn</text><text x="310" y="282" text-anchor="middle" class="a">TND 25.12bn</text><text x="520" y="282" text-anchor="middle" class="a">TND 24.54bn</text>
+  </g>
+  <g transform="translate(680 112)">
+    <rect width="270" height="118" rx="18" fill="#e9f8f3"/>
+    <text x="20" y="30" class="s">Workers’ income · 2025</text><text x="20" y="72" class="b">TND 11.44bn</text><text x="20" y="98" class="a" fill="#087e8b">+15.2% year on year</text>
+    <rect y="138" width="270" height="118" rx="18" fill="#fff1e2"/>
+    <text x="20" y="168" class="s">Tourism receipts · H1 2026</text><text x="20" y="210" class="b">TND 3.35bn</text><text x="20" y="236" class="a" fill="#b85f00">+4.4% year on year</text>
+    <rect y="276" width="270" height="74" rx="18" fill="#f4f5f7"/>
+    <text x="20" y="306" class="s">Current account · 2025</text><text x="20" y="336" class="h">−2.3% of GDP</text>
+  </g>
+  <text x="40" y="526" class="s">Sources: BCT Annual Report 2025; BCT daily indicators reported by TAP. Latest reserve observation reviewed: 3 July 2026.</text>
+</svg>

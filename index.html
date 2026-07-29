@@ -6,7 +6,7 @@
     <title>TunStat — Tunisia economy, energy and public finance dashboard</title>
     <meta
       name="description"
-      content="An evidence-based monthly dashboard tracking Tunisia's economy, electricity system, public finances, debt, investment and major projects."
+      content="An evidence-based monthly dashboard tracking Tunisia's economy, external liquidity, banks, households, electricity, water, public finances, investment and major projects."
     />
     <meta name="theme-color" content="#fafaf9" />
     <meta name="color-scheme" content="light dark" />
@@ -14,7 +14,7 @@
     <meta name="author" content="TunStat" />
     <meta
       name="keywords"
-      content="Tunisia, economy, statistics, electricity, public finance, debt, investment, infrastructure, open data"
+      content="Tunisia, economy, statistics, reserves, banks, electricity, water, public finance, debt, investment, jobs, state-owned enterprises, open data"
     />
     <link rel="canonical" href="https://alabenkhlifa.github.io/TunStat/" />
     <link rel="icon" type="image/svg+xml" href="./assets/tunisia-flag.svg" />
@@ -22,7 +22,7 @@
     <meta property="og:title" content="TunStat — Tunisia, measured clearly" />
     <meta
       property="og:description"
-      content="Monthly evidence on Tunisia's economy, electricity, public finances, investment and major projects."
+      content="Monthly evidence on Tunisia's economy, reserves, banks, households, electricity, water, public finances, investment and major projects."
     />
     <meta property="og:url" content="https://alabenkhlifa.github.io/TunStat/" />
     <meta property="og:image" content="https://alabenkhlifa.github.io/TunStat/assets/og.png" />
@@ -30,7 +30,7 @@
     <meta name="twitter:title" content="TunStat — Tunisia, measured clearly" />
     <meta
       name="twitter:description"
-      content="Monthly evidence on Tunisia's economy, electricity, public finances, investment and major projects."
+      content="Monthly evidence on Tunisia's economy, reserves, banks, households, electricity, water, public finances, investment and major projects."
     />
     <meta name="twitter:image" content="https://alabenkhlifa.github.io/TunStat/assets/og.png" />
     <script>
@@ -46,9 +46,9 @@
         "@context": "https://schema.org",
         "@type": "Dataset",
         "name": "TunStat",
-        "description": "A monthly evidence dashboard and research dataset covering Tunisia's economy, energy, public finances, debt, investment and major projects.",
+        "description": "A monthly evidence dashboard and research dataset covering Tunisia's economy, external liquidity, banking, households, energy, water, public finances, debt, investment and major projects.",
         "url": "https://alabenkhlifa.github.io/TunStat/",
-        "keywords": ["Tunisia", "macroeconomics", "energy", "public finance", "investment", "open data"],
+        "keywords": ["Tunisia", "macroeconomics", "external liquidity", "banking", "energy", "water", "public finance", "investment", "open data"],
         "temporalCoverage": "2023/2026",
         "spatialCoverage": "Tunisia",
         "license": "https://github.com/alabenkhlifa/TunStat"
@@ -75,6 +75,7 @@
 
         <nav class="hidden items-center gap-7 md:flex" aria-label="Primary navigation">
           <a class="nav-link" href="#snapshot">Snapshot</a>
+          <a class="nav-link" href="#system-risk">System risk</a>
           <a class="nav-link" href="#power">Power</a>
           <a class="nav-link" href="#finance">Finance</a>
           <a class="nav-link" href="#projects">Projects</a>
@@ -115,6 +116,7 @@
       <nav data-mobile-menu class="shell hidden border-t border-stone-200 py-4 md:hidden dark:border-white/10" aria-label="Mobile navigation">
         <div class="grid grid-cols-2 gap-2">
           <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#snapshot">Snapshot</a>
+          <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#system-risk">System risk</a>
           <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#power">Power</a>
           <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#finance">Finance</a>
           <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#projects">Projects</a>
@@ -143,7 +145,7 @@
               <span class="text-tunis-red">measured clearly.</span>
             </h1>
             <p class="mt-7 max-w-3xl text-lg leading-8 text-stone-600 sm:text-xl dark:text-stone-300">
-              A source-backed view of Tunisia’s economy, electricity system, public finances, debt, investment and major projects—followed by a practical recovery plan.
+              A source-backed view of Tunisia’s economy, reserves, banks, households, electricity, water, public finances, investment and major projects—followed by a practical recovery plan.
             </p>
             <div class="mt-9 flex flex-col gap-3 sm:flex-row">
               <a href="#snapshot" class="button-primary">Explore the latest data</a>
@@ -229,6 +231,103 @@
                 Graduate unemployment was 24.2%; for female graduates it reached 32%. Investment and training need to connect directly to real employer demand.
               </p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="system-risk" class="border-b border-stone-200 bg-[#eef4f2] py-18 sm:py-24 dark:border-white/10 dark:bg-[#0e1916]">
+        <div class="shell">
+          <div class="flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
+            <div>
+              <p class="section-kicker">System-risk dashboard</p>
+              <h2 class="section-title text-balance">The next crisis usually appears between the headline indicators.</h2>
+              <p class="section-copy">
+                Reserve cover, bank exposure, government cash, household pressure, utility service and SOE liabilities connect the economy. TunStat now tracks the available measures and records the missing ones explicitly.
+              </p>
+            </div>
+            <a href="./data/metric_coverage.csv" class="button-secondary shrink-0">Download coverage audit ↓</a>
+          </div>
+
+          <div class="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="stat-card">
+              <p class="text-xs font-bold tracking-wider text-stone-500 uppercase dark:text-stone-400">Import cover</p>
+              <p class="mt-4 text-4xl font-black text-tunis-red">97 days</p>
+              <p class="mt-2 text-sm leading-6 text-stone-500 dark:text-stone-400">TND 24.54bn on 3 July 2026; down from 121 days at end-2024.</p>
+            </article>
+            <article class="stat-card">
+              <p class="text-xs font-bold tracking-wider text-stone-500 uppercase dark:text-stone-400">Classified loans</p>
+              <p class="mt-4 text-4xl font-black text-tunis-red">14.9%</p>
+              <p class="mt-2 text-sm leading-6 text-stone-500 dark:text-stone-400">Coverage was 51.6%; sector solvency was 15.1% at end-2025.</p>
+            </article>
+            <article class="stat-card">
+              <p class="text-xs font-bold tracking-wider text-stone-500 uppercase dark:text-stone-400">Dam filling</p>
+              <p class="mt-4 text-4xl font-black text-tunis-red">60%</p>
+              <p class="mt-2 text-sm leading-6 text-stone-500 dark:text-stone-400">June estimate; leakage and groundwater risk still require separate measures.</p>
+            </article>
+            <article class="stat-card">
+              <p class="text-xs font-bold tracking-wider text-stone-500 uppercase dark:text-stone-400">Missing metrics</p>
+              <p class="mt-4 text-4xl font-black text-tunis-red">20 / 39</p>
+              <p class="mt-2 text-sm leading-6 text-stone-500 dark:text-stone-400">Current public observations were not found for more than half of the critical audit.</p>
+            </article>
+          </div>
+
+          <div class="mt-6 chart-frame">
+            <img
+              src="./charts/metric-coverage-2026.svg"
+              alt="Coverage audit of 39 critical metrics across ten economic and public-service domains"
+              width="1000"
+              height="700"
+              class="h-auto w-full"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="mt-6 grid gap-6 xl:grid-cols-2">
+            <div class="chart-frame">
+              <img
+                src="./charts/external-liquidity-2026.svg"
+                alt="Tunisia foreign-exchange reserves, import cover, workers income and tourism receipts"
+                width="1000"
+                height="560"
+                class="h-auto w-full"
+                loading="lazy"
+              />
+            </div>
+            <div class="chart-frame">
+              <img
+                src="./charts/banking-health-2025.svg"
+                alt="Tunisia banking-sector solvency, liquidity, classified loans and public-sector exposure in 2025"
+                width="1000"
+                height="590"
+                class="h-auto w-full"
+                loading="lazy"
+              />
+            </div>
+            <div class="chart-frame">
+              <img
+                src="./charts/jobs-and-welfare-2026.svg"
+                alt="Tunisia employment, unemployment and poverty indicators in 2025 and 2026"
+                width="1000"
+                height="560"
+                class="h-auto w-full"
+                loading="lazy"
+              />
+            </div>
+            <div class="chart-frame">
+              <img
+                src="./charts/water-security-2026.svg"
+                alt="Tunisia dam filling, water losses and approved water investment in 2026"
+                width="1000"
+                height="560"
+                class="h-auto w-full"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="https://github.com/alabenkhlifa/TunStat/blob/main/11-critical-metrics-and-system-risk.md" class="button-primary">Read the complete system-risk chapter</a>
+            <a href="https://github.com/alabenkhlifa/TunStat/tree/main/data" class="button-secondary">Open all datasets <span class="ml-2" aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
@@ -391,6 +490,17 @@
             />
           </div>
 
+          <div class="mt-6 chart-frame">
+            <img
+              src="./charts/investment-execution-2026.svg"
+              alt="Tunisia gross fixed capital formation, sector allocation and realized foreign direct investment"
+              width="1000"
+              height="570"
+              class="h-auto w-full"
+              loading="lazy"
+            />
+          </div>
+
           <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             <article class="panel p-6">
               <div class="flex items-start justify-between gap-3"><span class="text-2xl" aria-hidden="true">⚡</span><span class="rounded-full bg-emerald-100 px-3 py-1 text-[10px] font-bold text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">APPROVED / IMPLEMENTING</span></div>
@@ -497,6 +607,7 @@
             <a class="doc-link" href="https://github.com/alabenkhlifa/TunStat/blob/main/08-implementation-scorecard.md"><span>Implementation scorecard</span><span aria-hidden="true">↗</span></a>
             <a class="doc-link" href="https://github.com/alabenkhlifa/TunStat/blob/main/09-risks-and-scenarios.md"><span>Risks and scenarios</span><span aria-hidden="true">↗</span></a>
             <a class="doc-link" href="https://github.com/alabenkhlifa/TunStat/blob/main/10-sources-and-methodology.md"><span>Sources and methodology</span><span aria-hidden="true">↗</span></a>
+            <a class="doc-link" href="https://github.com/alabenkhlifa/TunStat/blob/main/11-critical-metrics-and-system-risk.md"><span>Critical metrics and system risk</span><span aria-hidden="true">↗</span></a>
             <a class="doc-link" href="https://github.com/alabenkhlifa/TunStat/tree/main/data"><span>Download all CSV data</span><span aria-hidden="true">↓</span></a>
           </div>
 
@@ -505,7 +616,7 @@
               <p class="section-kicker">Monthly release cycle</p>
               <h3 class="text-2xl font-black text-ink sm:text-3xl dark:text-white">New releases will be incorporated every month.</h3>
               <p class="mt-4 max-w-3xl leading-7 text-stone-600 dark:text-stone-300">
-                Each update will refresh the latest available macro, labor, trade, energy, fiscal, investment and project data while preserving the distinction between actual, forecast, declared, approved and proposed values.
+                Each update will refresh macro, external, banking, household, labor, trade, energy, water, fiscal, investment, SOE and project data while preserving the distinction between actual, forecast, declared, approved and proposed values.
               </p>
             </div>
             <a href="https://github.com/alabenkhlifa/TunStat" class="button-primary shrink-0">Follow on GitHub ↗</a>

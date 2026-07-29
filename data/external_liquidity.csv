@@ -1,0 +1,19 @@
+period,indicator,value,unit,status,notes,source
+2024-12,Net foreign-exchange reserves,27331.6,TND million,actual,End-period stock,BCT Annual Report 2025
+2024-12,Import cover,121,days,actual,End-period reserve coverage,BCT Annual Report 2025
+2025-12,Net foreign-exchange reserves,25115.3,TND million,actual,End-period stock,BCT Annual Report 2025
+2025-12,Import cover,106,days,actual,End-period reserve coverage,BCT Annual Report 2025
+2026-07-03,Net foreign-exchange reserves,24539.6,TND million,actual,Latest public observation reviewed,TAP reporting BCT daily indicators
+2026-07-03,Import cover,97,days,actual,Latest public observation reviewed,TAP reporting BCT daily indicators
+2025,Current-account balance,-2.3,percent of GDP,actual estimate,BCT estimate; World Bank estimate is -2.4 percent,BCT Annual Report 2025
+2025,Workers income receipts,11444.6,TND million,actual,Includes financial and in-kind components,BCT Annual Report 2025
+2025,Workers financial transfers,8785.2,TND million,actual,Financial component of workers income,BCT Annual Report 2025
+2026-06-30,Tourism receipts,3352.4,TND million,actual,Cumulative from start of year,TAP reporting BCT daily indicators
+2026-07-20,Tourism receipts plus workers remittances,">9000",TND million,actual,Cumulative combined total; components not published in the release,TAP reporting BCT daily indicators
+2026-07-06,TND per EUR,3.377,TND,actual reference rate,One-euro reference quotation,Tunisienumerique reporting BCT quotation
+2026-07-06,TND per USD,2.953,TND,actual reference rate,One-dollar reference quotation,Tunisienumerique reporting BCT quotation
+2025,Dinar change against USD,9.8,percent,actual,End-2025 appreciation against end-2024,BCT Annual Report 2025
+2025,Dinar change against EUR,-1.6,percent,actual,End-2025 depreciation against end-2024,BCT Annual Report 2025
+2025,Long-term external debt,68163,TND million,actual,End-period stock,BCT Annual Report 2025
+2025,Long-term external debt service,12445,TND million,actual,Principal plus interest,BCT Annual Report 2025
+2025,External debt-service coefficient,16.1,percent,actual,Long-term external debt service ratio,BCT Annual Report 2025

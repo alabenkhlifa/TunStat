@@ -94,6 +94,17 @@ This is a policy proposal, not an estimate of available savings. The formula sho
 | Guarantee exposure | TND 7bn 2026 authorization ceiling | Complete registry and expected loss | Declining high-risk concentration | Risk-priced portfolio |
 | Capital execution | Establish comparable baseline | +10 percentage points for priority portfolio | At least 85% | High, without cost inflation |
 
+### External liquidity and banking
+
+| KPI | Baseline | 12–18 month control | 2028 direction |
+|---|---:|---:|---:|
+| FX reserve cover | 97 import days, 3 July 2026 | Publish financing calendar; avoid disorderly decline | Rebuild a durable buffer |
+| External debt-service coefficient | 16.1% in 2025 | Quarterly stress test | Declining risk concentration |
+| Classified-loan ratio | 14.9% end-2025 | Publish migration and recovery | Sustained decline |
+| Classified-loan coverage | 51.6% end-2025 | Bank-level supervisory plan | Sustained improvement |
+| Bank public-sector financing | 27.6% of assets end-2025 | Publish concentration and new-flow split | Reduce crowding-out risk |
+| Medium- and long-term credit | TND 61.12bn; +0.7% in 2025 | Increase viable productive new lending | Stronger maturity profile |
+
 ### Electricity and energy
 
 | KPI | Baseline | 12–18 month target | 2028 target |
@@ -133,16 +144,31 @@ Targets for outage reduction and loss reduction are proposed and should be recal
 | Apprenticeship placement | Establish | ≥70% employed at 6 months in validated programs | Scale only successful programs |
 | Social-transfer payment success | Establish in pilot | ≥95% | ≥98% |
 | Exclusion-error resolution | Establish | 90% within 30 days | 95% |
+| Real median earnings | Not published currently | Publish baseline | Positive real growth |
+| Household energy burden | Not published by income decile | Baseline before tariff reform | No rise for protected groups |
 
 ### Water and climate
 
 | KPI | Baseline | 18-month target | 2028 target |
 |---|---:|---:|---:|
-| Non-revenue water | Publish by system | Metering and repair program | Sustained audited decline |
+| Potable-water physical losses | 23% project baseline; publish by system | Metering and repair program | Sustained audited decline |
+| Public-irrigation physical losses | 30% project baseline | Audited scheme baselines | Sustained audited decline |
+| Dam filling | About 60% in June 2026 | Monthly storage and allocation reporting | Multi-source resilience |
 | Service interruption | Establish | Public event log | Material reduction |
 | Energy per m³ desalinated | Establish | Published monthly | Declining |
 | Treated-water reuse | Establish | Project pipeline | Increased with quality compliance |
 | Major projects climate-tested | Partial/unknown | 100% of new major appraisals | 100% pipeline |
+
+### State-owned enterprises
+
+| KPI | Baseline | 12–18 month target | 2028 target |
+|---|---:|---:|---:|
+| Bank credit to public enterprises | TND 16.60bn end-2025 | Entity and maturity disclosure | Declining concentration risk |
+| Consolidated SOE debt | Not published currently | Audited register | Annual reduction for high-risk entities |
+| Outstanding guaranteed SOE debt | Not published currently | Quarterly registry and expected loss | Risk-priced portfolio |
+| Government–SOE cross-arrears | Not published currently | Reconcile and stop net accumulation | Normal payment terms |
+| Supplier payment delay | Not published | <60 days | <30 days |
+| Audited accounts filed on time | Not published as portfolio rate | 100% publication or named exception | 100% |
 
 ## Indicator rules
 

@@ -60,6 +60,10 @@ The Ministry’s headline total state budget of TND 79.624bn includes debt and T
 
 Source: [2026 Finance Law, Law no. 2025-17](https://www.finances.gov.tn/sites/default/files/2026-01/115725.pdf), [Ministry of Finance budget summary](https://www.finances.gov.tn/fr?Itemid=449&id=298&lang=ar-AA&option=com_content&view=article).
 
+### Current cash-data gap
+
+The 2026 budget plan is public, but no 2026 monthly execution bulletin was available in the reviewed Ministry publication list by the evidence cut-off. Current consolidated figures were also not found for government arrears, actual drawdown of the BCT facility, outstanding state guarantees, probability-weighted guarantee loss or priority-project capital execution. These are recorded as unavailable in [fiscal cash and risks](data/fiscal_cash_risks.csv), not inferred from authorization ceilings.
+
 ## Debt stock and service
 
 ![Public debt and debt service](charts/debt-and-service-2025.svg)

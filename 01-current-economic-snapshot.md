@@ -64,11 +64,17 @@ The European Union received 70.4% of Tunisia’s exports and supplied 44.9% of i
 
 ## Reserves, interest rates and credit
 
-The Central Bank’s annual report, as summarized by official national reporting, indicated that foreign-exchange reserves fell 8.2% in 2025 to TND 25.13bn. The World Bank estimated reserves at 3.3 months of imports. The policy rate had been reduced twice during 2025 to 7% by year-end, but financing conditions remain constrained by sovereign borrowing, risk and bank balance sheets.
+The Central Bank’s annual report recorded foreign-exchange reserves of TND 25.12bn and 106 import days at end-2025, down from TND 27.33bn and 121 days at end-2024. The latest reviewed daily observation was TND 24.54bn and 97 days on 3 July 2026. The policy rate had been reduced twice during 2025 to 7% by year-end, but financing conditions remain constrained by sovereign borrowing, risk and bank balance sheets.
 
-Outstanding loans from banks and financial institutions were reported at roughly TND 123bn at end-2025. That stock does not show whether credit is reaching productive firms on suitable terms. The key monitoring indicators are new private-sector credit excluding public enterprises, average maturity, collateral requirements, rejection rates and the share going to exporting and job-creating firms.
+![External liquidity](charts/external-liquidity-2026.svg)
 
-Sources: [Prime Ministry summary of the BCT 2025 annual report](https://www.pm.gov.tn/fr/article/finances-le-rapport-annuel-de-la-banque-centrale-pour-lannee-2025-remis-la-cheffe-du), [TAP on reserves](https://www.tap.info.tn/en/Portal-Economy/20134345-foreign-exchange), [TAP on bank lending](https://www.tap.info.tn/en/Portal-Headlines/20369052-bct-report).
+Outstanding loans to the economy reached TND 122.95bn at end-2025. Banking-sector solvency was 15.1% and the liquidity coverage ratio 252.8%, but classified loans reached 14.9%. Public-sector financing increased to 27.6% of bank assets, credit to public enterprises rose to TND 16.60bn, and Treasury bills held by banks reached TND 25.71bn.
+
+![Banking health](charts/banking-health-2025.svg)
+
+The aggregate loan stock does not show whether new credit is reaching productive firms on suitable terms. The key monitoring indicators are new private credit excluding public enterprises, average maturity, collateral requirements, rejection rates and the share going to exporting and job-creating firms.
+
+Sources: [BCT Annual Report 2025](https://www.bct.gov.tn/bct/siteprod/documents/RA_2025_fr.pdf), [TAP on reserves, 3 July 2026](https://www.tap.info.tn/en/Portal-Headlines/20357134-forex-reserves-drop), [TAP on bank lending](https://www.tap.info.tn/en/Portal-Headlines/20369052-bct-report).
 
 ## Baseline and forecast must not be mixed
 

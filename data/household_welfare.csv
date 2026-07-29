@@ -1,0 +1,16 @@
+period,indicator,value,unit,status,notes,source
+2024,Poverty at USD 8.30 per day,16.6,percent,estimate,2021 PPP upper-middle-income line,World Bank Macro Poverty Outlook April 2026
+2025,Poverty at USD 8.30 per day,16.0,percent,nowcast,2021 PPP upper-middle-income line,World Bank Macro Poverty Outlook April 2026
+2026,Poverty at USD 8.30 per day,15.7,percent,forecast,2021 PPP upper-middle-income line,World Bank Macro Poverty Outlook April 2026
+2027,Poverty at USD 8.30 per day,15.4,percent,forecast,2021 PPP upper-middle-income line,World Bank Macro Poverty Outlook April 2026
+2024,Poverty at USD 4.20 per day,1.4,percent,estimate,2021 PPP lower-middle-income line,World Bank Macro Poverty Outlook April 2026
+2025,Poverty at USD 4.20 per day,1.3,percent,nowcast,2021 PPP lower-middle-income line,World Bank Macro Poverty Outlook April 2026
+2026,Poverty at USD 4.20 per day,1.3,percent,forecast,2021 PPP lower-middle-income line,World Bank Macro Poverty Outlook April 2026
+2025,Real private consumption growth,4.3,percent,estimate,Annual change,World Bank Macro Poverty Outlook April 2026
+2026,Real private consumption growth,2.4,percent,forecast,Annual change,World Bank Macro Poverty Outlook April 2026
+2026-06,Headline inflation,5.3,percent,actual,Year-on-year,INS
+2026-06,Food inflation,7.1,percent,actual,Year-on-year,INS
+2026,Real wage index,NA,index,not published,No current economy-wide official series found by cut-off,INS and Social Affairs should publish
+2026,Household energy burden by income decile,NA,percent of expenditure,not published,Required before tariff or subsidy reform,INS and Energy Ministry should publish
+2026,Regional food inflation,NA,percent,not published,National product groups are available but a current comparable regional series was not found,INS should publish
+2026,Consumption by income decile,NA,TND,not published,Requires current household-budget microdata,INS should publish

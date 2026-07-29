@@ -1,0 +1,40 @@
+domain,metric,coverage,latest_period,publication_frequency,responsible_institution,priority
+External liquidity,FX reserves and import cover,current,2026-07,daily,BCT,critical
+External liquidity,Current account,current,2025,annual and quarterly,BCT,critical
+External liquidity,FX reference rates,current,2026-07,daily,BCT,high
+External liquidity,External financing calendar,partial,2026,annual,Finance Ministry and BCT,critical
+Banking,Capital liquidity and asset quality,current,2025,annual,BCT,critical
+Banking,Sovereign and public-enterprise exposure,partial,2025,annual,BCT,critical
+Banking,New productive private credit by maturity,missing,NA,monthly or quarterly,BCT,high
+Fiscal cash,Budget execution,current,2025,monthly,Finance Ministry,critical
+Fiscal cash,Government arrears stock,missing,NA,quarterly,Finance Ministry,critical
+Fiscal cash,Outstanding guarantees and expected loss,missing,NA,quarterly,Finance Ministry,critical
+Fiscal cash,2026 capital execution,missing,NA,monthly,Finance Ministry,critical
+Households,Headline and food inflation,current,2026-06,monthly,INS,critical
+Households,Poverty nowcast,partial,2025,annual,INS and World Bank,high
+Households,Real wages and median earnings,missing,NA,quarterly or annual,INS,critical
+Households,Energy burden by income decile,missing,NA,annual,INS and Energy Ministry,critical
+Electricity,Energy balance and generation mix,current,2026-05,monthly,Energy Ministry,critical
+Electricity,Peak available capacity and reserve,missing,NA,daily,STEG,critical
+Electricity,SAIDI SAIFI and unserved energy,missing,NA,monthly,STEG,critical
+Electricity,Losses collection and receivables,missing,NA,quarterly,STEG,critical
+Water,Dam filling rate,current,2026-06,weekly or monthly,Agriculture Ministry,critical
+Water,Physical network losses,partial,2026 project baseline,annual,SONEDE,critical
+Water,Groundwater abstraction and balance,missing,NA,monthly,Agriculture Ministry,critical
+Water,Interruption duration and quality compliance,missing,NA,monthly,SONEDE and Health Ministry,critical
+Investment,GFCF and investment rate,current,2025,annual and quarterly,INS and BCT,high
+Investment,Realized foreign investment,current,2026-Q1,quarterly,FIPA,high
+Investment,Declared-to-operational cohort conversion,missing,NA,quarterly,TIA FIPA and APII,critical
+Investment,Priority-project execution rate,missing,NA,monthly,Economy and Planning Ministry,critical
+Productive sectors,Trade and tourism receipts,current,2026-H1,monthly,INS BCT and ONTT,high
+Productive sectors,Industrial production,partial,2026-05,monthly,INS,high
+Productive sectors,Export orders and business pipeline,missing,NA,monthly,INS and CEPEX,high
+Productive sectors,Phosphate actual monthly production,missing,NA,monthly,CPG,high
+Labor,Employment unemployment and participation,current,2026-Q1,quarterly,INS,critical
+Labor,Informality and underemployment,missing,NA,quarterly or annual,INS,critical
+Labor,Long-term unemployment and earnings,missing,NA,quarterly or annual,INS,high
+Labor,Regional job and wage dashboard,partial,2026,quarterly,INS,critical
+SOEs,Aggregate public-enterprise bank credit,current,2025,annual,BCT,critical
+SOEs,Consolidated debt guarantees and transfers,missing,NA,quarterly,Finance Ministry,critical
+SOEs,Cross-arrears and supplier delays,missing,NA,quarterly,Finance Ministry and SOEs,critical
+SOEs,Timely audited accounts,missing,NA,annual,Finance Ministry,high

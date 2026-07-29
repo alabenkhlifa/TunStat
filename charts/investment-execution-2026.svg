@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="570" viewBox="0 0 1000 570" role="img" aria-labelledby="title desc">
+  <title id="title">Tunisia capital formation and realized foreign investment</title>
+  <desc id="desc">Gross fixed capital formation rose from 24.30 billion dinars in 2024 to 26.76 billion in 2025 and is forecast at 29.98 billion in 2026. FDI rose to 3.51 billion dinars in 2025.</desc>
+  <rect width="1000" height="570" fill="#fff"/>
+  <style>.t{font:700 25px system-ui;fill:#17212b}.h{font:700 17px system-ui;fill:#17212b}.s{font:13px system-ui;fill:#52606d}.l{font:15px system-ui;fill:#17212b}.v{font:800 16px system-ui;fill:#17212b}.w{font:700 13px system-ui;fill:#fff}.g{stroke:#d7dde3;stroke-width:1}</style>
+  <text x="40" y="44" class="t">Capital formation improved, but execution still lacks a cohort tracker</text>
+  <text x="40" y="69" class="s">GFCF is economy-wide; FDI is a recorded cross-border flow; declarations are intentions</text>
+  <g transform="translate(45 120)">
+    <text x="0" y="0" class="h">Gross fixed capital formation</text>
+    <line x1="30" y1="260" x2="530" y2="260" class="g"/>
+    <rect x="70" y="90" width="105" height="170" rx="8" fill="#7fc8c4"/><text x="122" y="78" text-anchor="middle" class="v">TND 24.30bn</text><text x="122" y="288" text-anchor="middle" class="s">2024 actual</text><text x="122" y="314" text-anchor="middle" class="v">15.2% GDP</text>
+    <rect x="225" y="73" width="105" height="187" rx="8" fill="#087e8b"/><text x="277" y="61" text-anchor="middle" class="v">TND 26.76bn</text><text x="277" y="288" text-anchor="middle" class="s">2025 actual</text><text x="277" y="314" text-anchor="middle" class="v">15.5% GDP</text>
+    <rect x="380" y="50" width="105" height="210" rx="8" fill="#f18f01"/><text x="432" y="38" text-anchor="middle" class="v">TND 29.98bn</text><text x="432" y="288" text-anchor="middle" class="s">2026 forecast</text><text x="432" y="314" text-anchor="middle" class="v">16.0% GDP</text>
+    <text x="0" y="358" class="s">2025 real GFCF growth: 5.4%.</text>
+  </g>
+  <g transform="translate(630 120)">
+    <text x="0" y="0" class="h">2025 GFCF by sector</text>
+    <circle cx="128" cy="132" r="92" fill="none" stroke="#e7ebee" stroke-width="34"/>
+    <circle cx="128" cy="132" r="92" fill="none" stroke="#087e8b" stroke-width="34" stroke-dasharray="295 283" transform="rotate(-90 128 132)"/>
+    <circle cx="128" cy="132" r="92" fill="none" stroke="#3a86ff" stroke-width="34" stroke-dasharray="159 419" stroke-dashoffset="-295" transform="rotate(-90 128 132)"/>
+    <circle cx="128" cy="132" r="92" fill="none" stroke="#f18f01" stroke-width="34" stroke-dasharray="95 483" stroke-dashoffset="-454" transform="rotate(-90 128 132)"/>
+    <text x="128" y="126" text-anchor="middle" class="s">TOTAL</text><text x="128" y="153" text-anchor="middle" class="v">TND 26.76bn</text>
+    <rect x="0" y="250" width="12" height="12" fill="#087e8b"/><text x="22" y="261" class="s">Services 51.1%</text>
+    <rect x="0" y="279" width="12" height="12" fill="#3a86ff"/><text x="22" y="290" class="s">Industry 27.6%</text>
+    <rect x="0" y="308" width="12" height="12" fill="#f18f01"/><text x="22" y="319" class="s">Collective equipment 16.4%</text>
+    <rect x="0" y="337" width="12" height="12" fill="#e7ebee"/><text x="22" y="348" class="s">Agriculture 4.9%</text>
+  </g>
+  <rect x="45" y="493" width="910" height="38" rx="9" fill="#f5f7f8"/>
+  <text x="65" y="518" class="l">Realized FDI: TND 2.70bn in 2024 → <tspan font-weight="800">TND 3.51bn in 2025</tspan> · Q1 2026: TND 0.82bn</text>
+  <text x="40" y="554" class="s">Sources: BCT Annual Report 2025 and FIPA. No declared-to-operational cohort conversion rate was published.</text>
+</svg>

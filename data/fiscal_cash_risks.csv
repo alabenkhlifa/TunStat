@@ -1,0 +1,17 @@
+period,indicator,value,unit,status,notes,source
+2025,Revenue and grants,49.6992,TND billion,provisional actual,End-December execution,Ministry of Finance provisional 2025 execution
+2025,Total expenditure,58.4706,TND billion,provisional actual,End-December execution,Ministry of Finance provisional 2025 execution
+2025,Overall budget balance,-8.9751,TND billion,provisional actual,Deficit shown as negative,Ministry of Finance provisional 2025 execution
+2025,Interest expense,6.4585,TND billion,provisional actual,End-December execution,Ministry of Finance provisional 2025 execution
+2025,Primary balance,-2.5166,TND billion,calculated,Overall balance plus interest; rounding applies,TunStat calculation from Ministry of Finance
+2026,Gross government financing need,27.064,TND billion,budget plan,Budget gap plus principal repayment,BCT Annual Report 2025 and 2026 Finance Law
+2026,Planned domestic financing,19.056,TND billion,budget plan,Borrowing component,BCT Annual Report 2025 and 2026 Finance Law
+2026,Planned external financing,6.808,TND billion,budget plan,Borrowing component,BCT Annual Report 2025 and 2026 Finance Law
+2026,Planned Treasury resources,1.200,TND billion,budget plan,Non-borrowing financing resource,BCT Annual Report 2025 and 2026 Finance Law
+2026,Public debt service,23.057,TND billion,budget plan,Principal 15.849 and interest 7.208,BCT Annual Report 2025 and 2026 Finance Law
+2026,State-guarantee authorization ceiling,7.000,TND billion,legal ceiling,Annual new-guarantee authorization; not the outstanding stock,2026 Finance Law
+2026,BCT direct facility authorization,11.000,TND billion,legal ceiling,Authorization is not evidence of amount drawn,2026 Finance Law
+2026,Actual BCT direct-facility drawdown,NA,TND billion,not published,No verified drawdown series found by cut-off,BCT and Ministry of Finance should publish
+2026,Outstanding government arrears,NA,TND billion,not published,No current consolidated verified stock found by cut-off,Ministry of Finance should publish
+2026,Outstanding state guarantees,NA,TND billion,not published,Annual ceiling is published but consolidated exposure and expected loss are not,Ministry of Finance should publish
+2026,Capital-budget execution rate,NA,percent,not yet published,No 2026 execution bulletin was available by cut-off,Ministry of Finance should publish monthly

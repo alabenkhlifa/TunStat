@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" role="img" aria-labelledby="title desc">
+  <title id="title">Tunisia water security indicators and approved investment</title>
+  <desc id="desc">Dam filling reached about 60 percent in June 2026, while project documents estimate 23 percent physical losses in potable-water networks and 30 percent in public irrigation schemes. The approved first phase totals 332.5 million dollars.</desc>
+  <rect width="1000" height="560" fill="#fff"/>
+  <style>.t{font:700 25px system-ui;fill:#17212b}.h{font:700 17px system-ui;fill:#17212b}.s{font:13px system-ui;fill:#52606d}.l{font:15px system-ui;fill:#17212b}.v{font:800 23px system-ui;fill:#17212b}.w{font:700 13px system-ui;fill:#fff}</style>
+  <text x="40" y="44" class="t">Water availability improved, but system losses remain structural</text>
+  <text x="40" y="69" class="s">Latest public condition and World Bank project baselines</text>
+  <g transform="translate(45 115)">
+    <text x="0" y="0" class="h">Dam filling · June 2026</text>
+    <path d="M60 185 A145 145 0 0 1 350 185" fill="none" stroke="#e7ebee" stroke-width="42" stroke-linecap="round"/>
+    <path d="M60 185 A145 145 0 0 1 255 55" fill="none" stroke="#3a86ff" stroke-width="42" stroke-linecap="round"/>
+    <text x="205" y="160" text-anchor="middle" class="v" font-size="42">60%</text>
+    <text x="205" y="190" text-anchor="middle" class="s">national estimate</text>
+    <rect x="0" y="240" width="410" height="112" rx="18" fill="#eef6ff"/>
+    <text x="20" y="273" class="s">Current supply mix contribution</text>
+    <text x="20" y="317" class="v">2% desalination</text>
+    <text x="215" y="317" class="v">1% reuse</text>
+    <text x="20" y="340" class="s">Treated-wastewater reuse remains small.</text>
+  </g>
+  <g transform="translate(515 115)">
+    <text x="0" y="0" class="h">Water that does not reach consumers</text>
+    <text x="0" y="55" class="l">Potable-water networks</text><rect x="205" y="29" width="240" height="38" rx="7" fill="#dfe6eb"/><rect x="205" y="29" width="110" height="38" rx="7" fill="#087e8b"/><text x="327" y="55" class="v">23%</text>
+    <text x="0" y="115" class="l">Public irrigation</text><rect x="205" y="89" width="240" height="38" rx="7" fill="#dfe6eb"/><rect x="205" y="89" width="144" height="38" rx="7" fill="#f18f01"/><text x="361" y="115" class="v">30%</text>
+    <rect y="165" width="445" height="187" rx="18" fill="#f5f7f8"/>
+    <text x="20" y="199" class="h">Approved phase 1 · US$332.5m</text>
+    <text x="20" y="239" class="l">Potable water / SONEDE</text><text x="425" y="239" text-anchor="end" class="v">US$208.5m</text>
+    <text x="20" y="278" class="l">Irrigation resilience</text><text x="425" y="278" text-anchor="end" class="v">US$124m</text>
+    <text x="20" y="319" class="s">Zarat: 50,000 → 100,000 m³/day</text>
+    <text x="20" y="342" class="s">100,000 smart meters · 2.3m expected beneficiaries</text>
+  </g>
+  <text x="40" y="518" class="s">Missing nationally: groundwater balance, interruption duration, system-level non-revenue water and quality compliance.</text>
+  <text x="40" y="540" class="s">Sources: Ministry of Agriculture official quoted by TAP; World Bank water-security program and project appraisal.</text>
+</svg>

@@ -22,10 +22,16 @@ Figures are not treated as current simply because a page remains online. Each ch
 
 ### Central Bank and official reporting
 
+- [BCT Annual Report 2025](https://www.bct.gov.tn/bct/siteprod/documents/RA_2025_fr.pdf)
 - [BCT SDMX statistical portal](https://gosdmx.bct.gov.tn/gosdmx/pnrd?lang=FR)
 - [Prime Ministry: BCT 2025 annual report presented to Head of Government](https://www.pm.gov.tn/fr/article/finances-le-rapport-annuel-de-la-banque-centrale-pour-lannee-2025-remis-la-cheffe-du)
 - [TAP summary of foreign-exchange reserves](https://www.tap.info.tn/en/Portal-Economy/20134345-foreign-exchange)
 - [TAP summary of bank and financial-institution lending](https://www.tap.info.tn/en/Portal-Headlines/20369052-bct-report)
+- [TAP: reserves at 97 import days, 3 July 2026](https://www.tap.info.tn/en/Portal-Headlines/20357134-forex-reserves-drop)
+- [TAP: tourism receipts through June 2026](https://www.tap.info.tn/en/Portal-Headlines/20383154-tourism-revenues)
+- [TAP: remittances and tourism through 20 July 2026](https://www.tap.info.tn/en/Portal-Economy/20420199-workers)
+
+The BCT annual report is the primary source for end-2025 reserves, external debt, capital formation, bank capital, liquidity, asset quality, credit allocation and public-sector exposure. Daily indicators reported by TAP were used where they post-date the annual report.
 
 ### Multilateral outlooks
 
@@ -80,9 +86,12 @@ The 2025 expense, subsidy, debt-stock and debt-service charts were transcribed f
 - [TIA 2025 annual bulletin](https://tia.gov.tn/storage/app/media/00_All_TunisiaInvestmentAuthority_2026/Stats/BULLETIN%20ANNUEL%202025.pdf)
 - [FIPA 2025 international-investment results reported by TAP](https://www.tap.info.tn/en/Portal-Top-News-EN/19985964-tunisia-over-tnd)
 - [FIPA 2026 target reported by TAP](https://www.tap.info.tn/en/Portal-Top-News-EN/19985948-foreign-investment)
+- [FIPA Q1 2026 international investment reported by TAP](https://www.tap.info.tn/fr/Portail-%C3%A0-la-Une-FR-top/20168744-hausse-des)
 - [EBRD Tunisia Country Strategy 2026–2031](https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/country-strategies/tunisia/tunisia-country-strategy-2026-31.pdf)
 
 Declared investment and recorded international investment were deliberately charted in separate panels.
+
+Gross fixed capital formation is an economy-wide national-accounts concept. It is not equivalent to declared projects or FDI. No declared-to-operational conversion rate was calculated because a comparable project cohort was not available.
 
 ## Major-project sources
 
@@ -98,7 +107,11 @@ Published ELMED costs differ by source and date, approximately €850m and €92
 ### Water
 
 - [World Bank Water Security and Resilience Program, April 2026](https://www.worldbank.org/en/news/press-release/2026/04/01/tunisia-major-push-to-strengthen-water-security-and-resilience)
+- [World Bank irrigation-water project appraisal](https://documents1.worldbank.org/curated/en/099020626172042635/pdf/P511719-ba379039-6898-4c94-ae53-0a713d6fd43a.pdf)
 - [World Bank Tunisia financing portfolio](https://financesone.worldbank.org/countries/tunisia)
+- [TAP: dam filling at approximately 60%, June 2026](https://www.tap.info.tn/en/Portal-Economy/20320889-dam-filling-rate-at)
+
+The 23% potable-water and 30% public-irrigation physical-loss figures are project-document baselines, not a recurring audited national service series. Dam filling is a dated national estimate and does not measure groundwater, water quality or continuity.
 
 ### Transport
 
@@ -111,6 +124,17 @@ Published ELMED costs differ by source and date, approximately €850m and €92
 - [Prime Ministry strategic-project priorities](https://www.pm.gov.tn/fr/article/conseil-ministeriel-restreint-appel-lacceleration-de-la-realisation-de-grands-projets)
 
 Government designation as a “strategic project” was classified as pipeline/preparation unless a separate source demonstrated active construction.
+
+## Banking, household, labor and SOE sources
+
+- [INS employment and unemployment, Q1 2026](https://www.ins.tn/publication/indicateurs-de-lemploi-et-du-chomage-premier-trimestre-2026)
+- [World Bank Macro Poverty Outlook, Tunisia, April 2026](https://documents1.worldbank.org/curated/en/099635304152611739/pdf/IDU-5b2c845c-675f-43d2-8411-9d2c38f7624b.pdf)
+- [Ministry of Finance state-enterprise report page](https://www.finances.gov.tn/fr/document/le-rapport-sur-les-entreprises-publiques-ar)
+- [Ministry of Finance state-guarantee definition](https://www.finances.gov.tn/fr/dette-garantie)
+
+Banking figures use the BCT 2025 annual report. Poverty values use the World Bank’s 2021-PPP international lines and are labeled estimate, nowcast or forecast. They are not presented as Tunisia’s national poverty line.
+
+The Ministry publishes an annual state-enterprise report and an annual authorization ceiling for new guarantees. A current machine-readable consolidated stock of SOE debt, guarantees, transfers, cross-arrears and supplier delays was not found. The dataset therefore records these fields as unavailable rather than deriving them from old reports.
 
 ## Legal sources
 
@@ -192,6 +216,7 @@ Calculated values are labeled in the CSV files and chart notes.
 - Legal databases can lag amendments; consolidated texts should be verified before drafting.
 - Recommended targets are policy proposals unless explicitly identified as official program targets.
 - The dossier does not model household-level distribution because no microdata exercise was performed.
+- The coverage audit classifies a metric as current only when a recent public observation was found. “Partial” includes stale, incomplete, non-recurring or non-comparable coverage. “Missing” means no current public value was found in the reviewed sources; it does not prove that the institution lacks internal data.
 - The dossier does not provide a project-by-project engineering audit or debt-sustainability model.
 
 ## Data files
@@ -207,6 +232,17 @@ Calculated values are labeled in the CSV files and chart notes.
 - [Electricity mix](data/electricity_mix_may_2026.csv)
 - [2025 investment](data/investment_2025.csv)
 - [Major projects](data/major_projects.csv)
+- [External liquidity](data/external_liquidity.csv)
+- [Banking health](data/banking_health_2025.csv)
+- [Fiscal cash and risks](data/fiscal_cash_risks.csv)
+- [Household welfare](data/household_welfare.csv)
+- [Electricity reliability](data/electricity_reliability.csv)
+- [Water security](data/water_security.csv)
+- [Investment execution](data/investment_execution.csv)
+- [Productive sectors](data/productive_sectors.csv)
+- [Labor-market depth](data/labour_depth_2026q1.csv)
+- [SOE fiscal risk](data/soe_fiscal_risk.csv)
+- [Critical metric coverage](data/metric_coverage.csv)
 
 ## Reproducibility note
 

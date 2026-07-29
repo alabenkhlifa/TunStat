@@ -1,0 +1,18 @@
+period,indicator,value,unit,status,notes,source
+2026-06,Dam filling rate,60,percent,actual,National estimate reported by Director General of Dams,TAP
+2026,Per-capita potable water consumption,128,litres per day,latest project baseline,Current project-document estimate,World Bank water project appraisal
+2026,Potable-water physical losses,23,percent,latest project baseline,Share not reaching consumers because of leakage,World Bank water project appraisal
+2026,Public-irrigation water losses,30,percent,latest project baseline,Share not reaching consumers because of leakage,World Bank water project appraisal
+2026,Desalination share of total water supply,2,percent,latest project baseline,Current system contribution,World Bank water project appraisal
+2026,Treated-wastewater reuse share of total water supply,1,percent,latest project baseline,Current system contribution,World Bank water project appraisal
+2026,Water Security and Resilience phase 1 financing,332.5,USD million,approved,Two approved projects,World Bank
+2026,Potable Water Security and Resilience financing,208.5,USD million,approved,SONEDE component,World Bank
+2026,Irrigation Water Security financing,124,USD million,approved,Irrigation component,World Bank
+2026,Zarat desalination capacity,50,thousand m3 per day,current project capacity,Expansion baseline,World Bank
+project_target,Zarat desalination capacity,100,thousand m3 per day,approved project target,Expansion target,World Bank
+project_target,Smart meters,100000,meters,approved project target,Sfax Tozeur and Kebili,World Bank
+project_target,Potable-water project beneficiaries,2.3,million people,approved project target,More reliable and sustainable service,World Bank
+2026,Groundwater level and abstraction balance,NA,m3,not published,No current consolidated national dashboard found by cut-off,Agriculture Ministry should publish monthly
+2026,Potable-water interruption duration,NA,hours per customer,not published,No national event log found,SONEDE should publish monthly
+2026,Non-revenue water by distribution system,NA,percent,not published nationally,Physical-loss estimate exists but a current system-level commercial metric is needed,SONEDE should publish quarterly
+2026,Water-quality compliance by system,NA,percent,not published nationally,Required for regional service accountability,SONEDE and Health Ministry should publish quarterly

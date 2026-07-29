@@ -7,19 +7,21 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4.3.3-38bdf8?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Open data](https://img.shields.io/badge/data-CSV-f18f01)](data/)
 
-TunStat is an evidence-based dashboard and research dossier covering Tunisia’s economy, electricity system, public finances, debt, investment and major projects. It combines current official data with a sequenced short-, medium- and long-term recovery program.
+TunStat is an evidence-based dashboard and research dossier covering Tunisia’s economy, external liquidity, banks, households, electricity, water, public finances, debt, investment, state-owned enterprises and major projects. It combines current official data with a sequenced short-, medium- and long-term recovery program.
 
-The project is designed to answer five questions:
+The project is designed to answer seven questions:
 
 - What is happening in Tunisia now?
+- Are reserves, banks, government cash and public enterprises creating connected risks?
 - What is driving electricity and energy insecurity?
+- How exposed are households and water services?
 - Where is public money going, and how is the state financed?
 - Which major investments are operational, under construction, financed or still in preparation?
 - Which economic, legal and institutional changes are practical at each time horizon?
 
 ## Monthly updates
 
-TunStat will be updated **monthly** as new official releases become available. Each release will refresh the latest macroeconomic, labor, trade, energy, fiscal, investment and project indicators.
+TunStat will be updated **monthly** as new official releases become available. Each release will refresh the latest macroeconomic, external, banking, household, labor, trade, energy, water, fiscal, investment, SOE and project indicators.
 
 Every value is labeled by status:
 
@@ -36,7 +38,9 @@ The website is mobile-first and includes:
 - persistent light and dark themes;
 - responsive navigation and accessible controls;
 - a current economic snapshot;
-- seven reusable data visualizations;
+- thirteen reusable data visualizations;
+- a 39-metric coverage audit that distinguishes current, partial and missing public data;
+- reserve, banking, household, water and state-owned-enterprise risk analysis;
 - electricity-outage and energy-security analysis;
 - public-spending, subsidy, debt and loan breakdowns;
 - a status-classified major-project portfolio;
@@ -59,7 +63,10 @@ Evidence cut-off: **29 July 2026**
 | Unemployment | 15.0%, Q1 2026 |
 | Youth unemployment | 37.5%, Q1 2026 |
 | H1 trade deficit | TND 12.57bn |
+| FX reserve cover | 97 import days, 3 July 2026 |
+| Banking-sector classified loans | 14.9%, end-2025 |
 | Energy independence | 34%, January–May 2026 |
+| Dam filling | Approximately 60%, June 2026 |
 | Public debt | 82.1% of GDP, end-2025 provisional |
 | 2025 declared investment | TND 8.36bn |
 
@@ -76,10 +83,11 @@ Evidence cut-off: **29 July 2026**
 9. [Implementation, financing and scorecard](08-implementation-scorecard.md)
 10. [Risks and scenarios](09-risks-and-scenarios.md)
 11. [Sources, definitions and methodology](10-sources-and-methodology.md)
+12. [Critical metrics and system-risk dashboard](11-critical-metrics-and-system-risk.md)
 
 ## Data and charts
 
-The [`data/`](data/) directory contains eleven CSV datasets. The [`charts/`](charts/) directory contains seven accessible SVG charts.
+The [`data/`](data/) directory contains twenty-two CSV datasets. The [`charts/`](charts/) directory contains thirteen accessible SVG charts.
 
 The values behind each visualization are preserved in CSV form. Declared investment is never added to realized international investment; approved financing is not reported as completed construction; and proposed targets are not presented as official forecasts.
 
@@ -111,9 +119,9 @@ npm run dev
 │   ├── og.png                  # Social preview
 │   └── styles.css              # Compiled Tailwind CSS
 ├── src/input.css               # Tailwind source
-├── charts/                     # Seven SVG visualizations
-├── data/                       # Eleven CSV datasets
-├── 00-...md to 10-...md        # Research chapters
+├── charts/                     # Thirteen SVG visualizations
+├── data/                       # Twenty-two CSV datasets
+├── 00-...md to 11-...md        # Research chapters
 └── package.json
 ```
 
@@ -132,10 +140,12 @@ See [Sources, definitions and methodology](10-sources-and-methodology.md) for th
 
 - Some official figures are provisional and may be revised.
 - A complete public real-time outage dataset was not found.
+- Current consolidated data on government arrears, outstanding guarantees, SOE cross-debt, household energy burden and water-service interruptions were not found.
+- Missing public metrics are preserved as `NA` with a proposed publishing institution; they are never treated as zero.
 - Project costs can differ because sources use different dates and scopes.
 - This project provides economic-policy research, not legal, financial or investment advice.
 - Legal texts must be checked in their consolidated official form before implementation.
 
 ## Repository topics
 
-`tunisia` · `economy` · `open-data` · `data-visualization` · `public-finance` · `energy` · `macroeconomics` · `policy-analysis` · `infrastructure` · `tailwindcss`
+`tunisia` · `economy` · `open-data` · `data-visualization` · `public-finance` · `banking` · `energy` · `water-security` · `macroeconomics` · `policy-analysis` · `infrastructure` · `tailwindcss`

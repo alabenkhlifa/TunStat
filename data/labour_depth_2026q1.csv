@@ -1,0 +1,19 @@
+indicator,value,unit,status,notes,source
+Labor force,4268.0,thousand people,actual,Up 13 thousand quarter-on-quarter,INS
+Employment,3626.3,thousand people,actual,Up 16.5 thousand quarter-on-quarter,INS
+Male employment,2532.2,thousand people,actual,69.8 percent of employment,INS
+Female employment,1094.1,thousand people,actual,30.2 percent of employment,INS
+Unemployment,641.7,thousand people,actual,Down 3.5 thousand quarter-on-quarter,INS
+Labor-force participation,45.9,percent,actual,Population aged 15 and over,INS
+Urban unemployment,14.4,percent,actual,First-quarter rate,INS
+Rural unemployment,16.5,percent,actual,First-quarter rate,INS
+Services employment share,52.9,percent,actual,Sector share of employment,INS
+Manufacturing employment share,19.0,percent,actual,Sector share of employment,INS
+Non-manufacturing employment share,12.3,percent,actual,Sector share of employment,INS
+Agriculture and fishing employment share,15.7,percent,actual,Sector share of employment,INS
+Informal employment,NA,percent,not current,No current quarterly official measure found by cut-off,INS should publish at least annually
+Time-related underemployment,NA,percent,not published,Needed to measure insufficient work beyond unemployment,INS should publish quarterly
+Long-term unemployment,NA,percent,not published,Needed to distinguish structural duration,INS should publish quarterly
+Real median earnings,NA,TND,not published,Needed to assess job quality and purchasing power,INS should publish annually
+Regional employment and wages,NA,people and TND,partial,Current comparable governorate dashboard not found,INS should publish quarterly
+Net labor migration,NA,people,not current,Needed to connect skills supply and remittances,INS and migration authorities should publish annually
