@@ -1,7 +1,9 @@
 @import "tailwindcss";
 @source "../index.html";
+@source "../comparisons/*.html";
 @source "../assets/app.js";
 @source "../assets/charts.js";
+@source "../assets/comparisons.js";
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {

@@ -23,6 +23,16 @@ Every tracked or explicitly missing metric has a health definition in [the metri
 
 The `healthy`, `watch`, `stress`, `gap` and `context` assessments are analytical summaries, not automatic policy triggers. See [Healthy ranges and benchmark methodology](12-health-benchmarks.md) for the benchmark hierarchy, core sources and limitations.
 
+## Country-comparison policy
+
+The Morocco, Jordan and Egypt pages compare mechanisms rather than claiming the countries are interchangeable:
+
+- Morocco is used as Tunisia’s closest structural and investment-delivery comparator.
+- Jordan is used as the closest macroeconomic-pressure and external-buffer comparator.
+- Egypt is used to examine fiscal, foreign-exchange and inflation transmission risks.
+
+Calendar years, fiscal years, debt perimeters and labor definitions can differ. Every comparison preserves the source period and definition in [the country-comparison dataset](data/country_comparisons_2025.csv). A similar headline debt ratio is never treated as proof of identical refinancing cost, currency exposure or institutional capacity.
+
 ## Core statistical sources
 
 ### National Institute of Statistics
@@ -256,6 +266,7 @@ Calculated values are labeled in the CSV files and chart notes.
 - [SOE fiscal risk](data/soe_fiscal_risk.csv)
 - [Critical metric coverage](data/metric_coverage.csv)
 - [Metric health definitions and current assessments](data/metric_health_reference.csv)
+- [Morocco, Jordan and Egypt country comparisons](data/country_comparisons_2025.csv)
 
 ## Reproducibility note
 

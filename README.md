@@ -8,9 +8,9 @@
 [![Chart.js](https://img.shields.io/badge/Chart.js-4.5.1-ff6384?logo=chartdotjs&logoColor=white)](https://www.chartjs.org/)
 [![Open data](https://img.shields.io/badge/data-CSV-f18f01)](data/)
 
-TunStat is an evidence-based dashboard and research dossier covering Tunisia’s economy, external liquidity, banks, households, electricity, water, public finances, debt, investment, state-owned enterprises and major projects. It combines current official data with a sequenced short-, medium- and long-term recovery program.
+TunStat is an evidence-based dashboard and research dossier covering Tunisia’s economy, external liquidity, banks, households, electricity, water, public finances, debt, investment, state-owned enterprises and major projects. It combines current official data with a sequenced recovery program and detailed comparisons with Morocco, Jordan and Egypt.
 
-The project is designed to answer seven questions:
+The project is designed to answer eight questions:
 
 - What is happening in Tunisia now?
 - Are reserves, banks, government cash and public enterprises creating connected risks?
@@ -19,6 +19,7 @@ The project is designed to answer seven questions:
 - Where is public money going, and how is the state financed?
 - Which major investments are operational, under construction, financed or still in preparation?
 - Which economic, legal and institutional changes are practical at each time horizon?
+- What can Tunisia learn from Morocco, Jordan and Egypt without treating any of them as an identical case?
 
 ## Monthly updates
 
@@ -41,6 +42,7 @@ The website is mobile-first and includes:
 - a current economic snapshot;
 - twelve interactive Chart.js chart groups with tooltips, exact-value tables and responsive layouts;
 - a searchable health-reference registry covering every tracked or missing metric;
+- three dedicated country-comparison pages with interactive evidence, causal analysis and Tunisia-specific lessons;
 - a 39-metric coverage audit that distinguishes current, partial and missing public data;
 - reserve, banking, household, water and state-owned-enterprise risk analysis;
 - electricity-outage and energy-security analysis;
@@ -88,9 +90,17 @@ Evidence cut-off: **29 July 2026**
 12. [Critical metrics and system-risk dashboard](11-critical-metrics-and-system-risk.md)
 13. [Healthy ranges and benchmark methodology](12-health-benchmarks.md)
 
+## Country comparisons
+
+- [Tunisia and Morocco: same foundations, different execution](comparisons/morocco.html)
+- [Tunisia and Jordan: similar pressure, different protection](comparisons/jordan.html)
+- [Tunisia and Egypt: similar debt, different crisis mechanics](comparisons/egypt.html)
+
+These comparisons use each country for a specific analytical purpose. Morocco is the structural and investment benchmark, Jordan is the macroeconomic-stability comparator, and Egypt is the fiscal–currency risk comparator. Differences in reporting periods and debt definitions are preserved rather than hidden.
+
 ## Data and charts
 
-The [`data/`](data/) directory contains twenty-three CSV datasets. The website renders twelve interactive Chart.js chart groups. The [`charts/`](charts/) directory preserves thirteen accessible SVG charts for the Markdown research chapters and non-JavaScript use.
+The [`data/`](data/) directory contains twenty-four CSV datasets. The website renders the main interactive dashboard plus comparison charts on three dedicated country pages. The [`charts/`](charts/) directory preserves thirteen accessible SVG charts for the Markdown research chapters and non-JavaScript use.
 
 The values behind each visualization are preserved in CSV form. The [metric health reference](data/metric_health_reference.csv) states what healthy, watch, stress, gap and context mean for every metric. Declared investment is never added to realized international investment; approved financing is not reported as completed construction; and proposed targets are not presented as official forecasts.
 
@@ -120,12 +130,14 @@ npm run dev
 ├── assets/
 │   ├── app.js                  # Theme and mobile navigation
 │   ├── charts.js               # Interactive charts and metric registry
+│   ├── comparisons.js          # Country-comparison charts and tables
 │   ├── chart.umd.min.js        # Chart.js runtime copied during build
 │   ├── og.png                  # Social preview
 │   └── styles.css              # Compiled Tailwind CSS
 ├── src/input.css               # Tailwind source
+├── comparisons/                # Morocco, Jordan and Egypt comparison pages
 ├── charts/                     # SVG fallbacks for research documents
-├── data/                       # Twenty-three CSV datasets
+├── data/                       # Twenty-four CSV datasets
 ├── 00-...md to 12-...md        # Research chapters
 └── package.json
 ```

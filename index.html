@@ -6,7 +6,7 @@
     <title>TunStat — Tunisia economy, energy and public finance dashboard</title>
     <meta
       name="description"
-      content="An evidence-based monthly dashboard tracking Tunisia's economy, external liquidity, banks, households, electricity, water, public finances, investment and major projects."
+      content="An evidence-based monthly dashboard tracking Tunisia's economy, public services, finance and investment, with detailed comparisons to Morocco, Jordan and Egypt."
     />
     <meta name="theme-color" content="#fafaf9" />
     <meta name="color-scheme" content="light dark" />
@@ -14,7 +14,7 @@
     <meta name="author" content="TunStat" />
     <meta
       name="keywords"
-      content="Tunisia, economy, statistics, reserves, banks, electricity, water, public finance, debt, investment, jobs, state-owned enterprises, open data"
+      content="Tunisia, Morocco, Jordan, Egypt, economy, country comparison, statistics, reserves, banks, electricity, water, public finance, debt, investment, jobs, open data"
     />
     <link rel="canonical" href="https://alabenkhlifa.github.io/TunStat/" />
     <link rel="icon" type="image/svg+xml" href="./assets/tunisia-flag.svg" />
@@ -46,7 +46,7 @@
         "@context": "https://schema.org",
         "@type": "Dataset",
         "name": "TunStat",
-        "description": "A monthly evidence dashboard and research dataset covering Tunisia's economy, external liquidity, banking, households, energy, water, public finances, debt, investment and major projects.",
+        "description": "A monthly evidence dashboard and research dataset covering Tunisia's economy, public services, finance and investment, with detailed comparisons to Morocco, Jordan and Egypt.",
         "url": "https://alabenkhlifa.github.io/TunStat/",
         "keywords": ["Tunisia", "macroeconomics", "external liquidity", "banking", "energy", "water", "public finance", "investment", "open data"],
         "temporalCoverage": "2023/2026",
@@ -73,12 +73,13 @@
           </span>
         </a>
 
-        <nav class="hidden items-center gap-5 md:flex" aria-label="Primary navigation">
+        <nav class="hidden items-center gap-5 xl:flex" aria-label="Primary navigation">
           <a class="nav-link" href="#snapshot">Snapshot</a>
           <a class="nav-link" href="#system-risk">System risk</a>
           <a class="nav-link" href="#power">Power</a>
           <a class="nav-link" href="#finance">Finance</a>
           <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#comparisons">Comparisons</a>
           <a class="nav-link" href="#plan">Recovery plan</a>
           <a class="nav-link" href="#health">Healthy ranges</a>
           <a class="nav-link" href="#research">Research</a>
@@ -105,7 +106,7 @@
           <button
             type="button"
             data-menu-toggle
-            class="grid size-11 place-items-center rounded-full border border-stone-200 bg-white text-xl md:hidden dark:border-white/10 dark:bg-white/5"
+            class="grid size-11 place-items-center rounded-full border border-stone-200 bg-white text-xl xl:hidden dark:border-white/10 dark:bg-white/5"
             aria-label="Open navigation"
             aria-expanded="false"
           >
@@ -114,13 +115,14 @@
         </div>
       </div>
 
-      <nav data-mobile-menu class="shell hidden border-t border-stone-200 py-4 md:hidden dark:border-white/10" aria-label="Mobile navigation">
+      <nav data-mobile-menu class="shell hidden border-t border-stone-200 py-4 xl:hidden dark:border-white/10" aria-label="Mobile navigation">
         <div class="grid grid-cols-2 gap-2">
           <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#snapshot">Snapshot</a>
           <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#system-risk">System risk</a>
           <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#power">Power</a>
           <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#finance">Finance</a>
           <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#projects">Projects</a>
+          <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#comparisons">Comparisons</a>
           <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#plan">Recovery plan</a>
           <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#health">Healthy ranges</a>
           <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#research">Research</a>
@@ -431,6 +433,59 @@
         </div>
       </section>
 
+      <section id="comparisons" class="border-y border-stone-200 bg-[#eef4f2] py-18 sm:py-24 dark:border-white/10 dark:bg-[#0e1916]">
+        <div class="shell">
+          <div class="flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
+            <div>
+              <p class="section-kicker">Country comparisons</p>
+              <h2 class="section-title text-balance">Three peers. Three different lessons for Tunisia.</h2>
+              <p class="section-copy">Similarity is separated from prediction. Morocco explains the structural opportunity, Jordan explains the current financing pressure, and Egypt shows how fiscal and foreign-exchange stress can transmit into inflation.</p>
+            </div>
+            <a href="./data/country_comparisons_2025.csv" class="button-secondary shrink-0">Download comparison data ↓</a>
+          </div>
+
+          <div class="mt-10 grid gap-5 lg:grid-cols-3">
+            <a href="./comparisons/morocco.html" class="group panel overflow-hidden transition hover:-translate-y-1 hover:border-emerald-400">
+              <div class="h-2 bg-[#087e8b]"></div>
+              <div class="p-6 sm:p-8">
+                <div class="flex items-center justify-between gap-4"><span class="status-pill">Structural peer</span><span class="text-2xl transition group-hover:translate-x-1" aria-hidden="true">→</span></div>
+                <p class="mt-8 text-xs font-black tracking-[0.18em] text-[#087e8b] uppercase">Tunisia × Morocco</p>
+                <h3 class="mt-3 text-3xl font-black tracking-tight text-ink dark:text-white">Same foundations.<br />Different execution.</h3>
+                <p class="mt-4 text-sm leading-6 text-stone-600 dark:text-stone-300">EU-linked manufacturing, tourism, agriculture and water stress—but an investment rate roughly twice Tunisia’s.</p>
+                <div class="mt-6 flex gap-6 border-t border-stone-200 pt-5 text-sm dark:border-white/10"><div><strong class="block text-xl">4.9%</strong><span class="text-stone-500">2025 growth</span></div><div><strong class="block text-xl">30.9%</strong><span class="text-stone-500">investment rate</span></div></div>
+              </div>
+            </a>
+
+            <a href="./comparisons/jordan.html" class="group panel overflow-hidden transition hover:-translate-y-1 hover:border-blue-400">
+              <div class="h-2 bg-blue-600"></div>
+              <div class="p-6 sm:p-8">
+                <div class="flex items-center justify-between gap-4"><span class="status-pill">Macroeconomic peer</span><span class="text-2xl transition group-hover:translate-x-1" aria-hidden="true">→</span></div>
+                <p class="mt-8 text-xs font-black tracking-[0.18em] text-blue-600 uppercase dark:text-blue-400">Tunisia × Jordan</p>
+                <h3 class="mt-3 text-3xl font-black tracking-tight text-ink dark:text-white">Similar pressure.<br />Different protection.</h3>
+                <p class="mt-4 text-sm leading-6 text-stone-600 dark:text-stone-300">Comparable debt, slow growth, unemployment and utility burdens—but a far larger reserve and external-financing buffer.</p>
+                <div class="mt-6 flex gap-6 border-t border-stone-200 pt-5 text-sm dark:border-white/10"><div><strong class="block text-xl">83.6%</strong><span class="text-stone-500">net debt measure</span></div><div><strong class="block text-xl">8.6</strong><span class="text-stone-500">import months</span></div></div>
+              </div>
+            </a>
+
+            <a href="./comparisons/egypt.html" class="group panel overflow-hidden transition hover:-translate-y-1 hover:border-amber-400">
+              <div class="h-2 bg-amber-500"></div>
+              <div class="p-6 sm:p-8">
+                <div class="flex items-center justify-between gap-4"><span class="status-pill">Risk comparator</span><span class="text-2xl transition group-hover:translate-x-1" aria-hidden="true">→</span></div>
+                <p class="mt-8 text-xs font-black tracking-[0.18em] text-amber-600 uppercase dark:text-amber-400">Tunisia × Egypt</p>
+                <h3 class="mt-3 text-3xl font-black tracking-tight text-ink dark:text-white">Similar debt.<br />Different crisis mechanics.</h3>
+                <p class="mt-4 text-sm leading-6 text-stone-600 dark:text-stone-300">The warning case for delayed foreign-exchange adjustment, state-enterprise opacity and an interest burden that compresses the budget.</p>
+                <div class="mt-6 flex gap-6 border-t border-stone-200 pt-5 text-sm dark:border-white/10"><div><strong class="block text-xl">82.5%</strong><span class="text-stone-500">central debt</span></div><div><strong class="block text-xl">10.6%</strong><span class="text-stone-500">GDP interest cost</span></div></div>
+              </div>
+            </a>
+          </div>
+
+          <div class="mt-8 panel grid gap-6 p-6 sm:p-8 lg:grid-cols-[auto_1fr] lg:items-center">
+            <p class="text-5xl font-black text-tunis-red">01 / 02 / 03</p>
+            <div><h3 class="text-xl font-black text-ink dark:text-white">Use each comparison for one job.</h3><p class="mt-2 leading-7 text-stone-600 dark:text-stone-300">Morocco is the development benchmark. Jordan is the stability benchmark. Egypt is the downside transmission warning. None is presented as Tunisia’s inevitable future.</p></div>
+          </div>
+        </div>
+      </section>
+
       <section id="plan" class="relative overflow-hidden border-y border-red-950 bg-[#79000a] py-18 text-white sm:py-24">
         <div class="absolute -top-40 -right-40 size-[30rem] rounded-full bg-red-500/30 blur-3xl"></div>
         <div class="shell relative">
@@ -575,6 +630,7 @@
           <p class="mt-1 text-sm text-stone-500 dark:text-stone-400">Evidence on Tunisia, updated monthly.</p>
         </div>
         <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold text-stone-600 dark:text-stone-300">
+          <a class="hover:text-tunis-red" href="#comparisons">Comparisons</a>
           <a class="hover:text-tunis-red" href="https://github.com/alabenkhlifa/TunStat/blob/main/10-sources-and-methodology.md">Methodology</a>
           <a class="hover:text-tunis-red" href="https://github.com/alabenkhlifa/TunStat">GitHub</a>
           <span>© <span data-year>2026</span></span>
