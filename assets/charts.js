@@ -626,6 +626,7 @@
     const registry = document.querySelector("[data-health-registry]");
     if (!registry) return;
     const count = document.querySelector("[data-health-count]");
+    const translate = window.tunstatTranslate || ((value) => value);
     try {
       const response = await fetch("./data/metric_health_reference.csv");
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -636,7 +637,7 @@
       [...new Set(records.map((record) => record.domain))].sort().forEach((value) => {
         const option = document.createElement("option");
         option.value = value;
-        option.textContent = value;
+        option.textContent = translate(value);
         domain.append(option);
       });
 
@@ -648,7 +649,7 @@
           const matchesSearch = !query || Object.values(record).join(" ").toLowerCase().includes(query);
           return matchesDomain && matchesSearch;
         });
-        count.textContent = `${visible.length} of ${records.length} metric references shown`;
+        count.textContent = `${visible.length} ${translate("of")} ${records.length} ${translate("metric references shown")}`;
         registry.replaceChildren();
         visible.forEach((record) => {
           const card = document.createElement("article");
@@ -656,18 +657,18 @@
           const top = document.createElement("div");
           top.className = "flex flex-col justify-between gap-3 sm:flex-row sm:items-start";
           const title = document.createElement("div");
-          title.append(textNode("p", "text-xs font-bold tracking-wider text-tunis-red uppercase", record.domain));
-          title.append(textNode("h3", "mt-1 text-lg font-black text-ink dark:text-white", record.metric));
-          const badge = textNode("span", `health-status ${statusClasses[record.assessment] || statusClasses.context}`, record.assessment);
+          title.append(textNode("p", "text-xs font-bold tracking-wider text-tunis-red uppercase", translate(record.domain)));
+          title.append(textNode("h3", "mt-1 text-lg font-black text-ink dark:text-white", translate(record.metric)));
+          const badge = textNode("span", `health-status ${statusClasses[record.assessment] || statusClasses.context}`, translate(record.assessment));
           top.append(title, badge);
           card.append(top);
 
           const grid = document.createElement("div");
           grid.className = "mt-4 grid gap-4 lg:grid-cols-3";
           [
-            ["Healthy means", record.healthy_meaning],
-            ["Watch or stress", record.watch_or_stress],
-            ["Current reading", record.current_reading],
+            ["Healthy means", translate(record.healthy_meaning)],
+            ["Watch or stress", translate(record.watch_or_stress)],
+            ["Current reading", translate(record.current_reading)],
           ].forEach(([label, value]) => {
             const cell = document.createElement("div");
             cell.append(textNode("p", "text-[10px] font-black tracking-wider text-stone-500 uppercase dark:text-stone-400", label));
@@ -678,13 +679,13 @@
 
           const meta = document.createElement("div");
           meta.className = "mt-4 flex flex-col gap-2 border-t border-stone-200 pt-4 text-xs text-stone-500 sm:flex-row sm:items-center sm:justify-between dark:border-white/10 dark:text-stone-400";
-          meta.append(textNode("span", "font-semibold", record.benchmark_type));
+          meta.append(textNode("span", "font-semibold", translate(record.benchmark_type)));
           const link = document.createElement("a");
           link.className = "font-bold text-tunis-red hover:underline";
           link.href = record.source_url;
           link.target = "_blank";
           link.rel = "noreferrer";
-          link.textContent = `${record.source_label} ↗`;
+          link.textContent = `${translate(record.source_label)} ↗`;
           meta.append(link);
           card.append(meta);
           registry.append(card);
@@ -705,8 +706,8 @@
       domain.addEventListener("change", render);
       render();
     } catch (error) {
-      count.textContent = "The metric registry could not be loaded.";
-      registry.innerHTML = '<p class="panel p-6 text-sm text-red-700 dark:text-red-300">Use the CSV download above to access every health definition.</p>';
+      count.textContent = translate("The metric registry could not be loaded.");
+      registry.innerHTML = `<p class="panel p-6 text-sm text-red-700 dark:text-red-300">${translate("Use the CSV download above to access every health definition.")}</p>`;
     }
   }
 
