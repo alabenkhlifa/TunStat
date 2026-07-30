@@ -6,6 +6,7 @@
 [![Data cut-off](https://img.shields.io/badge/data%20cut--off-29%20July%202026-087e8b)](https://github.com/alabenkhlifa/TunStat)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4.3.3-38bdf8?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Chart.js](https://img.shields.io/badge/Chart.js-4.5.1-ff6384?logo=chartdotjs&logoColor=white)](https://www.chartjs.org/)
+[![Leaflet](https://img.shields.io/badge/Leaflet-1.9.4-199900?logo=leaflet&logoColor=white)](https://leafletjs.com/)
 [![Open data](https://img.shields.io/badge/data-CSV-f18f01)](data/)
 
 TunStat is an evidence-based dashboard and research dossier covering Tunisia’s economy, external liquidity, banks, households, electricity, water, public finances, debt, investment, state-owned enterprises and major projects. It combines current official data with a sequenced recovery program and detailed comparisons with Morocco, Jordan and Egypt.
@@ -39,10 +40,12 @@ The website is mobile-first and includes:
 
 - Tunisia’s flag as the site identity and favicon;
 - persistent light and dark themes;
-- a persistent English/French/Tunisian Arabic language preference across the dashboard and comparison pages, with RTL layout for Tunisian Arabic;
+- a persistent English/French/Tunisian Arabic language preference across the dashboard, explorer and comparison pages, with RTL layout for Tunisian Arabic;
 - responsive navigation and accessible controls;
 - a current economic snapshot;
 - twelve interactive Chart.js chart groups with tooltips, exact-value tables and responsive layouts;
+- a seven-part interactive data explorer covering governorates, historical trends, project execution, peer comparisons, government spending, debt service and data revisions;
+- a Leaflet governorate map that preserves dated observations and missing regional values instead of presenting gaps as zero;
 - a searchable health-reference registry covering every tracked or missing metric;
 - three dedicated country-comparison pages with interactive evidence, causal analysis and Tunisia-specific lessons;
 - a 39-metric coverage audit that distinguishes current, partial and missing public data;
@@ -102,7 +105,7 @@ These comparisons use each country for a specific analytical purpose. Morocco is
 
 ## Data and charts
 
-The [`data/`](data/) directory contains twenty-four CSV datasets. The website renders the main interactive dashboard plus comparison charts on three dedicated country pages. The [`charts/`](charts/) directory preserves thirteen accessible SVG charts for the Markdown research chapters and non-JavaScript use.
+The [`data/`](data/) directory contains twenty-nine CSV datasets. The website renders the main dashboard, a seven-part interactive data explorer and comparison charts on three dedicated country pages. The [`charts/`](charts/) directory preserves thirteen accessible SVG charts for the Markdown research chapters and non-JavaScript use.
 
 The values behind each visualization are preserved in CSV form. The [metric health reference](data/metric_health_reference.csv) states what healthy, watch, stress, gap and context mean for every metric. Declared investment is never added to realized international investment; approved financing is not reported as completed construction; and proposed targets are not presented as official forecasts.
 
@@ -129,19 +132,21 @@ npm run dev
 ```text
 .
 ├── index.html                  # Responsive dashboard
+├── explore.html                # Regional, trend, project, budget and debt explorers
 ├── assets/
 │   ├── app.js                  # Theme and mobile navigation
 │   ├── i18n.js                 # English/French translation and language preference
 │   ├── i18n-tn.js              # Tunisian Arabic locale
 │   ├── charts.js               # Interactive charts and metric registry
 │   ├── comparisons.js          # Country-comparison charts and tables
+│   ├── explorer.js             # Explorer maps, filters, charts and revision log
 │   ├── chart.umd.min.js        # Chart.js runtime copied during build
 │   ├── og.png                  # Social preview
 │   └── styles.css              # Compiled Tailwind CSS
 ├── src/input.css               # Tailwind source
 ├── comparisons/                # Morocco, Jordan and Egypt comparison pages
 ├── charts/                     # SVG fallbacks for research documents
-├── data/                       # Twenty-four CSV datasets
+├── data/                       # Twenty-nine CSV datasets
 ├── 00-...md to 12-...md        # Research chapters
 └── package.json
 ```

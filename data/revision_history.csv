@@ -1,0 +1,12 @@
+release_id,release_date,dataset,metric,change_type,previous_value,new_value,reason,source_url
+2026-07,2026-07-29,macro_dashboard,Real GDP growth,updated,,2.6% year on year Q1 2026,New INS quarterly release,https://www.ins.tn/
+2026-07,2026-07-29,trade_h1_2026,Trade deficit,updated,,TND 12.57bn H1 2026,New INS half-year trade release,https://www.ins.tn/
+2026-07,2026-07-29,external_liquidity,Reserve cover,updated,121 days end-2024,97 days on 3 July 2026,New dated BCT reserve observation,https://www.bct.gov.tn/
+2026-07,2026-07-29,banking_health_2025,Classified loans,updated,,14.9% end-2025,Added BCT 2025 banking observation,https://www.bct.gov.tn/
+2026-07,2026-07-29,energy_may_2026,Energy independence,updated,39% Jan-May 2025,34% Jan-May 2026,New Ministry of Energy period comparison,https://www.energiemines.gov.tn/
+2026-07,2026-07-29,major_projects,Water Security and Resilience Program,added,,US$332.5m phase 1,World Bank approval added to portfolio,https://www.worldbank.org/en/news/press-release/2026/04/01/tunisia-major-push-to-strengthen-water-security-and-resilience
+2026-07,2026-07-29,metric_health_reference,Health definitions,methodology,,103 metric references,Added explicit healthy watch stress gap and context definitions,./data/metric_health_reference.csv
+2026-07,2026-07-29,country_comparisons,Morocco Jordan Egypt,added,,32 comparable observations,Added definition-aware country comparison dataset,./data/country_comparisons_2025.csv
+2026-07,2026-07-29,regional_dashboard,Governorate map,added,,24 governorates,Added official coordinates and dated regional observations,./data/regional_dashboard.csv
+2026-07,2026-07-29,budget_history,Expense history,added,,2022-2025 series,Added Ministry of Finance historical expense series,https://www.finances.gov.tn/fr/les-indicateurs/depenses
+2026-07,2026-07-29,debt_calendar,Debt service,added,,2022-2026 annual schedule,Added actual and planned aggregate debt-service calendar,https://www.finances.gov.tn/fr/les-indicateurs/depenses

@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en" class="scroll-pt-24">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TunStat Explorer — regions, trends, projects, budget and debt</title>
+    <meta name="description" content="Interactive Tunisia data explorer covering governorates, historical trends, major projects, country comparisons, government spending, debt service and data revisions." />
+    <meta name="theme-color" content="#fafaf9" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://alabenkhlifa.github.io/TunStat/explore.html" />
+    <link rel="icon" type="image/svg+xml" href="./assets/tunisia-flag.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="TunStat Explorer" />
+    <meta property="og:description" content="Explore Tunisia by governorate, through time, across projects and inside the public budget and debt-service schedule." />
+    <meta property="og:url" content="https://alabenkhlifa.github.io/TunStat/explore.html" />
+    <meta property="og:image" content="https://alabenkhlifa.github.io/TunStat/assets/og.png" />
+    <script>
+      (() => {
+        const saved = localStorage.getItem("tunstat-theme");
+        const dark = saved ? saved === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.classList.toggle("dark", dark);
+      })();
+    </script>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIINfQ3yn5QZrCm9MZDB4+TJRRB06TzMZ2w="
+      crossorigin=""
+    />
+  </head>
+  <body>
+    <a href="#main" class="sr-only z-[100] rounded-lg bg-white px-4 py-3 font-bold text-stone-900 focus:not-sr-only focus:fixed focus:top-4 focus:left-4">Skip to content</a>
+
+    <header class="sticky top-0 z-50 border-b border-stone-200/80 bg-stone-50/90 backdrop-blur-xl dark:border-white/10 dark:bg-[#0b1210]/90">
+      <div class="shell flex h-18 items-center justify-between gap-4">
+        <a href="./index.html" class="flex items-center gap-3" aria-label="TunStat home">
+          <img src="./assets/tunisia-flag.svg" alt="Flag of Tunisia" width="48" height="32" class="h-8 w-12 rounded-sm object-cover shadow-sm ring-1 ring-black/10 dark:ring-white/20" />
+          <span><span class="block text-base font-black text-ink dark:text-white">TunStat</span><span class="block text-[10px] font-bold tracking-[0.13em] text-stone-500 uppercase dark:text-stone-400">Data explorer</span></span>
+        </a>
+        <nav class="hidden items-center gap-5 xl:flex" aria-label="Explorer navigation">
+          <a class="nav-link" href="#regions">Regions</a>
+          <a class="nav-link" href="#trends">Trends</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#peers">Peer explorer</a>
+          <a class="nav-link" href="#budget">Budget</a>
+          <a class="nav-link" href="#debt">Debt</a>
+          <a class="nav-link" href="#revisions">Revisions</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <button type="button" data-language-toggle class="grid h-11 min-w-11 place-items-center rounded-full border border-stone-200 bg-white px-3 text-xs font-black tracking-wider dark:border-white/10 dark:bg-white/5" aria-label="Change language">EN</button>
+          <button type="button" data-theme-toggle class="grid size-11 place-items-center rounded-full border border-stone-200 bg-white text-lg dark:border-white/10 dark:bg-white/5" aria-label="Switch theme"><span class="dark:hidden" aria-hidden="true">☾</span><span class="hidden dark:inline" aria-hidden="true">☀</span></button>
+          <button type="button" data-menu-toggle class="grid size-11 place-items-center rounded-full border border-stone-200 bg-white text-xl xl:hidden dark:border-white/10 dark:bg-white/5" aria-label="Open navigation" aria-expanded="false"><span aria-hidden="true">≡</span></button>
+        </div>
+      </div>
+      <nav data-mobile-menu class="shell hidden border-t border-stone-200 py-4 xl:hidden dark:border-white/10" aria-label="Mobile navigation">
+        <div class="grid grid-cols-2 gap-2 sm:grid-cols-4">
+          <a class="nav-link rounded-xl px-3 py-3" href="#regions">Regions</a><a class="nav-link rounded-xl px-3 py-3" href="#trends">Trends</a>
+          <a class="nav-link rounded-xl px-3 py-3" href="#projects">Projects</a><a class="nav-link rounded-xl px-3 py-3" href="#peers">Peer explorer</a>
+          <a class="nav-link rounded-xl px-3 py-3" href="#budget">Budget</a><a class="nav-link rounded-xl px-3 py-3" href="#debt">Debt</a>
+          <a class="nav-link rounded-xl px-3 py-3" href="#revisions">Revisions</a><a class="nav-link rounded-xl px-3 py-3" href="./index.html">Dashboard</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="relative isolate overflow-hidden pt-14 pb-18 sm:pt-20 sm:pb-24">
+        <div class="grid-fade absolute inset-0 -z-20"></div>
+        <div class="absolute -top-36 -right-28 -z-10 size-[32rem] rounded-full bg-cyan-200/45 blur-3xl dark:bg-cyan-950/25"></div>
+        <div class="shell">
+          <div class="flex flex-wrap gap-2"><span class="status-pill">Seven interactive explorers</span><span class="status-pill">Evidence cut-off: 29 July 2026</span><span class="status-pill">Downloadable data</span></div>
+          <p class="mt-8 text-sm font-black tracking-[0.2em] text-sea uppercase">TunStat Explorer</p>
+          <h1 class="mt-4 max-w-6xl text-balance text-5xl leading-[0.98] font-black tracking-[-0.05em] text-ink sm:text-7xl lg:text-8xl dark:text-white">Move from a headline<br /><span class="text-tunis-red">to the underlying system.</span></h1>
+          <p class="mt-7 max-w-3xl text-lg leading-8 text-stone-600 sm:text-xl dark:text-stone-300">Map regional gaps, inspect trends, track projects, compare peers, open the budget, examine debt-service pressure and see exactly when the data changed.</p>
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row"><a href="#regions" class="button-primary">Start exploring</a><a href="https://github.com/alabenkhlifa/TunStat/tree/main/data" class="button-secondary">Download all CSV data</a></div>
+          <div class="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <a href="#regions" class="stat-card"><p class="text-xs font-black text-tunis-red uppercase">24 governorates</p><p class="mt-3 font-black">Regional map</p><p class="mt-2 text-sm text-stone-500 dark:text-stone-400">Dated observations and visible gaps.</p></a>
+            <a href="#projects" class="stat-card"><p class="text-xs font-black text-tunis-red uppercase">12 projects</p><p class="mt-3 font-black">Execution tracker</p><p class="mt-2 text-sm text-stone-500 dark:text-stone-400">Stage, evidence and next milestone.</p></a>
+            <a href="#budget" class="stat-card"><p class="text-xs font-black text-tunis-red uppercase">2022–2025</p><p class="mt-3 font-black">Budget history</p><p class="mt-2 text-sm text-stone-500 dark:text-stone-400">Composition and category trends.</p></a>
+            <a href="#revisions" class="stat-card"><p class="text-xs font-black text-tunis-red uppercase">Release log</p><p class="mt-3 font-black">Revision history</p><p class="mt-2 text-sm text-stone-500 dark:text-stone-400">What changed, when and why.</p></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="regions" class="explorer-section border-y border-stone-200 bg-[#eef4f2] dark:border-white/10 dark:bg-[#0e1916]">
+        <div class="shell">
+          <p class="section-kicker">Governorate map</p>
+          <h2 class="section-title">Regional inequality is visible. Current regional data is not.</h2>
+          <p class="section-copy">Switch between the latest reviewed governorate investment observations and the last complete governorate youth-unemployment series. Period labels are always shown because these datasets are not contemporaneous.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <label class="block text-sm font-bold"><span class="mb-2 block">Map metric</span><select data-region-metric class="health-control sm:w-80"><option value="youth_unemployment_percent">Youth unemployment</option><option value="declared_investment_mdt">Declared investment</option></select></label>
+            <a class="text-sm font-bold text-tunis-red hover:underline" href="./data/regional_dashboard.csv">Regional CSV ↓</a>
+          </div>
+          <div class="mt-6 grid min-w-0 gap-5 xl:grid-cols-[1.25fr_0.75fr]">
+            <div class="chart-frame"><div id="regional-map" class="regional-map" role="img" aria-label="Interactive map of Tunisia governorates"></div><p class="mt-3 px-2 text-xs leading-5 text-stone-500 dark:text-stone-400" data-region-note></p></div>
+            <div class="panel min-w-0 p-5"><h3 class="text-xl font-black">Governorate ranking</h3><div class="mt-4 max-h-[34rem] overflow-auto" data-region-list></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="trends" class="explorer-section">
+        <div class="shell">
+          <p class="section-kicker">Historical trends</p>
+          <h2 class="section-title">Separate realized history from published forecasts.</h2>
+          <p class="section-copy">Select a macroeconomic or fiscal series. Forecast years use a dashed line and the exact table preserves each observation’s status.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <label class="block text-sm font-bold"><span class="mb-2 block">Trend metric</span><select data-trend-metric class="health-control sm:w-96"></select></label>
+            <a class="text-sm font-bold text-tunis-red hover:underline" href="./data/macro_dashboard.csv">Macro CSV ↓</a>
+          </div>
+          <div class="mt-6 chart-frame"><div class="chart-canvas-wrap h-80 sm:h-[28rem]"><canvas data-trend-chart role="img" aria-label="Historical trend chart"></canvas></div><div data-trend-table></div></div>
+        </div>
+      </section>
+
+      <section id="projects" class="explorer-section border-y border-stone-200 bg-[#f3efe5] dark:border-white/10 dark:bg-[#111a17]">
+        <div class="shell">
+          <p class="section-kicker">Project execution tracker</p>
+          <h2 class="section-title">Track the next verifiable milestone—not the announcement.</h2>
+          <p class="section-copy">The progress bar is an administrative stage score, not a claim about physical completion. Each card identifies the next public evidence needed.</p>
+          <div class="mt-8 grid gap-3 md:grid-cols-3">
+            <label class="block text-sm font-bold"><span class="mb-2 block">Search projects</span><input data-project-search class="health-control" type="search" placeholder="Search project, sector or region" /></label>
+            <label class="block text-sm font-bold"><span class="mb-2 block">Sector</span><select data-project-sector class="health-control"><option value="">All sectors</option></select></label>
+            <label class="block text-sm font-bold"><span class="mb-2 block">Stage</span><select data-project-stage class="health-control"><option value="">All stages</option></select></label>
+          </div>
+          <div class="mt-4 flex items-center justify-between gap-4 text-sm"><p data-project-count></p><a class="font-bold text-tunis-red hover:underline" href="./data/project_tracker.csv">Project CSV ↓</a></div>
+          <div class="mt-6 grid gap-4 lg:grid-cols-2" data-project-grid></div>
+        </div>
+      </section>
+
+      <section id="peers" class="explorer-section">
+        <div class="shell">
+          <p class="section-kicker">Country comparison explorer</p>
+          <h2 class="section-title">Compare values only after comparing definitions.</h2>
+          <p class="section-copy">Choose a metric to compare Tunisia with Morocco, Jordan and Egypt. Missing observations remain blank and every definition note stays attached to the value.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <label class="block text-sm font-bold"><span class="mb-2 block">Comparison metric</span><select data-peer-metric class="health-control sm:w-96"></select></label>
+            <a class="text-sm font-bold text-tunis-red hover:underline" href="./data/country_comparisons_2025.csv">Comparison CSV ↓</a>
+          </div>
+          <div class="mt-6 grid min-w-0 gap-5 xl:grid-cols-[1fr_0.8fr]">
+            <div class="chart-frame"><div class="chart-canvas-wrap h-80 sm:h-[28rem]"><canvas data-peer-chart role="img" aria-label="Country comparison chart"></canvas></div></div>
+            <div class="panel min-w-0 p-5"><h3 class="text-xl font-black">Definitions and periods</h3><div class="mt-4 space-y-3" data-peer-notes></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="budget" class="explorer-section border-y border-stone-200 bg-[#eef4f2] dark:border-white/10 dark:bg-[#0e1916]">
+        <div class="shell">
+          <p class="section-kicker">Government budget explorer</p>
+          <h2 class="section-title">See where spending goes and what is gaining room.</h2>
+          <p class="section-copy">The composition view shows the selected year. The trend view follows one category through the official 2022–2025 series.</p>
+          <div class="mt-8 grid gap-3 sm:grid-cols-2">
+            <label class="block text-sm font-bold"><span class="mb-2 block">Budget year</span><select data-budget-year class="health-control"></select></label>
+            <label class="block text-sm font-bold"><span class="mb-2 block">Trend category</span><select data-budget-category class="health-control"></select></label>
+          </div>
+          <div class="mt-6 grid min-w-0 gap-5 xl:grid-cols-2">
+            <div class="chart-frame"><h3 class="px-2 pt-2 text-xl font-black">Spending composition</h3><div class="chart-canvas-wrap"><canvas data-budget-composition role="img" aria-label="Budget composition chart"></canvas></div></div>
+            <div class="chart-frame"><h3 class="px-2 pt-2 text-xl font-black">Category trend</h3><div class="chart-canvas-wrap"><canvas data-budget-trend role="img" aria-label="Budget category trend chart"></canvas></div></div>
+          </div>
+          <div class="mt-5 chart-frame" data-budget-table></div>
+        </div>
+      </section>
+
+      <section id="debt" class="explorer-section">
+        <div class="shell">
+          <p class="section-kicker">Debt-service calendar</p>
+          <h2 class="section-title">The cash-flow burden can stay high even when debt stops rising.</h2>
+          <p class="section-copy">This is the official annual aggregate of principal and interest—not an instrument-by-instrument maturity profile. The 2026 observation is a budget plan; earlier years are actual or provisional actual.</p>
+          <div class="mt-8 flex justify-end"><a class="text-sm font-bold text-tunis-red hover:underline" href="./data/debt_calendar.csv">Debt calendar CSV ↓</a></div>
+          <div class="mt-6 chart-frame"><div class="chart-canvas-wrap h-80 sm:h-[30rem]"><canvas data-debt-chart role="img" aria-label="Debt service calendar chart"></canvas></div><div data-debt-table></div></div>
+        </div>
+      </section>
+
+      <section id="revisions" class="explorer-section border-y border-stone-200 bg-[#f3efe5] dark:border-white/10 dark:bg-[#111a17]">
+        <div class="shell">
+          <p class="section-kicker">Data quality and revision history</p>
+          <h2 class="section-title">A dashboard should show its edits, not silently replace the past.</h2>
+          <p class="section-copy">The release log records additions, updates and methodology changes. Blank previous values mean the observation was newly added, not revised from a known prior value.</p>
+          <div class="mt-8 grid gap-3 sm:grid-cols-[1fr_16rem]">
+            <label class="block text-sm font-bold"><span class="mb-2 block">Search revisions</span><input data-revision-search class="health-control" type="search" placeholder="Search dataset, metric or reason" /></label>
+            <label class="block text-sm font-bold"><span class="mb-2 block">Change type</span><select data-revision-type class="health-control"><option value="">All changes</option></select></label>
+          </div>
+          <div class="mt-4 flex items-center justify-between gap-4 text-sm"><p data-revision-count></p><a class="font-bold text-tunis-red hover:underline" href="./data/revision_history.csv">Revision CSV ↓</a></div>
+          <div class="mt-6 space-y-4" data-revision-list></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-stone-200 bg-white py-10 dark:border-white/10 dark:bg-white/[0.02]">
+      <div class="shell flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between"><div><p class="font-black">TunStat</p><p class="mt-1 text-sm text-stone-500 dark:text-stone-400">Evidence on Tunisia, updated monthly.</p></div><div class="flex flex-wrap gap-5 text-sm font-semibold"><a href="./index.html">Dashboard</a><a href="./index.html#research">Research</a><span>© <span data-year>2026</span></span></div></div>
+    </footer>
+
+    <script src="./assets/i18n-tn.js" defer></script>
+    <script src="./assets/i18n.js" defer></script>
+    <script src="./assets/chart.umd.min.js" defer></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+    <script src="./assets/explorer.js" defer></script>
+    <script src="./assets/app.js" defer></script>
+  </body>
+</html>

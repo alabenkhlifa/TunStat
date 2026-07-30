@@ -1,0 +1,25 @@
+governorate,latitude,longitude,youth_unemployment_percent,unemployment_period,declared_investment_mdt,investment_period,investment_coverage,region_group,source_url
+Tunis,36.80278,10.17972,25.2,2014,430.8,Jan-Sep 2025,reported top 10,Greater Tunis,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Ariana,36.86250,10.19556,20.5,2014,,,not published in reviewed top 10,Greater Tunis,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Ben Arous,36.75333,10.22220,23.7,2014,260.9,Jan-Sep 2025,reported top 10,Greater Tunis,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Manouba,36.80778,10.10111,30.1,2014,,,not published in reviewed top 10,Greater Tunis,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Nabeul,36.45000,10.73333,17.8,2014,420.2,Jan-Sep 2025,reported top 10,North East,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Zaghouan,36.40000,10.14000,25.4,2014,,,not published in reviewed top 10,North East,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Bizerte,37.29000,9.87000,23.3,2014,239.0,Jan-Sep 2025,reported top 10,North East,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Beja,36.73333,9.18333,31.9,2014,,,not published in reviewed top 10,North West,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Jendouba,36.50111,8.77944,44.1,2014,340.1,Jan-Sep 2025,reported top 10,North West,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Kef,36.19000,8.71000,35.9,2014,,,not published in reviewed top 10,North West,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Siliana,36.08333,9.36667,30.7,2014,,,not published in reviewed top 10,North West,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Sousse,35.82556,10.64111,18.9,2014,,,not published in reviewed top 10,Center East,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Monastir,35.79000,10.82000,15.4,2014,,,not published in reviewed top 10,Center East,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Mahdia,35.52000,11.07000,19.1,2014,,,not published in reviewed top 10,Center East,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Sfax,34.74056,10.76028,20.8,2014,386.2,Jan-Sep 2025,reported top 10,Center East,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Kairouan,35.68000,10.10000,27.5,2014,373.7,Jan-Sep 2025,reported top 10,Center West,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Kasserine,35.18000,8.83000,35.8,2014,,,not published in reviewed top 10,Center West,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Sidi Bouzid,35.04028,9.49361,26.7,2014,945.6,Jan-Sep 2025,reported top 10,Center West,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Gabes,33.88333,10.11667,34.2,2014,627.8,Jan-Sep 2025,reported top 10,South East,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Medenine,33.35000,10.49000,25.8,2014,,,not published in reviewed top 10,South East,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Tataouine,32.93333,10.45000,42.5,2014,,,not published in reviewed top 10,South East,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Gafsa,34.42500,8.78417,46.5,2014,417.6,Jan-Sep 2025,reported top 10,South West,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Tozeur,33.93000,8.13000,27.9,2014,,,not published in reviewed top 10,South West,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf
+Kebili,33.70194,8.97361,35.3,2014,,,not published in reviewed top 10,South West,https://www.ins.tn/sites/default/files/publication/pdf/RGPH%202014-V7.pdf

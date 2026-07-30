@@ -1,0 +1,6 @@
+year,principal_tnd_billion,interest_tnd_billion,total_service_tnd_billion,domestic_service_tnd_billion,external_service_tnd_billion,status,note,source_url
+2022,9.7781,4.6634,14.4415,8.4494,5.9921,actual,Annual aggregate service; not an instrument-level maturity schedule,https://www.finances.gov.tn/fr/les-indicateurs/depenses
+2023,14.9200,5.8305,20.7508,12.0300,8.7205,actual,Annual aggregate service; rounding applies,https://www.finances.gov.tn/fr/les-indicateurs/depenses
+2024,18.5210,6.2907,24.8117,13.2888,11.5229,actual,Annual aggregate service; rounding applies,https://www.finances.gov.tn/fr/les-indicateurs/depenses
+2025,17.9830,6.4585,24.4415,14.3542,10.0873,provisional actual,End-December provisional execution,https://www.finances.gov.tn/fr/les-indicateurs/depenses
+2026,15.8490,7.2080,23.0570,,,budget plan,Domestic and external split was not published in the reviewed financing plan,https://www.finances.gov.tn/ar/document/qanwn-almalyt-lsnt-2026

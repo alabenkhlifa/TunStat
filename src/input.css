@@ -1,11 +1,13 @@
 @import "tailwindcss";
 @source "../index.html";
+@source "../explore.html";
 @source "../comparisons/*.html";
 @source "../assets/app.js";
 @source "../assets/charts.js";
 @source "../assets/comparisons.js";
 @source "../assets/i18n.js";
 @source "../assets/i18n-tn.js";
+@source "../assets/explorer.js";
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
@@ -138,6 +140,25 @@
 
   .health-status {
     @apply inline-flex rounded-full px-2.5 py-1 text-[10px] font-black tracking-wider uppercase;
+  }
+
+  .explorer-section {
+    @apply py-18 sm:py-24;
+  }
+
+  .regional-map {
+    @apply relative z-0 h-[28rem] w-full overflow-hidden rounded-xl bg-stone-200 sm:h-[36rem] dark:bg-stone-800;
+  }
+
+  .dark .regional-map .leaflet-tile-pane {
+    filter: brightness(0.62) contrast(1.18) saturate(0.78);
+  }
+
+  .dark .regional-map .leaflet-control-zoom a,
+  .dark .regional-map .leaflet-control-attribution,
+  .dark .regional-map .leaflet-popup-content-wrapper,
+  .dark .regional-map .leaflet-popup-tip {
+    @apply border-white/10 bg-[#111a17] text-stone-100;
   }
 
   html[dir="rtl"] .section-kicker,
