@@ -3,15 +3,15 @@
 > Tunisia, measured clearly.
 
 [![Monthly update](https://img.shields.io/badge/update-monthly-e70013)](https://github.com/alabenkhlifa/TunStat)
-[![Data cut-off](https://img.shields.io/badge/data%20cut--off-29%20July%202026-087e8b)](https://github.com/alabenkhlifa/TunStat)
+[![Data cut-off](https://img.shields.io/badge/data%20cut--off-30%20July%202026-087e8b)](https://github.com/alabenkhlifa/TunStat)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4.3.3-38bdf8?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Chart.js](https://img.shields.io/badge/Chart.js-4.5.1-ff6384?logo=chartdotjs&logoColor=white)](https://www.chartjs.org/)
 [![Leaflet](https://img.shields.io/badge/Leaflet-1.9.4-199900?logo=leaflet&logoColor=white)](https://leafletjs.com/)
 [![Open data](https://img.shields.io/badge/data-CSV-f18f01)](data/)
 
-TunStat is an evidence-based dashboard and research dossier covering Tunisia’s economy, external liquidity, banks, households, electricity, water, public finances, debt, investment, state-owned enterprises and major projects. It combines current official data with a sequenced recovery program and detailed comparisons with Morocco, Jordan and Egypt.
+TunStat is an evidence-based dashboard and research dossier covering Tunisia’s economy, external liquidity, banks, households, electricity, water, public finances, debt, investment, national companies and major projects. It combines current official data with a sequenced recovery program, a dedicated observatory for strategic state companies and detailed comparisons with Morocco, Jordan and Egypt.
 
-The project is designed to answer eight questions:
+The project is designed to answer nine questions:
 
 - What is happening in Tunisia now?
 - Are reserves, banks, government cash and public enterprises creating connected risks?
@@ -19,6 +19,7 @@ The project is designed to answer eight questions:
 - How exposed are households and water services?
 - Where is public money going, and how is the state financed?
 - Which major investments are operational, under construction, financed or still in preparation?
+- How are Tunisair, Tunisie Telecom, public banks and major state service operators performing, and are government interventions producing measurable results?
 - Which economic, legal and institutional changes are practical at each time horizon?
 - What can Tunisia learn from Morocco, Jordan and Egypt without treating any of them as an identical case?
 
@@ -40,7 +41,7 @@ The website is mobile-first and includes:
 
 - Tunisia’s flag as the site identity and favicon;
 - persistent light and dark themes;
-- a persistent English/French/Tunisian Arabic language preference across the dashboard, explorer and comparison pages, with RTL layout for Tunisian Arabic;
+- a persistent English/French/Tunisian Arabic language preference across the dashboard, explorer, company observatory and comparison pages, with RTL layout for Tunisian Arabic;
 - responsive navigation and accessible controls;
 - a current economic snapshot;
 - twelve interactive Chart.js chart groups with tooltips, exact-value tables and responsive layouts;
@@ -48,6 +49,7 @@ The website is mobile-first and includes:
 - a Leaflet governorate map that preserves dated observations and missing regional values instead of presenting gaps as zero;
 - a searchable health-reference registry covering every tracked or missing metric;
 - three dedicated country-comparison pages with interactive evidence, causal analysis and Tunisia-specific lessons;
+- a national-companies observatory with nine dossiers, official figures, disclosure gaps, government actions, interactive 2028 scenarios and company-specific reforms;
 - a 39-metric coverage audit that distinguishes current, partial and missing public data;
 - reserve, banking, household, water and state-owned-enterprise risk analysis;
 - electricity-outage and energy-security analysis;
@@ -63,7 +65,7 @@ After GitHub Pages is enabled, the public site is available at:
 
 ## Latest snapshot
 
-Evidence cut-off: **29 July 2026**
+Evidence cut-off: **30 July 2026**
 
 | Indicator | Latest value |
 |---|---:|
@@ -103,9 +105,15 @@ Evidence cut-off: **29 July 2026**
 
 These comparisons use each country for a specific analytical purpose. Morocco is the structural and investment benchmark, Jordan is the macroeconomic-stability comparator, and Egypt is the fiscal–currency risk comparator. Differences in reporting periods and debt definitions are preserved rather than hidden.
 
+## National companies observatory
+
+[Open the observatory](companies.html) for current figures and reform analysis covering Tunisair, Tunisie Telecom, STEG, SONEDE, SNCFT, BNA, STB Bank, BH Bank and SOTETEL.
+
+The observatory separates BVMT-listed issuers from non-listed strategic operators. It records government announcements beside the next result that should be verified, distinguishes private passenger-experience rankings from safety assessments, and labels every 2028 forecast as a TunStat planning scenario rather than an official prediction or investment recommendation.
+
 ## Data and charts
 
-The [`data/`](data/) directory contains twenty-nine CSV datasets. The website renders the main dashboard, a seven-part interactive data explorer and comparison charts on three dedicated country pages. The [`charts/`](charts/) directory preserves thirteen accessible SVG charts for the Markdown research chapters and non-JavaScript use.
+The [`data/`](data/) directory contains thirty-two CSV datasets. The website renders the main dashboard, a seven-part interactive data explorer, a national-companies observatory and comparison charts on three dedicated country pages. The [`charts/`](charts/) directory preserves thirteen accessible SVG charts for the Markdown research chapters and non-JavaScript use.
 
 The values behind each visualization are preserved in CSV form. The [metric health reference](data/metric_health_reference.csv) states what healthy, watch, stress, gap and context mean for every metric. Declared investment is never added to realized international investment; approved financing is not reported as completed construction; and proposed targets are not presented as official forecasts.
 
@@ -133,12 +141,14 @@ npm run dev
 .
 ├── index.html                  # Responsive dashboard
 ├── explore.html                # Regional, trend, project, budget and debt explorers
+├── companies.html              # National companies, actions, scenarios and reforms
 ├── assets/
 │   ├── app.js                  # Theme and mobile navigation
 │   ├── i18n.js                 # English/French translation and language preference
 │   ├── i18n-tn.js              # Tunisian Arabic locale
 │   ├── charts.js               # Interactive charts and metric registry
 │   ├── comparisons.js          # Country-comparison charts and tables
+│   ├── companies.js            # Company charts and scenario selector
 │   ├── explorer.js             # Explorer maps, filters, charts and revision log
 │   ├── chart.umd.min.js        # Chart.js runtime copied during build
 │   ├── og.png                  # Social preview
@@ -146,7 +156,7 @@ npm run dev
 ├── src/input.css               # Tailwind source
 ├── comparisons/                # Morocco, Jordan and Egypt comparison pages
 ├── charts/                     # SVG fallbacks for research documents
-├── data/                       # Twenty-nine CSV datasets
+├── data/                       # Thirty-two CSV datasets
 ├── 00-...md to 12-...md        # Research chapters
 └── package.json
 ```
@@ -175,4 +185,4 @@ See [Sources, definitions and methodology](10-sources-and-methodology.md) for th
 
 ## Repository topics
 
-`tunisia` · `economy` · `open-data` · `data-visualization` · `public-finance` · `banking` · `energy` · `water-security` · `macroeconomics` · `policy-analysis` · `infrastructure` · `tailwindcss`
+`tunisia` · `economy` · `open-data` · `data-visualization` · `public-finance` · `state-owned-enterprises` · `corporate-governance` · `tunisair` · `banking` · `energy` · `water-security` · `macroeconomics` · `policy-analysis` · `infrastructure` · `tailwindcss`

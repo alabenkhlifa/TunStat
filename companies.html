@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en" class="scroll-pt-24">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tunisia national companies observatory | TunStat</title>
+    <meta name="description" content="A source-backed observatory of Tunisair, Tunisie Telecom, public banks and Tunisia's major state service operators, with current figures, government actions, reform options and transparent scenarios." />
+    <meta name="theme-color" content="#fafaf9" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://alabenkhlifa.github.io/TunStat/companies.html" />
+    <link rel="icon" type="image/svg+xml" href="./assets/tunisia-flag.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tunisia national companies observatory | TunStat" />
+    <meta property="og:description" content="Numbers, service quality, government action, scenarios and reforms for Tunisia's strategic public companies." />
+    <meta property="og:url" content="https://alabenkhlifa.github.io/TunStat/companies.html" />
+    <meta property="og:image" content="https://alabenkhlifa.github.io/TunStat/assets/og.png" />
+    <script>
+      (() => {
+        const saved = localStorage.getItem("tunstat-theme");
+        const dark = saved ? saved === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.classList.toggle("dark", dark);
+      })();
+    </script>
+    <link rel="stylesheet" href="./assets/styles.css?v=20260730-3" />
+  </head>
+  <body>
+    <a href="#main" class="sr-only z-[100] rounded-lg bg-white px-4 py-3 font-bold text-stone-900 focus:not-sr-only focus:fixed focus:top-4 focus:left-4">Skip to content</a>
+
+    <header class="sticky top-0 z-50 border-b border-stone-200/80 bg-stone-50/90 backdrop-blur-xl dark:border-white/10 dark:bg-[#0b1210]/90">
+      <div class="shell flex h-16 items-center justify-between gap-3">
+        <a href="./index.html" class="flex items-center gap-2" aria-label="TunStat home">
+          <img src="./assets/tunisia-flag.svg" alt="Flag of Tunisia" width="48" height="32" class="h-7 w-10 rounded-sm object-cover shadow-sm ring-1 ring-black/10 dark:ring-white/20" />
+          <span>
+            <span class="block text-base font-black text-ink dark:text-white">TunStat</span>
+            <span class="hidden text-[9px] font-bold tracking-[0.1em] text-stone-500 uppercase sm:block dark:text-stone-400">Company observatory</span>
+          </span>
+        </a>
+        <nav class="hidden items-center gap-4 xl:flex" aria-label="Company observatory navigation">
+          <a class="nav-link" href="#signals">Signals</a>
+          <a class="nav-link" href="#companies">Companies</a>
+          <a class="nav-link" href="#actions">Government action</a>
+          <a class="nav-link" href="#scenarios">Scenarios</a>
+          <a class="nav-link" href="#solutions">Solutions</a>
+        </nav>
+        <div class="flex items-center gap-1.5">
+          <button type="button" data-language-toggle class="grid h-10 min-w-10 place-items-center rounded-full border border-stone-200 bg-white px-2 text-xs font-black tracking-wider dark:border-white/10 dark:bg-white/5" aria-label="Change language">EN</button>
+          <button type="button" data-theme-toggle class="grid size-10 place-items-center rounded-full border border-stone-200 bg-white text-base transition hover:bg-stone-100 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10" aria-label="Switch theme">
+            <span class="dark:hidden" aria-hidden="true">☾</span><span class="hidden dark:inline" aria-hidden="true">☀</span>
+          </button>
+          <button type="button" data-menu-toggle class="grid size-10 place-items-center rounded-full border border-stone-200 bg-white text-lg xl:hidden dark:border-white/10 dark:bg-white/5" aria-label="Open navigation" aria-expanded="false">
+            <span aria-hidden="true">≡</span>
+          </button>
+        </div>
+      </div>
+      <nav data-mobile-menu class="shell hidden border-t border-stone-200 py-4 xl:hidden dark:border-white/10" aria-label="Mobile navigation">
+        <div class="grid grid-cols-2 gap-2">
+          <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#signals">Signals</a>
+          <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#companies">Companies</a>
+          <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#actions">Government action</a>
+          <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#scenarios">Scenarios</a>
+          <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#solutions">Solutions</a>
+          <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="#sources">Sources</a>
+          <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="./index.html">Dashboard</a>
+          <a class="nav-link rounded-xl px-3 py-3 hover:bg-stone-100 dark:hover:bg-white/5" href="./explore.html">Explore data</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="relative isolate overflow-hidden pt-14 pb-18 sm:pt-20 sm:pb-24">
+        <div class="grid-fade absolute inset-0 -z-20"></div>
+        <div class="absolute -top-32 -right-36 -z-10 size-[34rem] rounded-full bg-red-200/40 blur-3xl dark:bg-red-950/25"></div>
+        <div class="absolute -bottom-36 -left-28 -z-10 size-[30rem] rounded-full bg-emerald-200/35 blur-3xl dark:bg-emerald-950/20"></div>
+        <div class="shell">
+          <div class="max-w-5xl">
+            <div class="flex flex-wrap gap-2">
+              <span class="status-pill"><span class="text-emerald-500" aria-hidden="true">●</span> Evidence cut-off: 30 July 2026</span>
+              <span class="status-pill"><span aria-hidden="true">↻</span> Updated monthly</span>
+              <span class="status-pill"><span aria-hidden="true">◇</span> Official data first</span>
+            </div>
+            <p class="mt-8 text-sm font-black tracking-[0.14em] text-tunis-red uppercase">National companies observatory</p>
+            <h1 class="mt-4 max-w-5xl text-balance text-5xl leading-[0.98] font-black tracking-[-0.05em] text-ink sm:text-7xl dark:text-white">
+              Public value must be measured, not assumed.
+            </h1>
+            <p class="mt-7 max-w-3xl text-lg leading-8 text-stone-600 sm:text-xl dark:text-stone-300">
+              Audited numbers, service quality, government measures and transparent 2028 scenarios for Tunisair, Tunisie Telecom, public banks and Tunisia’s major state operators.
+            </p>
+            <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+              <a href="#companies" class="button-primary">Open company dossiers</a>
+              <a href="./data/national_companies_snapshot.csv" class="button-secondary">Download the evidence ↓</a>
+            </div>
+          </div>
+
+          <div class="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="stat-card">
+              <p class="text-xs font-bold tracking-wider text-stone-500 uppercase dark:text-stone-400">Companies monitored</p>
+              <p class="mt-5 text-4xl font-black text-ink dark:text-white">9</p>
+              <p class="mt-2 text-sm leading-6 text-stone-500 dark:text-stone-400">Five listed or state-linked issuers and four non-listed service operators.</p>
+            </article>
+            <article class="stat-card">
+              <p class="text-xs font-bold tracking-wider text-stone-500 uppercase dark:text-stone-400">Tunisair punctuality</p>
+              <p class="mt-5 text-4xl font-black text-tunis-red">37%</p>
+              <p class="mt-2 text-sm leading-6 text-stone-500 dark:text-stone-400">Flights within 15 minutes in 2025, down from 46% in 2024.</p>
+            </article>
+            <article class="stat-card">
+              <p class="text-xs font-bold tracking-wider text-stone-500 uppercase dark:text-stone-400">Tunisie Telecom revenue</p>
+              <p class="mt-5 text-4xl font-black text-ink dark:text-white">1.244bn</p>
+              <p class="mt-2 text-sm leading-6 text-stone-500 dark:text-stone-400">TND, regulated operator revenue in 2025; ISP entities are reported separately.</p>
+            </article>
+            <article class="stat-card">
+              <p class="text-xs font-bold tracking-wider text-stone-500 uppercase dark:text-stone-400">Public disclosure</p>
+              <p class="mt-5 text-4xl font-black text-tunis-red">Uneven</p>
+              <p class="mt-2 text-sm leading-6 text-stone-500 dark:text-stone-400">Listed issuers report regularly; several strategic operators do not publish current audited accounts.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="signals" class="border-y border-stone-200 bg-white py-18 sm:py-24 dark:border-white/10 dark:bg-white/[0.02]">
+        <div class="shell">
+          <p class="section-kicker">What the evidence says</p>
+          <h2 class="section-title text-balance">The problem is not simply “public versus private.”</h2>
+          <p class="section-copy">The recurring failure pattern is weak service accountability, delayed financial reporting, blurred public-service obligations and support without measurable conditions.</p>
+
+          <div class="mt-10 grid gap-5 lg:grid-cols-[1.35fr_0.65fr]">
+            <article class="panel p-5 sm:p-8">
+              <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-start">
+                <div>
+                  <p class="text-xs font-black tracking-wider text-stone-500 uppercase dark:text-stone-400">Tunisair: 2025 movement from 2024</p>
+                  <h3 class="mt-2 text-2xl font-black text-ink dark:text-white">A fuller aircraft is not yet a reliable airline.</h3>
+                </div>
+                <a href="./data/national_companies_snapshot.csv" class="text-sm font-black text-tunis-red hover:underline">CSV data ↓</a>
+              </div>
+              <div class="relative mt-7 min-h-[25rem] w-full sm:min-h-[28rem]">
+                <canvas id="tunisair-change-chart" aria-label="Tunisair operational change chart"></canvas>
+              </div>
+            </article>
+
+            <article class="rounded-3xl border border-red-200 bg-red-50 p-6 sm:p-8 dark:border-red-900/60 dark:bg-red-950/25">
+              <p class="text-sm font-black text-tunis-red dark:text-red-400">Ranking, stated accurately</p>
+              <p class="mt-4 text-5xl font-black text-ink dark:text-white">115 / 117</p>
+              <p class="mt-4 leading-7 text-stone-700 dark:text-stone-200">
+                Tunisair had the third-lowest AirHelp Score in 2025. It was last among 109 airlines in 2024.
+              </p>
+              <div class="mt-6 rounded-2xl border border-red-200 bg-white/80 p-4 dark:border-red-900/60 dark:bg-black/20">
+                <p class="text-sm leading-6 text-stone-600 dark:text-stone-300">
+                  This is a private passenger-rights ranking based equally on punctuality, customer opinion and claim handling. It is not an aviation-safety assessment.
+                </p>
+              </div>
+              <a href="https://www.airhelp.com/en-int/press/air-help-reveals-the-best-and-worst-airlines-in-2025-air-help-score/" class="mt-6 inline-flex text-sm font-black text-tunis-red hover:underline">Review the methodology ↗</a>
+            </article>
+          </div>
+
+          <div class="mt-5 panel p-5 sm:p-8">
+            <p class="text-xs font-black tracking-wider text-stone-500 uppercase dark:text-stone-400">State-controlled listed banks</p>
+            <h3 class="mt-2 text-2xl font-black text-ink dark:text-white">Profitability diverged sharply in 2025.</h3>
+            <p class="mt-3 max-w-3xl leading-7 text-stone-600 dark:text-stone-300">Net income rose at BNA but fell at STB and BH Bank. Profit alone does not measure asset quality, public-sector concentration or future provisioning.</p>
+            <div class="relative mt-7 min-h-[24rem] w-full">
+              <canvas id="bank-income-chart" aria-label="Public bank net income chart"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="companies" class="border-b border-stone-200 bg-[#eef4f2] py-18 sm:py-24 dark:border-white/10 dark:bg-[#0e1916]">
+        <div class="shell">
+          <p class="section-kicker">Company dossiers</p>
+          <h2 class="section-title text-balance">Nine companies, two accountability systems.</h2>
+          <p class="section-copy">BVMT companies face market disclosure rules. Non-listed public operators still need equivalent transparency because citizens and the budget carry their service and fiscal risks.</p>
+
+          <div class="mt-10 grid gap-4 lg:grid-cols-2">
+            <article class="panel p-6 sm:p-8">
+              <div class="flex items-start justify-between gap-4">
+                <div><p class="text-xs font-black tracking-wider text-tunis-red uppercase">Aviation · Listed</p><h3 class="mt-2 text-3xl font-black text-ink dark:text-white">Tunisair</h3></div>
+                <span class="rounded-full bg-red-100 px-3 py-1 text-xs font-black text-red-800 dark:bg-red-950 dark:text-red-300">Critical</span>
+              </div>
+              <div class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                <div class="rounded-2xl bg-stone-100 p-4 dark:bg-white/5"><p class="text-xs text-stone-500 dark:text-stone-400">Passengers</p><p class="mt-1 text-xl font-black text-ink dark:text-white">2.49m</p></div>
+                <div class="rounded-2xl bg-stone-100 p-4 dark:bg-white/5"><p class="text-xs text-stone-500 dark:text-stone-400">Load factor</p><p class="mt-1 text-xl font-black text-ink dark:text-white">76.1%</p></div>
+                <div class="rounded-2xl bg-stone-100 p-4 dark:bg-white/5"><p class="text-xs text-stone-500 dark:text-stone-400">Debt</p><p class="mt-1 text-xl font-black text-ink dark:text-white">638m</p></div>
+                <div class="rounded-2xl bg-stone-100 p-4 dark:bg-white/5"><p class="text-xs text-stone-500 dark:text-stone-400">Punctuality</p><p class="mt-1 text-xl font-black text-tunis-red">37%</p></div>
+              </div>
+              <p class="mt-6 leading-7 text-stone-600 dark:text-stone-300">The core issue is reliability: passenger volume, market share and punctuality fell while debt rose. The 2023 audited loss was TND 282.7m, and those accounts were approved only in May 2026.</p>
+              <p class="mt-4 text-sm font-bold text-stone-700 dark:text-stone-200">Priority: publish daily fleet availability, dispatch reliability, cancellations, compensation time and route contribution; condition any balance-sheet support on verified milestones.</p>
+            </article>
+
+            <article class="panel p-6 sm:p-8">
+              <div class="flex items-start justify-between gap-4">
+                <div><p class="text-xs font-black tracking-wider text-blue-600 uppercase dark:text-blue-400">Telecom · Not listed</p><h3 class="mt-2 text-3xl font-black text-ink dark:text-white">Tunisie Telecom</h3></div>
+                <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-black text-amber-800 dark:bg-amber-950 dark:text-amber-300">Watch</span>
+              </div>
+              <div class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                <div class="rounded-2xl bg-stone-100 p-4 dark:bg-white/5"><p class="text-xs text-stone-500 dark:text-stone-400">2025 revenue</p><p class="mt-1 text-xl font-black text-ink dark:text-white">1.244bn</p></div>
+                <div class="rounded-2xl bg-stone-100 p-4 dark:bg-white/5"><p class="text-xs text-stone-500 dark:text-stone-400">Fixed data</p><p class="mt-1 text-xl font-black text-ink dark:text-white">438m</p></div>
+                <div class="rounded-2xl bg-stone-100 p-4 dark:bg-white/5"><p class="text-xs text-stone-500 dark:text-stone-400">Mobile data</p><p class="mt-1 text-xl font-black text-ink dark:text-white">346m</p></div>
+                <div class="rounded-2xl bg-stone-100 p-4 dark:bg-white/5"><p class="text-xs text-stone-500 dark:text-stone-400">Ownership</p><p class="mt-1 text-xl font-black text-ink dark:text-white">65% state</p></div>
+              </div>
+              <p class="mt-6 leading-7 text-stone-600 dark:text-stone-300">The regulator reports operating revenue and quality monitoring, but current consolidated audited financial statements are not as accessible as listed-company filings. 5G launched in February 2025.</p>
+              <p class="mt-4 text-sm font-bold text-stone-700 dark:text-stone-200">Priority: publish audited group accounts, fibre and 5G coverage by delegation, fault-repair times, complaint resolution and the cost of universal-service obligations.</p>
+            </article>
+
+            <article class="panel p-6 sm:p-8">
+              <p class="text-xs font-black tracking-wider text-emerald-700 uppercase dark:text-emerald-400">Energy · Not listed</p>
+              <h3 class="mt-2 text-3xl font-black text-ink dark:text-white">STEG</h3>
+              <p class="mt-5 text-4xl font-black text-tunis-red">91% gas</p>
+              <p class="mt-3 leading-7 text-stone-600 dark:text-stone-300">The May 2026 generation mix shows extreme gas concentration. The Ministry of Finance’s public-enterprise risk report classified STEG’s overall risk as high for 2022, but that entity-level fiscal analysis is already too old.</p>
+              <p class="mt-4 text-sm font-bold text-stone-700 dark:text-stone-200">Priority: quarterly audited subsidy, arrears, loss, collection and investment tables alongside daily reliability data.</p>
+            </article>
+
+            <article class="panel p-6 sm:p-8">
+              <p class="text-xs font-black tracking-wider text-cyan-700 uppercase dark:text-cyan-400">Water · Not listed</p>
+              <h3 class="mt-2 text-3xl font-black text-ink dark:text-white">SONEDE</h3>
+              <p class="mt-5 text-4xl font-black text-tunis-red">23% losses</p>
+              <p class="mt-3 leading-7 text-stone-600 dark:text-stone-300">The current project baseline estimates physical potable-water losses at 23%. A USD 208.5m resilience component was approved in March 2026, but national interruption and non-revenue-water dashboards remain missing.</p>
+              <p class="mt-4 text-sm font-bold text-stone-700 dark:text-stone-200">Priority: publish interruption hours, leakage, collection and water-quality compliance by distribution system.</p>
+            </article>
+
+            <article class="panel p-6 sm:p-8">
+              <p class="text-xs font-black tracking-wider text-violet-700 uppercase dark:text-violet-400">Rail · Not listed</p>
+              <h3 class="mt-2 text-3xl font-black text-ink dark:text-white">SNCFT</h3>
+              <p class="mt-5 text-4xl font-black text-tunis-red">Data gap</p>
+              <p class="mt-3 leading-7 text-stone-600 dark:text-stone-300">Current consolidated audited statements and a national punctuality, cancellation, fleet-availability and safety-performance series were not found in the reviewed official public sources.</p>
+              <p class="mt-4 text-sm font-bold text-stone-700 dark:text-stone-200">Priority: a route-level public-service contract with cost, subsidy, punctuality, cancellations and rolling-stock availability.</p>
+            </article>
+
+            <article class="panel p-6 sm:p-8">
+              <p class="text-xs font-black tracking-wider text-stone-500 uppercase dark:text-stone-400">Banking · Listed</p>
+              <h3 class="mt-2 text-3xl font-black text-ink dark:text-white">BNA · STB · BH Bank</h3>
+              <div class="mt-5 grid grid-cols-3 gap-3">
+                <div class="rounded-2xl bg-stone-100 p-4 dark:bg-white/5"><p class="text-xs text-stone-500 dark:text-stone-400">BNA profit</p><p class="mt-1 text-xl font-black text-emerald-700 dark:text-emerald-400">274.5m</p></div>
+                <div class="rounded-2xl bg-stone-100 p-4 dark:bg-white/5"><p class="text-xs text-stone-500 dark:text-stone-400">STB profit</p><p class="mt-1 text-xl font-black text-ink dark:text-white">65.9m</p></div>
+                <div class="rounded-2xl bg-stone-100 p-4 dark:bg-white/5"><p class="text-xs text-stone-500 dark:text-stone-400">BH profit</p><p class="mt-1 text-xl font-black text-ink dark:text-white">39.8m</p></div>
+              </div>
+              <p class="mt-5 leading-7 text-stone-600 dark:text-stone-300">These banks are profitable, but their public value also depends on credit quality, provisioning, connected exposures, governance and whether state-directed financing is transparently priced.</p>
+              <p class="mt-4 text-sm font-bold text-stone-700 dark:text-stone-200">Priority: publish comparable state-ownership objectives and separate commercial lending from any compensated public-policy mandate.</p>
+            </article>
+
+            <article class="panel p-6 sm:p-8 lg:col-span-2">
+              <div class="grid gap-6 lg:grid-cols-[0.7fr_1.3fr] lg:items-center">
+                <div><p class="text-xs font-black tracking-wider text-orange-700 uppercase dark:text-orange-400">Telecom infrastructure · Listed</p><h3 class="mt-2 text-3xl font-black text-ink dark:text-white">SOTETEL</h3><p class="mt-5 text-4xl font-black text-ink dark:text-white">TND 4.1m</p><p class="mt-1 text-sm text-stone-500 dark:text-stone-400">2024 net income</p></div>
+                <div>
+                  <p class="leading-7 text-stone-600 dark:text-stone-300">Tunisie Telecom owns 35% and the public float is 65%. SOTETEL is therefore state-linked, not state-controlled under the usual majority threshold. It shows why ownership labels matter.</p>
+                  <p class="mt-4 text-sm font-bold text-stone-700 dark:text-stone-200">Priority: compete on equal terms, disclose related-party business clearly and link strategy to fibre, enterprise networks and exportable technical services.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="actions" class="border-b border-stone-200 bg-white py-18 sm:py-24 dark:border-white/10 dark:bg-white/[0.02]">
+        <div class="shell">
+          <div class="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+            <div>
+              <p class="section-kicker">What government is doing</p>
+              <h2 class="section-title text-balance">Action exists. Verification is the missing layer.</h2>
+              <p class="section-copy">Announcements are shown beside the next observable result. This prevents a meeting, financing approval or management change from being counted as an outcome.</p>
+            </div>
+            <a href="./data/national_companies_actions.csv" class="button-secondary shrink-0">Download action tracker ↓</a>
+          </div>
+
+          <div class="mt-10 grid gap-4 lg:grid-cols-2">
+            <article class="panel p-6 sm:p-8"><p class="text-sm font-black text-tunis-red">Tunisair · March–October 2025</p><h3 class="mt-2 text-2xl font-black text-ink dark:text-white">Fleet and maintenance intervention</h3><p class="mt-4 leading-7 text-stone-600 dark:text-stone-300">The Transport Ministry required continuous availability of 14 aircraft, set up maintenance follow-up and reported the cell 68% complete. EASA Part-145 approval for Tunisair Technics was renewed.</p><p class="mt-4 text-sm font-bold text-stone-700 dark:text-stone-200">Verify next: monthly serviceable aircraft, dispatch reliability, completed checks and cancelled flights.</p></article>
+            <article class="panel p-6 sm:p-8"><p class="text-sm font-black text-tunis-red">Tunisie Telecom · 2025</p><h3 class="mt-2 text-2xl font-black text-ink dark:text-white">5G launch and updated quality rules</h3><p class="mt-4 leading-7 text-stone-600 dark:text-stone-300">Tunisie Telecom launched 5G commercially. INTT Decision 2025-16 updated the evaluation framework for mobile coverage and quality.</p><p class="mt-4 text-sm font-bold text-stone-700 dark:text-stone-200">Verify next: operator results by region, affordability, complaint outcomes and remedy deadlines.</p></article>
+            <article class="panel p-6 sm:p-8"><p class="text-sm font-black text-tunis-red">STEG and SONEDE · 2025–2028</p><h3 class="mt-2 text-2xl font-black text-ink dark:text-white">Financing tied to energy and water delivery</h3><p class="mt-4 leading-7 text-stone-600 dark:text-stone-300">The TEREG program sets energy-sector result targets, while the water program finances network and resilience investment. These are financed programs, not proof that service has improved already.</p><p class="mt-4 text-sm font-bold text-stone-700 dark:text-stone-200">Verify next: disbursement-linked results, leakage, outages, subsidy effects and audited entity accounts.</p></article>
+            <article class="panel p-6 sm:p-8"><p class="text-sm font-black text-tunis-red">All public enterprises · 2026</p><h3 class="mt-2 text-2xl font-black text-ink dark:text-white">Board training and a new plan cycle</h3><p class="mt-4 leading-7 text-stone-600 dark:text-stone-300">A governance program trained nearly 48 state board members. The draft 2026–2030 development plan includes public-enterprise reform and periodic evaluation.</p><p class="mt-4 text-sm font-bold text-stone-700 dark:text-stone-200">Verify next: board selection rules, adopted company targets, annual evaluation and consequences for missed milestones.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="scenarios" class="border-b border-stone-200 bg-[#101916] py-18 text-white sm:py-24">
+        <div class="shell">
+          <p class="section-kicker text-red-400">2028 scenarios</p>
+          <h2 class="section-title max-w-4xl text-balance text-white">Forecast the mechanism, not a fake precise future.</h2>
+          <p class="mt-5 max-w-3xl text-lg leading-8 text-stone-300">These are TunStat planning scenarios. They are not company guidance, government targets or investment advice. Use the selector to see how different reform execution changes the 2028 range.</p>
+
+          <div class="mt-10 grid gap-5 lg:grid-cols-[0.72fr_1.28fr]">
+            <article class="rounded-3xl border border-white/10 bg-white/[0.05] p-6 sm:p-8">
+              <label for="scenario-metric" class="text-xs font-black tracking-wider text-stone-400 uppercase">Select forecast metric</label>
+              <select id="scenario-metric" class="mt-3 w-full rounded-xl border border-white/15 bg-[#18231f] px-4 py-3 font-bold text-white outline-none focus:border-red-500">
+                <option value="punctuality">Tunisair punctuality</option>
+                <option value="passengers">Tunisair passenger volume</option>
+                <option value="debt">Tunisair debt</option>
+                <option value="telecom">Tunisie Telecom real regulated revenue</option>
+              </select>
+              <div class="mt-7 space-y-4">
+                <div><p class="text-sm font-black text-red-400">Stress</p><p class="mt-1 text-sm leading-6 text-stone-300">Execution stalls, service reliability does not recover and financial pressure compounds.</p></div>
+                <div><p class="text-sm font-black text-amber-400">Baseline</p><p class="mt-1 text-sm leading-6 text-stone-300">Announced measures are partly delivered, preventing deterioration but leaving structural gaps.</p></div>
+                <div><p class="text-sm font-black text-emerald-400">Reform</p><p class="mt-1 text-sm leading-6 text-stone-300">Support is conditional, management has authority and public KPIs trigger corrective action.</p></div>
+              </div>
+            </article>
+            <article class="rounded-3xl border border-white/10 bg-white/[0.05] p-5 sm:p-8">
+              <div class="relative min-h-[27rem] w-full">
+                <canvas id="scenario-chart" aria-label="National company forecast scenarios chart"></canvas>
+              </div>
+            </article>
+          </div>
+          <a href="./data/national_companies_scenarios.csv" class="mt-7 inline-flex font-black text-red-400 hover:underline">Download assumptions and values ↓</a>
+        </div>
+      </section>
+
+      <section id="solutions" class="border-b border-stone-200 bg-white py-18 sm:py-24 dark:border-white/10 dark:bg-white/[0.02]">
+        <div class="shell">
+          <p class="section-kicker">Reform sequence</p>
+          <h2 class="section-title text-balance">Fix service first, then the balance sheet.</h2>
+          <p class="section-copy">A recapitalization without operational conditions delays the next crisis. A cost-cutting plan without public-service contracts can damage essential access. Tunisia needs both disciplines together.</p>
+
+          <div class="mt-10 grid gap-4 lg:grid-cols-3">
+            <article class="panel p-6 sm:p-8">
+              <p class="text-sm font-black text-tunis-red">0–12 months</p><h3 class="mt-3 text-2xl font-black text-ink dark:text-white">Expose performance</h3>
+              <ul class="mt-5 list-disc space-y-3 ps-5 text-sm leading-6 text-stone-600 dark:text-stone-300">
+                <li>Publish a state ownership register and one quarterly dashboard.</li><li>Reconcile tax, social-fund, supplier and government cross-arrears.</li><li>Give each company five service and five financial KPIs.</li><li>Freeze unconditional guarantees and require a published recovery covenant.</li>
+              </ul>
+            </article>
+            <article class="panel p-6 sm:p-8">
+              <p class="text-sm font-black text-tunis-red">12–36 months</p><h3 class="mt-3 text-2xl font-black text-ink dark:text-white">Separate missions and money</h3>
+              <ul class="mt-5 list-disc space-y-3 ps-5 text-sm leading-6 text-stone-600 dark:text-stone-300">
+                <li>Sign costed public-service obligation contracts.</li><li>Appoint boards through published skills matrices and fixed mandates.</li><li>Price state guarantees and show their expected fiscal cost.</li><li>Restructure debt only after operational milestones are independently verified.</li>
+              </ul>
+            </article>
+            <article class="panel p-6 sm:p-8">
+              <p class="text-sm font-black text-tunis-red">3–8 years</p><h3 class="mt-3 text-2xl font-black text-ink dark:text-white">Choose the right ownership model</h3>
+              <ul class="mt-5 list-disc space-y-3 ps-5 text-sm leading-6 text-stone-600 dark:text-stone-300">
+                <li>Retain strategic control where a clear public rationale exists.</li><li>Use concessions, minority listings or partnerships where competition can work.</li><li>Liquidate dormant subsidiaries through a protected legal process.</li><li>Keep workers protected through funded transition and retraining plans.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="mt-12 rounded-3xl border border-stone-200 bg-stone-50 p-6 sm:p-10 dark:border-white/10 dark:bg-white/[0.03]">
+            <p class="section-kicker">Legal changes</p>
+            <h3 class="mt-3 max-w-4xl text-3xl font-black text-ink dark:text-white">Modernize the ownership framework; enforce the disclosure rules already on paper.</h3>
+            <div class="mt-8 grid gap-5 md:grid-cols-2">
+              <div><p class="font-black text-ink dark:text-white">Update Law 89-9</p><p class="mt-2 leading-7 text-stone-600 dark:text-stone-300">Create a centralized professional ownership function, publish the rationale for owning each company and separate the state’s roles as owner, regulator and customer.</p></div>
+              <div><p class="font-black text-ink dark:text-white">Enforce Circular 17 of 2020</p><p class="mt-2 leading-7 text-stone-600 dark:text-stone-300">Set a searchable filing calendar for audited statements, auditor reports and performance reports, with automatic escalation when deadlines are missed.</p></div>
+              <div><p class="font-black text-ink dark:text-white">Contract public-service obligations</p><p class="mt-2 leading-7 text-stone-600 dark:text-stone-300">Every controlled fare, remote route, social tariff or universal-service mandate should state its cost, beneficiary, budget line and service standard.</p></div>
+              <div><p class="font-black text-ink dark:text-white">Protect competition and minority investors</p><p class="mt-2 leading-7 text-stone-600 dark:text-stone-300">Apply competitive neutrality, disclose related-party transactions and prevent state support from bypassing CMF, competition and procurement safeguards.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources" class="bg-[#eef4f2] py-18 sm:py-24 dark:bg-[#0e1916]">
+        <div class="shell">
+          <p class="section-kicker">Sources and limits</p>
+          <h2 class="section-title text-balance">Every number has a status.</h2>
+          <p class="section-copy">Actual, program target, private ranking, project baseline, disclosure gap and TunStat scenario are never merged into one category.</p>
+          <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <a class="panel p-6 transition hover:-translate-y-0.5" href="https://www.cmf.tn/"><p class="font-black text-ink dark:text-white">CMF and BVMT filings ↗</p><p class="mt-2 text-sm leading-6 text-stone-500 dark:text-stone-400">Listed-company indicators and audited statements.</p></a>
+            <a class="panel p-6 transition hover:-translate-y-0.5" href="https://www.intt.tn/upload/files/Rapport%20Financier%202025%20%281%29.pdf"><p class="font-black text-ink dark:text-white">INTT 2025 report ↗</p><p class="mt-2 text-sm leading-6 text-stone-500 dark:text-stone-400">Regulated telecom revenue and market reporting.</p></a>
+            <a class="panel p-6 transition hover:-translate-y-0.5" href="https://www.finances.gov.tn/sites/default/files/2024-09/rapport1.pdf"><p class="font-black text-ink dark:text-white">Public-enterprise report ↗</p><p class="mt-2 text-sm leading-6 text-stone-500 dark:text-stone-400">Official fiscal-risk framework, with older entity-level observations.</p></a>
+            <a class="panel p-6 transition hover:-translate-y-0.5" href="https://www.transport.tn/fr/aviation/article/539/mise-au-point-situation-de-tunisair"><p class="font-black text-ink dark:text-white">Transport Ministry ↗</p><p class="mt-2 text-sm leading-6 text-stone-500 dark:text-stone-400">Tunisair service diagnosis and interventions.</p></a>
+            <a class="panel p-6 transition hover:-translate-y-0.5" href="https://legislation-securite.tn/latest-laws/loi-n-89-9-du-01-fevrier-1989-relative-aux-participations-et-entreprises-publiques/"><p class="font-black text-ink dark:text-white">Law 89-9 ↗</p><p class="mt-2 text-sm leading-6 text-stone-500 dark:text-stone-400">Current legal base for public participations and enterprises.</p></a>
+            <a class="panel p-6 transition hover:-translate-y-0.5" href="https://www.oecd.org/en/publications/2024/06/oecd-guidelines-on-corporate-governance-of-state-owned-enterprises-2024_68fa05cd/full-report.html"><p class="font-black text-ink dark:text-white">OECD SOE Guidelines ↗</p><p class="mt-2 text-sm leading-6 text-stone-500 dark:text-stone-400">International reference for ownership, boards, disclosure and neutrality.</p></a>
+          </div>
+          <div class="mt-8 rounded-2xl border border-amber-300 bg-amber-50 p-5 text-sm leading-7 text-amber-950 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-100">
+            <strong>Investment warning:</strong> this observatory is public-policy research, not a recommendation to buy or sell any security. Company figures can be revised; consult the original filing before making a financial decision.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-stone-200 bg-white py-10 dark:border-white/10 dark:bg-white/[0.02]">
+      <div class="shell flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div><p class="font-black text-ink dark:text-white">TunStat</p><p class="mt-1 text-sm text-stone-500 dark:text-stone-400">Evidence on Tunisia, updated monthly.</p></div>
+        <div class="flex flex-wrap gap-4 text-sm font-bold text-stone-600 dark:text-stone-300">
+          <a href="./index.html" class="hover:text-tunis-red">Dashboard</a><a href="./explore.html" class="hover:text-tunis-red">Explore data</a><a href="https://github.com/alabenkhlifa/TunStat" class="hover:text-tunis-red">GitHub ↗</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/i18n-tn.js?v=20260730-5" defer></script>
+    <script src="./assets/i18n.js?v=20260730-5" defer></script>
+    <script src="./assets/chart.umd.min.js?v=20260730-2" defer></script>
+    <script src="./assets/companies.js?v=20260730-1" defer></script>
+    <script src="./assets/app.js?v=20260730-2" defer></script>
+  </body>
+</html>

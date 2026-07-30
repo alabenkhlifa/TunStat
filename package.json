@@ -2,7 +2,7 @@
   "name": "tunstat",
   "version": "1.0.0",
   "private": true,
-  "description": "Evidence-based monthly dashboard on Tunisia's economy, public services, finance and investment, with comparisons to Morocco, Jordan and Egypt.",
+  "description": "Evidence-based monthly dashboard on Tunisia's economy, public services, national companies, finance and investment, with comparisons to Morocco, Jordan and Egypt.",
   "scripts": {
     "build": "tailwindcss -i ./src/input.css -o ./assets/styles.css --minify && cp ./node_modules/chart.js/dist/chart.umd.min.js ./assets/chart.umd.min.js",
     "dev": "tailwindcss -i ./src/input.css -o ./assets/styles.css --watch"

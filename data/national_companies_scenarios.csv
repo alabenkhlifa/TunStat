@@ -1,0 +1,7 @@
+company,metric,unit,latest_actual,stress_2028,baseline_2028,reform_2028,model_note
+Tunisair,Punctuality under 15 minutes,percent,37,35,55,75,Illustrative TunStat scenarios linked to fleet availability maintenance execution and operating discipline
+Tunisair,Passenger volume index,2025=100,100,92,110,129,Stress assumes continued disruption; reform assumes reliable fleet and schedule recovery
+Tunisair,Debt index,2025=100,100,119,102,71,Reform requires asset and route discipline working-capital control and a conditional balance-sheet restructuring
+Tunisie Telecom,Real regulated-revenue index,2025=100,100,92,100,108,Stress assumes price competition without service gains; reform assumes monetized fibre and 5G with lower churn
+Tunisie Telecom,Public disclosure score,0-5 TunStat rubric,1,1,3,5,Score counts timely audited accounts ownership service KPIs investment and public-service obligations
+Public banks,Net-income resilience index,2025=100,100,70,100,115,Not a profit forecast; scenario index tests credit quality provisioning and governance conditions
