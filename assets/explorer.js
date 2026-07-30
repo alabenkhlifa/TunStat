@@ -143,6 +143,16 @@
     state.charts[name] = new Chart(canvas, config);
   }
 
+  function syncSelect(select, items, fallbackValue = "") {
+    const selectedValue = select.value;
+    const availableValues = items.map((item) => String(item.value));
+    select.innerHTML = items
+      .map((item) => `<option value="${escapeHtml(item.value)}">${escapeHtml(t(item.label))}</option>`)
+      .join("");
+    select.value = availableValues.includes(selectedValue) ? selectedValue : fallbackValue;
+    if (!availableValues.includes(select.value) && availableValues.length) select.value = availableValues[0];
+  }
+
   function metricColor(value, min, max) {
     if (!Number.isFinite(value)) return "#a8a29e";
     const ratio = max === min ? 0.5 : (value - min) / (max - min);
@@ -167,6 +177,14 @@
     const note = document.querySelector("[data-region-note]");
     if (!selector || !list || !note) return;
     initRegionalMap();
+    syncSelect(
+      selector,
+      [
+        { value: "youth_unemployment_percent", label: "Youth unemployment" },
+        { value: "declared_investment_mdt", label: "Declared investment" },
+      ],
+      "youth_unemployment_percent",
+    );
     const metric = selector.value;
     const isInvestment = metric === "declared_investment_mdt";
     const values = state.regional.map((record) => numeric(record[metric])).filter(Number.isFinite);
@@ -239,9 +257,11 @@
     const table = document.querySelector("[data-trend-table]");
     if (!selector || !canvas || !table) return;
     const series = macroSeries();
-    if (!selector.options.length) {
-      selector.innerHTML = series.map((item) => `<option value="${escapeHtml(item.metric)}">${escapeHtml(t(item.metric))}</option>`).join("");
-    }
+    syncSelect(
+      selector,
+      series.map((item) => ({ value: item.metric, label: item.metric })),
+      series[0]?.metric,
+    );
     const active = series.find((item) => item.metric === selector.value) || series[0];
     const actual = active.values.map((item) => (item.status === "historical" ? item.value : null));
     const forecast = active.values.map((item, index) => (item.status === "forecast" || index === 2 ? item.value : null));
@@ -268,10 +288,14 @@
     const grid = document.querySelector("[data-project-grid]");
     const count = document.querySelector("[data-project-count]");
     if (!search || !sector || !stage || !grid || !count) return;
-    if (sector.options.length === 1) {
-      [...new Set(state.projects.map((record) => record.sector))].sort().forEach((value) => sector.insertAdjacentHTML("beforeend", `<option value="${escapeHtml(value)}">${escapeHtml(t(value))}</option>`));
-      [...new Set(state.projects.map((record) => record.stage))].sort().forEach((value) => stage.insertAdjacentHTML("beforeend", `<option value="${escapeHtml(value)}">${escapeHtml(t(value))}</option>`));
-    }
+    syncSelect(sector, [
+      { value: "", label: "All sectors" },
+      ...[...new Set(state.projects.map((record) => record.sector))].sort().map((value) => ({ value, label: value })),
+    ]);
+    syncSelect(stage, [
+      { value: "", label: "All stages" },
+      ...[...new Set(state.projects.map((record) => record.stage))].sort().map((value) => ({ value, label: value })),
+    ]);
     const query = search.value.trim().toLowerCase();
     const visible = state.projects.filter((record) => {
       const matchesQuery = !query || Object.values(record).join(" ").toLowerCase().includes(query);
@@ -301,7 +325,11 @@
     const notes = document.querySelector("[data-peer-notes]");
     if (!selector || !canvas || !notes) return;
     const metrics = [...new Set(state.peers.map((record) => normalizedMetric(record.metric)))].sort();
-    if (!selector.options.length) selector.innerHTML = metrics.map((metric) => `<option value="${escapeHtml(metric)}">${escapeHtml(t(metric))}</option>`).join("");
+    syncSelect(
+      selector,
+      metrics.map((metric) => ({ value: metric, label: metric })),
+      metrics[0],
+    );
     const active = selector.value || metrics[0];
     const rows = state.peers.filter((record) => normalizedMetric(record.metric) === active);
     replaceChart("peer", canvas, {
@@ -326,10 +354,16 @@
     if (!yearSelect || !categorySelect || !compositionCanvas || !trendCanvas || !table) return;
     const years = [...new Set(state.budget.map((record) => record.year))].sort();
     const categories = [...new Set(state.budget.map((record) => record.category))];
-    if (!yearSelect.options.length) {
-      yearSelect.innerHTML = years.map((year) => `<option value="${year}" ${year === years.at(-1) ? "selected" : ""}>${year}</option>`).join("");
-      categorySelect.innerHTML = categories.map((category) => `<option value="${escapeHtml(category)}">${escapeHtml(t(category))}</option>`).join("");
-    }
+    syncSelect(
+      yearSelect,
+      years.map((year) => ({ value: year, label: year })),
+      years.at(-1),
+    );
+    syncSelect(
+      categorySelect,
+      categories.map((category) => ({ value: category, label: category })),
+      categories[0],
+    );
     const compositionCategories = ["Wages", "Goods and services", "Transfers and interventions", "Capital expenditure", "Interest"];
     const yearRows = state.budget.filter((record) => record.year === yearSelect.value && compositionCategories.includes(record.category));
     replaceChart("budgetComposition", compositionCanvas, {
@@ -375,7 +409,10 @@
     const list = document.querySelector("[data-revision-list]");
     const count = document.querySelector("[data-revision-count]");
     if (!search || !type || !list || !count) return;
-    if (type.options.length === 1) [...new Set(state.revisions.map((record) => record.change_type))].sort().forEach((value) => type.insertAdjacentHTML("beforeend", `<option value="${value}">${escapeHtml(t(value))}</option>`));
+    syncSelect(type, [
+      { value: "", label: "All changes" },
+      ...[...new Set(state.revisions.map((record) => record.change_type))].sort().map((value) => ({ value, label: value })),
+    ]);
     const query = search.value.trim().toLowerCase();
     const visible = state.revisions.filter((record) => (!query || Object.values(record).join(" ").toLowerCase().includes(query)) && (!type.value || record.change_type === type.value));
     count.textContent = `${visible.length} ${t("of")} ${state.revisions.length} ${t("changes shown")}`;
