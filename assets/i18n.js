@@ -653,14 +653,17 @@
     "Recorded FDI (periods differ)": "IDE enregistrés (périodes différentes)",
   };
 
+  const tn = window.tunstatTunisian || {};
   const originals = new WeakMap();
   const titleEn = document.title;
-  let language = localStorage.getItem("tunstat-language") === "fr" ? "fr" : "en";
+  const savedLanguage = localStorage.getItem("tunstat-language");
+  let language = ["en", "fr", "tn"].includes(savedLanguage) ? savedLanguage : "en";
   let translating = false;
 
   function translate(value) {
-    if (language !== "fr") return value;
-    return fr[value] || value;
+    if (language === "fr") return fr[value] || value;
+    if (language === "tn") return tn[value] || fr[value] || value;
+    return value;
   }
 
   window.tunstatTranslate = translate;
@@ -671,7 +674,7 @@
     const original = originals.get(node);
     const trimmed = original.trim();
     if (!trimmed) return;
-    const translated = language === "fr" ? fr[trimmed] : null;
+    const translated = language === "fr" ? fr[trimmed] : language === "tn" ? tn[trimmed] || fr[trimmed] : null;
     node.nodeValue = translated ? original.replace(trimmed, translated) : original;
   }
 
@@ -681,7 +684,8 @@
       const key = `data-i18n-${attribute}-en`;
       if (!element.hasAttribute(key)) element.setAttribute(key, element.getAttribute(attribute));
       const original = element.getAttribute(key);
-      element.setAttribute(attribute, language === "fr" ? fr[original] || original : original);
+      const translated = language === "fr" ? fr[original] : language === "tn" ? tn[original] || fr[original] : null;
+      element.setAttribute(attribute, translated || original);
     });
   }
 
@@ -703,12 +707,13 @@
   }
 
   function updateControls() {
-    document.documentElement.lang = language;
-    document.title = language === "fr" ? fr[titleEn] || titleEn : titleEn;
+    document.documentElement.lang = language === "tn" ? "aeb" : language;
+    document.documentElement.dir = language === "tn" ? "rtl" : "ltr";
+    document.title = translate(titleEn);
     document.querySelectorAll("[data-language-toggle]").forEach((button) => {
-      button.textContent = language === "fr" ? "EN" : "FR";
-      button.setAttribute("aria-label", language === "fr" ? "Switch to English" : "Passer au français");
-      button.setAttribute("aria-pressed", String(language === "fr"));
+      button.textContent = language === "tn" ? "تونسي" : language.toUpperCase();
+      button.setAttribute("aria-label", language === "tn" ? "بدّل اللغة" : language === "fr" ? "Changer de langue" : "Change language");
+      button.setAttribute("title", language === "tn" ? "تونسي ← English" : language === "fr" ? "Français ← تونسي" : "English ← Français");
     });
   }
 
@@ -721,7 +726,10 @@
   }
 
   document.querySelectorAll("[data-language-toggle]").forEach((button) => {
-    button.addEventListener("click", () => applyLanguage(language === "fr" ? "en" : "fr"));
+    button.addEventListener("click", () => {
+      const languages = ["en", "fr", "tn"];
+      applyLanguage(languages[(languages.indexOf(language) + 1) % languages.length]);
+    });
   });
 
   const observer = new MutationObserver((mutations) => {

@@ -463,6 +463,8 @@
     const p = palette();
     const radial = spec.type === "doughnut" || spec.type === "pie";
     const compact = matchMedia("(max-width: 639px)").matches;
+    const rtl = document.documentElement.dir === "rtl";
+    const locale = window.tunstatLanguage?.() === "tn" ? "ar-TN" : window.tunstatLanguage?.() === "fr" ? "fr-FR" : "en-US";
     const tickOptions = {
       color: p.muted,
       autoSkip: true,
@@ -472,6 +474,7 @@
     };
     return {
       responsive: true,
+      locale,
       maintainAspectRatio: false,
       resizeDelay: 80,
       animation: reducedMotion ? false : { duration: 500 },
@@ -481,6 +484,8 @@
       plugins: {
         legend: {
           position: "bottom",
+          rtl,
+          textDirection: rtl ? "rtl" : "ltr",
           labels: {
             color: p.text,
             usePointStyle: true,
@@ -491,12 +496,14 @@
         },
         tooltip: {
           enabled: true,
+          rtl,
+          textDirection: rtl ? "rtl" : "ltr",
           backgroundColor: document.documentElement.classList.contains("dark") ? "#111a17" : "#1c1917",
           padding: 12,
           callbacks: {
             label(context) {
               const value = context.parsed.y ?? context.parsed.x ?? context.parsed;
-              return `${context.dataset.label}: ${Number(value).toLocaleString("en-US", { maximumFractionDigits: 2 })}`;
+              return `${context.dataset.label}: ${Number(value).toLocaleString(locale, { maximumFractionDigits: 2 })}`;
             },
           },
         },

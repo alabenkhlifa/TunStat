@@ -4,6 +4,8 @@
 @source "../assets/app.js";
 @source "../assets/charts.js";
 @source "../assets/comparisons.js";
+@source "../assets/i18n.js";
+@source "../assets/i18n-tn.js";
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
@@ -24,6 +26,10 @@
 
   body {
     @apply bg-stone-50 text-stone-900 antialiased selection:bg-red-200 selection:text-red-950 dark:bg-[#0b1210] dark:text-stone-100 dark:selection:bg-red-900 dark:selection:text-red-50;
+  }
+
+  html[dir="rtl"] body {
+    font-family: Tahoma, Arial, ui-sans-serif, system-ui, sans-serif;
   }
 
   :focus-visible {
@@ -132,6 +138,17 @@
 
   .health-status {
     @apply inline-flex rounded-full px-2.5 py-1 text-[10px] font-black tracking-wider uppercase;
+  }
+
+  html[dir="rtl"] .section-kicker,
+  html[dir="rtl"] .section-title,
+  html[dir="rtl"] .status-pill,
+  html[dir="rtl"] .health-status {
+    letter-spacing: 0;
+  }
+
+  html[dir="rtl"] .chart-data-table table {
+    text-align: right;
   }
 }
 

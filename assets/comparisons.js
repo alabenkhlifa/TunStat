@@ -102,6 +102,8 @@
     const compact = matchMedia("(max-width: 639px)").matches;
     const theme = palette();
     const translate = window.tunstatTranslate || ((value) => value);
+    const rtl = document.documentElement.dir === "rtl";
+    const locale = window.tunstatLanguage?.() === "tn" ? "ar-TN" : window.tunstatLanguage?.() === "fr" ? "fr-FR" : "en-US";
 
     document.querySelectorAll("[data-comparison-chart]").forEach((canvas) => {
       const spec = active.charts[canvas.dataset.comparisonChart];
@@ -111,15 +113,16 @@
       if (title) title.textContent = translate(spec.title);
       if (subtitle) subtitle.textContent = translate(spec.subtitle);
       const card = canvas.closest("[data-chart-card]");
-      if (card && !card.querySelector("[data-comparison-table]")) {
+      card?.querySelector("[data-comparison-table]")?.remove();
+      if (card) {
         const details = document.createElement("details");
         details.className = "chart-data-table";
         details.dataset.comparisonTable = "";
         details.innerHTML = `
-          <summary class="cursor-pointer px-3 py-3 text-xs font-bold">View exact comparison data</summary>
+          <summary class="cursor-pointer px-3 py-3 text-xs font-bold">${translate("View exact comparison data")}</summary>
           <table>
-            <thead><tr><th scope="col">Metric</th><th scope="col">Tunisia</th><th scope="col">${active.peer}</th></tr></thead>
-            <tbody>${spec.labels.map((label, index) => `<tr><th scope="row">${label}</th><td>${spec.tunisia[index]} ${spec.units[index]}</td><td>${spec.peer[index]} ${spec.units[index]}</td></tr>`).join("")}</tbody>
+            <thead><tr><th scope="col">${translate("Metric")}</th><th scope="col">${translate("Tunisia")}</th><th scope="col">${translate(active.peer)}</th></tr></thead>
+            <tbody>${spec.labels.map((label, index) => `<tr><th scope="row">${translate(label)}</th><td>${spec.tunisia[index].toLocaleString(locale)} ${translate(spec.units[index])}</td><td>${spec.peer[index].toLocaleString(locale)} ${translate(spec.units[index])}</td></tr>`).join("")}</tbody>
           </table>`;
         card.querySelector(".p-3, .p-4")?.append(details);
       }
@@ -136,6 +139,7 @@
           },
           options: {
             responsive: true,
+            locale,
             maintainAspectRatio: false,
             resizeDelay: 80,
             animation: matchMedia("(prefers-reduced-motion: reduce)").matches ? false : { duration: 450 },
@@ -144,14 +148,18 @@
             plugins: {
               legend: {
                 position: "bottom",
+                rtl,
+                textDirection: rtl ? "rtl" : "ltr",
                 labels: { color: theme.text, usePointStyle: true, boxWidth: 8, padding: compact ? 10 : 16 },
               },
               tooltip: {
                 backgroundColor: theme.tooltip,
                 padding: 12,
+                rtl,
+                textDirection: rtl ? "rtl" : "ltr",
                 callbacks: {
                   label(context) {
-                    return `${context.dataset.label}: ${context.parsed.y.toLocaleString()} ${spec.units[context.dataIndex]}`;
+                    return `${context.dataset.label}: ${context.parsed.y.toLocaleString(locale)} ${translate(spec.units[context.dataIndex])}`;
                   },
                 },
               },
