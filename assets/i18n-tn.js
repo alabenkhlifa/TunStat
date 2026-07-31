@@ -607,6 +607,33 @@ Object.assign(window.tunstatTunisian, {
 });
 
 Object.assign(window.tunstatTunisian, {
+  "Economic growth (real GDP)": "النمو الاقتصادي (الناتج الحقيقي)",
+  "How fast the economy’s output is growing after removing price changes.": "قدّاش إنتاج الاقتصاد قاعد يكبر بعد ما ننحّيو تأثير تبدّل الأسعار.",
+  "How fast average consumer prices are rising.": "قدّاش معدّل أسعار الاستهلاك قاعد يطلع.",
+  "Share of people seeking work who cannot find it.": "نسبة الناس اللي تلوّج على خدمة وما لقاتش.",
+  "How much the country’s imports exceed its exports.": "قدّاش التوريد يفوت التصدير.",
+  "Import cover from reserves": "قدّاش الاحتياطي يغطّي من التوريد",
+  "How many days of imports the country’s reserves can pay for.": "قدّاش نهار توريد تنجم احتياطات البلاد تخلّص.",
+  "Loans at risk (classified)": "قروض معرّضة للخطر (مصنّفة)",
+  "Bank loans at serious risk of not being repaid.": "قروض بنكية فما خطر كبير ما تتخلّصش.",
+  "Share of total reservoir capacity currently holding water.": "قدّاش من طاقة استيعاب السدود فيها ماء توّة.",
+  "Critical indicators without a current public value.": "مؤشرات مهمّة ما عندهاش رقم عمومي حديث.",
+  "Domestic energy share": "حصّة الطاقة المنتجة في تونس",
+  "Share of energy demand covered by production inside Tunisia.": "نسبة حاجيات الطاقة اللي يغطيها الإنتاج من داخل تونس.",
+  "Electricity sources (generation mix)": "مصادر إنتاج الضو",
+  "The fuel sources used to generate electricity.": "أنواع الوقود والطاقة اللي نستعملوهم باش ننتجوا الضو.",
+  "Flights close to schedule": "رحلات قريبة من الموعد",
+  "Within 15 minutes · 2025": "في حدود 15 دقيقة · 2025",
+  "Number of company profiles tracked in this observatory.": "عدد ملفات الشركات اللي المرصد هذا يتبعهم.",
+  "Share of flights within 15 minutes of schedule.": "نسبة الرحلات اللي كانت في حدود 15 دقيقة من الموعد.",
+  "Sales recorded by the telecom regulator, not profit.": "المداخيل المسجّلة عند هيئة الاتصالات، موش الربح.",
+  "How fully and quickly accounts and service results are published.": "قدّاش الحسابات ونتائج الخدمة تتنشر كاملة وفي وقتها.",
+  "Seats filled": "الكراسي المعمّرة",
+  "Fixed-internet revenue": "مداخيل الإنترنت القار",
+  "Mobile-internet revenue": "مداخيل الإنترنت الجوال",
+});
+
+Object.assign(window.tunstatTunisian, {
   "Potable losses": "ضياع ماء الشرب",
   "Irrigation losses": "ضياع ماء الري",
   "Approved financing": "تمويل مصادق عليه",

@@ -1,9 +1,11 @@
 @import "tailwindcss";
 @source "../index.html";
 @source "../explore.html";
+@source "../companies.html";
 @source "../comparisons/*.html";
 @source "../assets/app.js";
 @source "../assets/charts.js";
+@source "../assets/companies.js";
 @source "../assets/comparisons.js";
 @source "../assets/i18n.js";
 @source "../assets/i18n-tn.js";
